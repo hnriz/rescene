@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rescene | Contact</title>
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/footer.css">
+    <link rel="stylesheet" href="src/css/body.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="src/css/header.css">
+    <link rel="stylesheet" href="src/css/contact.css">
+    <link rel="stylesheet" href="src/css/signin-signup.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="headerContainer container">
+            <div class="row">
+                <div class="firstColumn">
+                    <a href="">
+                        <img src="src/img/logo-branco.png" alt="" class="logo">
+                    </a>
+                </div>
+
+                <div class="lastColumn">
+                    <div>
+                        <a href="" class="user">
+                            <img src="src/img/icon.jpg" alt="" id="avatar">
+                            <h3>SIGN IN</h3>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">TRENDING</a>
+                    </div>
+
+                    <div>
+                        <a href="#">LISTS</a>
+                    </div>
+
+                    <div>
+                        <a href="#">CATALOG</a>
+                    </div>
+
+                    <div class="searchBarContainer">
+                        <div class="searchBar">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                            <input type="text" placeholder="Search...">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- LOGIN -->
+    <div id="loginPopup" class="popup-overlay hidden">
+        <div class="popup">
+
+            <div id="loginForm" class="form-container">
+
+                <div class="topPopup">
+                    <h2>SIGN IN</h2>
+                    <span class="close-btn" onclick="togglePopup()"><img src="src/img/x.png"></span>
+                </div>
+
+                <div class="credentialFields">
+
+                    <div class="credentials">
+                        <label>Email address / username</label>
+                        <input type="text" placeholder="Enter email or username" />
+                    </div>
+
+                    <div class="credentials">
+                        <label>Password</label>
+                        <input type="password" placeholder="Enter password" />
+                    </div>
+
+                </div>
+
+                <a href="#" class="forgot">Forgot password?</a>
+
+                <div class="submitBtn">
+                    <button class="submit-btn" id="signin">SIGN IN</button>
+                    <p>Not a member? <span class="switch-link" onclick="showSignup()">Sign up</span></p>
+                </div>
+
+
+            </div>
+
+            <!-- SIGNUP POPUP  -->
+            <div id="signupForm" class="form-container hidden">
+
+                <div class="topPopup">
+                    <h2>JOIN RESCENE</h2>
+                    <span class="close-btn" onclick="togglePopup()"><img src="src/img/x.png"></span>
+                </div>
+
+                <div class="credentialFields">
+                    <div class="credentials">
+                        <label>Email address</label>
+                        <input type="email" placeholder="Enter email" />
+                    </div>
+
+                    <div class="credentials">
+                        <label>Username</label>
+                        <input type="text" placeholder="Choose a username" />
+                    </div>
+
+                    <div class="credentials">
+                        <label>Password</label>
+                        <input type="password" placeholder="Choose a password" />
+                    </div>
+
+                </div>
+
+                <div class="checkboxes">
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="terms" />
+                        <label for="terms">I accept the <a href="#" class="highlight">Terms of Use</a></label>
+                    </div>
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="privacy" />
+                        <label for="privacy">I accept the <a href="#" class="highlight">Privacy Policy</a></label>
+                    </div>
+                </div>
+
+                <div class="submitBtn">
+                    <button class="submit-btn" id="signup">SIGN UP</button>
+                    <p>Already a member? <span class="switch-link" onclick="showLogin()">Sign in</span></p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="contactContent container">
+        <div class="posterSide">
+            <img src="src/img/contact-poster.jpg" alt="">
+        </div>
+
+        <div class="infoSide">
+            <h2>Contact Rescene</h2>
+
+            <div class="textContact">
+                <p>We’d love to hear from you regarding any aspect of Letterboxd. Please check our Frequent Questions
+                    page, and if your enquiry is not answered there, send it to us by email (use the links below or
+                    click the “Help” button in the bottom right corner of this page) and general messages of delight or
+                    dismay via email.
+                </p>
+
+                <p>Please direct email enquiries to one of the following addresses only (mass mails will be ignored):
+                </p>
+
+                <div class="emails">
+                    <div class="email">
+                        <a href=""><img src="src/img/email.png">
+                            General support enquiries</a>
+                    </div>
+
+                    <div class="email">
+                        <a href=""><img src="src/img/email.png">
+                            Partnership and co-marketing enquiries</a>
+                    </div>
+
+                    <div class="email">
+                        <a href=""><img src="src/img/email.png">
+                            Advertising enquiries</a>
+                    </div>
+
+                    <div class="email">
+                        <a href=""><img src="src/img/email.png">
+                            Film data corrections</a>
+                    </div>
+                </div>
+
+
+
+                <p>To make feature requests, please use our Feedback channel. Your feature may already have been
+                    requested by another member, so check first, and add a vote or comment to their entry.</p>
+
+
+            </div>
+
+            <button class="btn">
+                <a href="">PROVIDE FEEDBACK</a>
+            </button>
+
+        </div>
+    </div>
+
+    <footer>
+
+        <div class="footerContent container">
+
+            <div class="upInfo">
+                <div class="browseLinks">
+                    <a href="">Home</a>
+                    <a href="">About</a>
+                    <a href="">
+                        <p>Contact</p>
+                    </a>
+                    <a href="">
+                        <p>Search</p>
+                    </a>
+                </div> <!-- .browseLinks -->
+
+                <div class="socials">
+                    <a href="https://www.threads.net/@taylorswift?hl=pt-br" target="_blank">
+                        <img src="src/img/threads.svg" alt="threads">
+                    </a>
+
+                    <a href="https://www.instagram.com/taylorswift" target="_blank">
+                        <img src="src/img/instagram.svg" alt="instagram">
+                    </a>
+
+                    <a href="https://x.com/taylorswift13" target="_blank">
+                        <img src="src/img/x-twitter.svg" alt="twitter">
+                    </a>
+
+                </div> <!-- .socials -->
+
+            </div> <!-- .upInfo -->
+
+            <div class="copyright">
+                <p>&copy IFSP-CAR. Made by students. Film data from TMDB.</p>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script src="src/js/login-signup.js"></script>
+</body>
+
+</html>

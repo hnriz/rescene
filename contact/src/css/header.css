@@ -1,0 +1,109 @@
+/* Fonte */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+/* Header */
+header {
+    height: 110px;
+    background-image: linear-gradient(to bottom, #36353d 0%, #333241 50%, #1c1b25 100%);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* Linha de conteúdo */
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px; /* Espaço entre colunas */
+    width: 100%;
+}
+
+/* Estilo da fonte e cor dos links e inputs */
+.row a,
+.searchBar input {
+    font-family: 'Nunito Sans';
+    font-weight: 600;
+}
+
+.row a,
+a:hover,
+a:active,
+a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+/* Avatar */
+.row .user img {
+    height: 30px;
+    border-radius: 100%;
+    margin-right: 10px;
+}
+
+/* Itens dentro da row */
+.row div,
+.searchBarContainer {
+    display: flex;
+    align-items: center;
+    height: 75px;
+    color: black;
+    font-size: 17px;
+    /* Remove o padding lateral problemático */
+    padding: 14px 0;
+}
+
+/* Logo */
+.row .logo {
+    height: 100px;
+}
+
+/* Primeira coluna (logo) */
+.row .firstColumn {
+    display: flex;
+    justify-content: flex-start;
+}
+
+/* Última coluna (menus, search, avatar) */
+.row .lastColumn {
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+}
+
+/* Estilo do usuário */
+.row .user {
+    display: flex;
+    align-items: center;
+}
+
+/* Search bar */
+.row .searchBarContainer {
+    display: flex;
+}
+
+.row .searchBar {
+    display: flex;
+    background-color: white;
+    height: 30px;
+    border-radius: 50px;
+    gap: 10px;
+    width: 200px;
+    align-items: center;
+    padding: 0 10px;
+    flex-direction: row-reverse;
+}
+
+.row input[type=text] {
+    border: none;
+    font-size: 17px;
+    width: 150px;
+    outline: none;
+}
+
+.row button[type=submit] {
+    border: none;
+    font-size: 20px;
+    background: none;
+    color: #5f5f5f;
+    cursor: pointer;
+}

@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+header {
+  height: 110px;
+  background: linear-gradient(to bottom,#36353d 10%, #19191d 100%);
+}
+
+.row {
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+.row a, .searchBar input {
+    font-family: 'Nunito Sans';
+    font-weight: 600;
+    transition: all .3s ease-in-out;
+}
+
+.row .user img{
+    height: 30px;
+    border-radius: 100%;
+    margin-right: 10px;
+}
+  
+  .row div, .searchBarContainer {
+    float: left;
+    display: flex;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    align-items: center;
+    height: 75px;
+  }
+
+  
+  .row a, a:hover, a:active, a:visited {
+    text-decoration: none;
+    color: white;
+  }  
+  
+  .row input[type=text] {
+    float: right;
+    padding: 6px;
+    border: none;
+    font-size: 17px;
+  }
+
+  .row button[type=submit] {
+    float: left;
+    border: none;
+    font-size: 20px;
+    background: none;
+    color: #5f5f5f;
+    cursor: pointer;
+  }
+
+  .row .logo {
+    height: 75px;
+  }
+
+  .row .firstColumn {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .row .lastColumn {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .row .user {
+    display: flex;
+    align-items: center;
+  }
+
+  .row .searchBar {
+    display: flex;
+    background-color: white;
+    height: 40px;
+    border-radius: 50px;
+    gap: 10px;
+    }
+
+    .row a:hover{
+        color: #ffe26c;
+        transition: all .3s ease-in-out;
+    }
+
+
+    nav .logo {
+      height: 45px;
+    }
+
+
+.hamburger {
+  display: none;
+  width: 30px;
+  height: 24px;
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  z-index: 1001;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hamburger span {
+  display: block;
+  height: 4px;
+  width: 100%;
+  background: white;
+  border-radius: 2px;
+  transition: all 0.4s ease;
+  margin-bottom: 6px;
+}
+
+/* Efeito X quando ativo */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translateY(15px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-14px);
+}
+
+.mobileMenu {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to bottom,#36353d 10%, #19191d 100%);
+  width: 100%;
+  height: 400px;
+  transform: translateY(-110%);
+  transition: transform 0.4s ease-in-out;
+  padding-top: 80px;
+  z-index: 1000;
+  transform: translateY(-100%);
+  transition: transform 0.4s ease-in-out;
+}
+
+
+.mobileMenu.show {
+  transform: translateY(0%);
+}
+
+.mobileMenu a {
+  color: white;
+  padding: 15px 30px;
+  text-align: left;
+  font-size: 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.mobileMenu a:hover {
+  color: #ffe26c;
+}
+
+.mobileMenu.show {
+  transform: translateY(0%);
+}
+
+
+.closeBtn {
+  position: absolute;
+  top: 25px;
+  left: 20px;
+  font-size: 36px;
+  color: white;
+  cursor: pointer;
+}
+
+
+
+@media (max-width: 950px) {
+  .row .lastColumn {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}

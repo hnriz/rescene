@@ -1,0 +1,79 @@
+.contactContent {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 70px;
+
+    .posterSide img {
+        height: 400px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+        border-radius: 4px;
+    }
+
+    .btn {
+        background-color: #ffe26c;
+        border: none;
+        width: fit-content;
+        border-radius: 3px;
+        padding: 8px 10px 8px 10px;
+        margin-top: 20px;
+        transition: transform .2s;
+
+        a {
+            color: black;
+            font-size: 15px;
+            font-weight: bold;
+        }
+    }
+
+    .btn:hover {
+        transform: scale(1.02);
+        cursor: pointer;
+        box-shadow: 0 4px 8px #a3881a;
+    }
+
+    h2 {
+        font-size: 40px;
+        padding-bottom: 30px;
+    }
+
+    p {
+        letter-spacing: 1px;
+        line-height: 25px;
+        font-size: 17px;
+    }
+
+    .textContact {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        img {
+            height: 25px;
+            width: min-content;
+
+        }
+
+        .emails {
+            margin: 10px 0 10px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            a {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                font-size: 20px;
+                letter-spacing: 1.5px;
+                font-weight: 500;
+                color: #f7e084;
+                width: fit-content;
+            }
+
+            a:hover {
+                color: white
+            }
+        }
+
+    }
+}

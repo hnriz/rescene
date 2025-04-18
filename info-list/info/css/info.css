@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+body {
+    margin: 0;
+    font-family: "Nunito", sans-serif;
+    background: linear-gradient(to bottom, #19191d 30%, #262627 50%, #19191d 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+.container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    background-color: #2a2931;
+    min-height: 100vh;
+    margin-top: 0.2rem;
+    margin-inline: auto;
+}
+
+h1,
+h2,
+h3,
+p,
+a,
+div {
+    font-family: 'Nunito Sans';
+    color: white;
+}
+
+.columnOne,
+.columnTwo {
+    display: flex;
+    flex-direction: column;
+}
+
+.columnOne {
+    width: 230px;
+}
+
+.mediaInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+    margin: 30px 0 30px 0;
+}
+
+.columnOne img {
+    width: 230px;
+    height: 345px;
+    border-radius: 8px;
+}
+
+.columnOne .review {
+    display: flex;
+    flex-direction: column;
+}
+
+.columnOne .options {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 230px;
+    margin: 30px 0 30px 0;
+}
+
+.columnOne .options .watched,
+.columnOne .options .like,
+.columnOne .options .addTo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 76px;
+    background: none;
+    border: none;
+    color: white;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+    gap: 10px;
+
+    i {
+        font-size: 30px;
+    }
+}
+
+.columnOne .options .reviewSender:hover {
+    background-color: #ffd736;
+}
+
+.options button[type=button]:hover {
+    color: #ffd736;
+}
+
+.columnOne .rate {
+    display: flex;
+    justify-content: space-between;
+    width: 230px;
+    margin: 10px 0 20px 0;
+
+    button {
+        background: none;
+        border: none;
+        color: white;
+    }
+
+    i {
+        font-size: 30px;
+        margin-bottom: 7px;
+        transition: all .3s ease-in-out;
+    }
+
+    label:hover {
+        color: #ffd736;
+        cursor: pointer;
+    }
+}
+
+.reviewTyper {
+    border-radius: 10px;
+    height: 200px;
+    resize: none;
+    padding: 10px;
+    font-family: 'Nunito Sans';
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.reviewSender {
+    width: 120px;
+    margin-top: 20px;
+    padding: 5px 10px 5px 10px;
+    background-color: #ffe26c;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.reviewSender:hover {
+    background-color: #ffd736;
+}
+
+.columnOne button[type=submit] {
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+    height: 30px;
+    width: 100px;
+}
+
+.columnTwo {
+    width: 500px;
+}
+
+.columnTwo .infoRow {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    h2 {
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    .description {
+        width: 75%;
+    }
+
+    .userScore {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .userScore .number {
+        display: flex;
+        font-size: 30px;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    .userScore .scoreID {
+        display: flex;
+        font-size: 15px;
+        font-weight: bold;
+        margin: 0;
+    }
+}
+
+.columnTwo .mediaData .director {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+
+    h3 {
+        color: #ffe26c;
+        font-size: 17px;
+        font-weight: bold;
+    }
+}
+
+.columnTwo .mediaData {
+    margin-bottom: 20px;
+
+    p {
+        font-size: 15px;
+        margin-bottom: 20px;
+        font-weight: 100;
+    }
+}
+
+.topic {
+    h3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #bfbfbf;
+        color: white;
+        font-weight: bold;
+        height: 60px;
+        border-radius: 8px;
+        width: 500px;
+        transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+        margin-bottom: 20px;
+        font-size: 1.4em;
+    }
+
+    p {
+        text-decoration: none;
+        display: inline-block;
+    }
+}
+
+.columnTwo .mediaData .topic .genres {
+    font-weight: bold;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.reviews {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reviews h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.reviewCard {
+    display: flex;
+    gap: 1rem;
+    background-color: transparent;
+    padding: 1rem 0;
+    width: 500px;
+}
+
+.reviewMain {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: min-content;
+}
+
+.reviewUser {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.1rem;
+}
+
+.userAvatarCircle {
+    width: 50px;
+    height: 50px;
+    background-color: #3d3a49;
+    border-radius: 50%;
+}
+
+.userInfo {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.85rem;
+}
+
+.stars {
+    color: gold;
+    font-size: 18px;
+}
+
+.commentLike {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: none;
+    color: white;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.like:hover {
+    color: #ffd736;
+}
+
+.addTo:hover {
+    color: #ffd736;
+}
+
+.watched:hover {
+    color: #ffd736;
+}
+
+.commentLike:hover {
+    color: #ffd736;
+}
+
+.commentAndActions {
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.commentSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.comment {
+    flex: 0.4;
+    background: #444150;
+    border: 1px solid rgba(255, 255, 255, 0.267);
+    padding: 0.7rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin: 0;
+    height: 100px;
+    width: 100%;
+    text-align: justify;
+    flex: 1;
+}
+
+.actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 0.2rem;
+    gap: 0.4rem;
+    width: 20px;
+}

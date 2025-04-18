@@ -1,0 +1,578 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body {
+    font-family: "Nunito Sans";
+    background-color: #36353d;
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+header {
+    height: fit-content;
+    background-image: linear-gradient(#36353d, #36353d, #36353d, #36353db4, #36353d00);
+}
+
+.row {
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.row a,
+.searchBar input {
+    font-family: 'Nunito Sans';
+    font-weight: 600;
+}
+
+.row .user img {
+    height: 30px;
+    border-radius: 100%;
+    margin-right: 10px;
+}
+
+.row div,
+.searchBarContainer {
+    float: left;
+    display: flex;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    align-items: center;
+    height: 75px;
+}
+
+
+.row a,
+a:hover,
+a:active,
+a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+.row input[type=text] {
+    float: right;
+    padding: 6px;
+    border: none;
+    font-size: 17px;
+}
+
+.row button[type=submit] {
+    float: left;
+    border: none;
+    font-size: 20px;
+    background: none;
+    color: #5f5f5f;
+    cursor: pointer;
+}
+
+.row .logo {
+    height: 75px;
+}
+
+.row .firstColumn {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.row .lastColumn {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.row .user {
+    display: flex;
+    align-items: center;
+}
+
+.row .searchBar {
+    display: flex;
+    background-color: white;
+    height: 20px;
+    border-radius: 50px;
+    gap: 10px;
+}
+
+/* main */
+
+main {
+    display: flex;
+    flex-direction: column;
+    color: whitesmoke;
+}
+
+#container-pInicial {
+    display: flex;
+    flex-direction: column;
+    background-color: #36353d;
+}
+
+/* BANNER COM SLOGAN */
+
+.hero-text {
+    text-align: center;
+    width: 100%;
+}
+
+.hero {
+    width: 1200px;
+    margin: auto;
+
+    img {
+        width: 100%;
+    }
+}
+
+/* FIM DO BANNER */
+
+
+
+
+/* CARROSSEL DE FILMES */
+.category {
+    padding: 1.5rem;
+}
+
+.category h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.carrossel-container {
+    width: 100%;
+    padding: 1rem 3rem;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.carrossel {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    transition: transform 0.4s ease-in-out;
+    scrollbar-width: none;
+    height: 320px;
+    align-items: center;
+}
+
+.carrossel::-webkit-scrollbar {
+    display: none;
+}
+
+.card {
+    flex: 0 0 200px;
+    height: 280px;
+    background: #3e3c46;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 2px 10px #ffe26c;
+    transition: all .3s ease-in-out;
+}
+
+.seta {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 10;
+    background-color: transparent;
+    transition: all .5s ease-in-out;
+}
+
+.seta:hover {
+    color: #ffe26c;
+    transition: all .2s ease-in-out;
+}
+
+#seta-esquerda {
+    left: 0.3rem;
+}
+
+#seta-direita {
+    right: 0.3rem;
+}
+
+#seta-esquerda2 {
+    left: 0.3rem;
+}
+
+#seta-direita2 {
+    right: 0.3rem;
+}
+
+#seta-esquerda3 {
+    left: 0.3rem;
+}
+
+#seta-direita3 {
+    right: 0.3rem;
+}
+
+/* FIM DO CARROSSEL */
+
+.titulo-pag-inicial {
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.coment-pag-inicial {
+    display: flex;
+    background-color: blue;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 250px;
+    margin-bottom: 70px;
+}
+
+.div1-coment {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(158, 123, 57);
+}
+
+.div2-coment {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(65, 163, 40);
+}
+
+
+footer {
+    background-color: #696969;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    .footerContent {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        align-items: flex-start;
+        gap: 35px;
+
+
+        p,
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .upInfo {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 100px;
+
+            .browseLinks {
+                display: flex;
+                flex-direction: row;
+                gap: 100px;
+
+                a,
+                p {
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+            }
+
+            .socials {
+                display: flex;
+                gap: 50px;
+
+                img {
+                    width: 30px;
+                    ;
+                }
+            }
+        }
+
+        .copyright {
+            font-size: 13px;
+        }
+    }
+}
+
+/* COPIADO DO SCRIPT DO LUCAS */
+* {
+    box-sizing: border-box;
+}
+
+.corpo {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    background-color: #2a2931;
+    min-height: 100vh;
+    margin-top: 0.2rem;
+    margin-inline: auto;
+}
+
+.reviews {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reviews h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.review-card {
+    display: flex;
+    gap: 1rem;
+    background-color: transparent;
+    padding: 1rem 0;
+    width: 65%;
+}
+
+.movie-thumbnail {
+    width: 180px;
+    height: 240px;
+    background-color: #3e3c46;
+    border-radius: 6px;
+}
+
+.review-main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: min-content;
+}
+
+.review-title {
+    font-weight: 600;
+    font-size: 1.4rem;
+    margin-bottom: 2.2rem;
+}
+
+.review-user {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.1rem;
+}
+
+.user-avatar-circle {
+    width: 50px;
+    height: 50px;
+    background-color: #3d3a49;
+    border-radius: 50%;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.85rem;
+}
+
+.stars {
+    color: gold;
+    font-size: 0.9rem;
+}
+
+.comment-and-actions {
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.comment-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.comment {
+    flex: 0.4;
+    background: #444150;
+    border: 1px solid rgba(255, 255, 255, 0.267);
+    padding: 0.7rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin: 0;
+    height: 100px;
+    width: 100%;
+    text-align: justify;
+    flex: 1;
+}
+
+.actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 0.2rem;
+    gap: 0.4rem;
+}
+
+.divisoria {
+    width: 80%;
+    border-color: rgb(153, 157, 184);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

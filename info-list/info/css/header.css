@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+header {
+  height: 110px;
+  background: linear-gradient(to bottom,#36353d 10%, #19191d 100%);
+}
+
+.row {
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+.row a, .searchBar input {
+    font-family: 'Nunito Sans';
+    font-weight: 600;
+    transition: all .3s ease-in-out;
+}
+
+.row .user img{
+    height: 30px;
+    border-radius: 100%;
+    margin-right: 10px;
+}
+  
+  .row div, .searchBarContainer {
+    float: left;
+    display: flex;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    align-items: center;
+    height: 75px;
+  }
+
+  
+  .row a, a:hover, a:active, a:visited {
+    text-decoration: none;
+    color: white;
+  }  
+  
+  .row input[type=text] {
+    float: right;
+    padding: 6px;
+    border: none;
+    font-size: 17px;
+  }
+
+  .row button[type=submit] {
+    float: left;
+    border: none;
+    font-size: 20px;
+    background: none;
+    color: #5f5f5f;
+    cursor: pointer;
+  }
+
+  .row .logo {
+    height: 75px;
+  }
+
+  .row .firstColumn {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .row .lastColumn {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .row .user {
+    display: flex;
+    align-items: center;
+  }
+
+  .row .searchBar {
+    display: flex;
+    background-color: white;
+    height: 40px;
+    border-radius: 50px;
+    gap: 10px;
+    }
+
+    .row a:hover{
+        color: #ffe26c;
+        transition: all .3s ease-in-out;
+    }

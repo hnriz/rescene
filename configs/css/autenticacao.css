@@ -1,0 +1,113 @@
+main{
+    background-color: rgb(61, 61, 73);
+}
+
+.pagInicial-container{
+    padding-bottom: 80px;
+    background-color: rgb(61, 61, 73);
+}
+
+#autenticacao-container2{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(61, 61, 73);
+    gap: 50px;
+}
+
+#autenticacao-conteudo1{
+    background-color: white;
+    border: solid black 1px;
+    width: 250px;
+    margin: 15px;
+}
+
+#autenti-conteudo3{
+    background-color: rgb(61, 61, 73);
+}
+
+#autenticacao-conteudo2{
+    width: 150px;
+    flex-direction: row;
+    display: flex;
+    gap: 220px;
+    margin-left: 30px;
+}
+
+a{
+    color: white;
+}
+
+.h1-autenti{
+    color: rgb(255, 255, 255);
+    margin-left: 15px;
+    margin-top: 30px;
+}
+
+.h3-autenti{
+    color: white;
+}
+
+.opcoes-autenti-container{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-top: 30px;
+    gap: 30px;
+}
+
+.opcao-autenti{
+    background-color: white;
+    width: 400px;
+    height: 35px;
+}
+
+#separator-autenti{
+    height: 1px;
+    background-color: white;
+    width: 100%;
+}
+
+#autenti-container3{
+    display: flex;
+    flex-direction: row;
+    height: auto;
+}
+
+.opcoes-autenti-container{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-top: 30px;
+    gap: 50px;
+}
+
+#opcoes-autenti-container{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    gap: 30px;
+}
+
+.button-autenti {
+    width: 120px;
+    height: 40px;
+    margin-top: 20px;
+    padding: 5px 10px 5px 10px;
+    background-color: #ffe26c;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#h2-salvar-autenti{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.opcoes-autenti-content input[type=text]{
+    font-family: 'Nunito Sans';
+    border-radius: 5px;
+    margin: 10px 0 0 0;
+}

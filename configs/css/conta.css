@@ -1,0 +1,77 @@
+#separator-conta {
+    height: 1px;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+}
+
+#separator2-conta {
+    height: 1px;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    margin-top: 30px;
+}
+
+.conta-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.conta-content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.titulo-conta {
+    color: white;
+    margin-left: 15px;
+    margin-top: 30px;
+}
+
+.aviso-conta {
+    color: white;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+.pergunta-conta {
+    color: lightgray;
+    margin-left: 30px;
+    margin-top: 40px;
+}
+
+.confirmacao-conta {
+    background-color: white;
+    width: 250px;
+    height: 35px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 30px;
+    margin-top: 10px;
+
+    h2 {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        margin-left: 100px;
+    }
+}
+
+#redBtn {
+    background-color: red;
+    color: white;
+}
+
+.containerConfig input[type=text] {
+    font-family: 'Nunito Sans';
+    border-radius: 5px;
+    margin: 10px 0 20px 0;
+    width: 400px;
+    height: 25px;
+    padding-left: 10px;
+}
+
+.infoConta {
+    line-height: 30px;
+}

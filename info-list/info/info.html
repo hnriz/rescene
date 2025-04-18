@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rescene | Cassandra</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/info.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="headerContainer">
+            <div class="row">
+                <div class="firstColumn">
+                    <a href="">
+                        <img src="img/logo-branco.png" alt="Rescene logo" class="logo">
+                    </a>
+                </div>
+                <div class="lastColumn">
+                    <div>
+                        <a href="" class="user" aria-label="User profile">
+                            <img src="img/icon.jpg" alt="User avatar" id="avatar">
+                            <h3>USER</h3>
+                        </a>
+                    </div>
+                    <nav>
+                        <a href="#">TRENDING</a>
+                        <a href="#">LISTS</a>
+                        <a href="#">CATALOG</a>
+                    </nav>
+                    <div class="searchBarContainer">
+                        <form class="searchBar" role="search">
+                            <button type="submit" aria-label="Search"><i class="fa fa-search"></i></button>
+                            <input type="text" placeholder="Search..." aria-label="Search input">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="mediaBanner"></div>
+
+        <div class="mediaInfo">
+            <aside class="columnOne">
+                <img src="img/postTemplate.jpg" alt="Cassandra movie poster">
+
+                <div class="options">
+                    <button type="button" class="watched" aria-label="Mark as watched">
+                        <i class="fa-regular fa-eye"></i>
+                        WATCHED
+                    </button>
+                    <button type="button" class="like" aria-label="Like this movie">
+                        <i class="fa-regular fa-heart"></i>
+                        LIKE
+                    </button>
+                    <button type="button" class="addTo" aria-label="Add to list">
+                        <i class="fa-solid fa-plus"></i>
+                        ADD TO
+                    </button>
+                </div>
+
+                <section class="review">
+                    <fieldset class="rate">
+                        <label for="star5" aria-label="5 stars"><i class="fa-regular fa-star"></i></label>
+                        <label for="star4" aria-label="4 stars"><i class="fa-regular fa-star"></i></label>
+                        <label for="star3" aria-label="3 stars"><i class="fa-regular fa-star"></i></label>
+                        <label for="star2" aria-label="2 stars"><i class="fa-regular fa-star"></i></label>
+                        <label for="star1" aria-label="1 star"><i class="fa-regular fa-star"></i></label>
+                    </fieldset>
+
+                    
+                    <textarea id="reviewText" placeholder="Type here your review..." class="reviewTyper"></textarea>
+
+                    <button type="submit" class="reviewSender">Send</button>
+                </section>
+            </aside>
+
+            <section class="columnTwo">
+                <article class="mediaData">
+                    <div class="infoRow">
+                        <h2>Cassandra</h2>
+                        <h2>(2025)</h2>
+                    </div>
+                    <div class="director">
+                        <h3>Directed by Benjamin Gutsche</h3>
+                    </div>
+                    <div class="infoRow">
+                        <p class="description">When a family moves into a decades-old smart home and reactivates its dormant robot housekeeper, Cassandra, they become fresh targets for her sinister motives</p>
+                        <div class="userScore">
+                            <p class="number">100</p>
+                            <p class="scoreId">USER SCORE</p>
+                        </div>
+                    </div>
+                    <div class="topic">
+                        <h3>Genres</h3>
+                        <p class="genres">Drama, Terror, Sci-Fi, Thriller</p>
+                    </div>
+                </article>
+
+                <div class="topic">
+                    <h3>Main Reviews</h3>
+                </div>
+                <section class="reviews" aria-labelledby="main-reviews">
+                    <div class="commentSection">
+                        <article class="reviewCard">
+                            <div class="reviewMain">
+                                <div class="reviewUser">
+                                    <div class="userAvatarCircle" aria-hidden="true"></div>
+                                    <div class="userInfo">
+                                        <span class="username">FULANINHO123</span>
+                                        <span class="stars" aria-label="4 out of 5 stars">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="commentAndActions">
+                                    <p class="comment">AAAAAAAAAAAAAAAAAAAAAAAAAAAAA AAAAAAAAAAAAAAAAAAAAAAAAAAAA AAAAAAAA</p>
+                                    <div class="actions">
+                                        <button type="button" class="commentLike" aria-label="Like this review">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footerContent">
+            <div class="upInfo">
+                <nav class="browseLinks">
+                    <a href="">Home</a>
+                    <a href="">About</a>
+                    <a href="">Contact</a>
+                    <a href="">Search</a>
+                </nav>
+                <div class="socials">
+                    <a href="https://www.threads.net/@taylorswift?hl=pt-br" target="_blank">
+                        <img src="img/threads.svg" alt="Threads">
+                    </a>
+                    <a href="https://www.instagram.com/taylorswift" target="_blank">
+                        <img src="img/instagram.svg" alt="Instagram">
+                    </a>
+                    <a href="https://x.com/taylorswift13" target="_blank">
+                        <img src="img/x-twitter.svg" alt="X (formerly Twitter)">
+                    </a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; IFSP-CAR. Made by students. Film data from TMDB.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
