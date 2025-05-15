@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+.containerSettings {
+    /* background-color: #2a2931; */
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    /* padding: 0 60px 0px 60px; */
+    margin-top: 30px;
+}
+
+.settingsNav {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    margin-top: 10px;
+
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+
+    a {
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 15px;
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+    }
+
+    a:hover {
+        color: #b4b4b4;
+        transition: all .3s ease-in-out;
+    }
+}
+
+.separatorSettings {
+    height: 1px;
+    background-color: white;
+    width: 100%;
+}
+
+h2 {
+    color: #ffe26c;
+    font-size: 30px;
+}
+
+#current {
+    color: #ffe26c;
+}
+
+.btn {
+    margin-top: 30px;
+}

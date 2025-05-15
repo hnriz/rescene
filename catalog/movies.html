@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rescene | Movies</title>
+
+  <link rel="stylesheet" href="../src/css/reset.css">
+  <link rel="stylesheet" href="../src/css/footer.css">
+  <link rel="stylesheet" href="../src/css/header.css">
+  <link rel="stylesheet" href="../src/css/movies.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <link rel="icon" type="image/x-icon" href="../src/img/favicon.ico">
+
+</head>
+
+<body>
+  <header>
+    <!-- Ícone do menu hambúrguer (mobile) -->
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- Menu mobile -->
+    <nav class="mobileMenu" id="mobileMenu">
+      <a href="">
+          <img src="../src/img/logo-branco.png" alt="" class="logo">
+      </a>
+      <a href="../profile/profile.html">USER</a>
+      <a href="../ranking/rankFilmes.html">TRENDING</a>
+      <a href="#">MOVIES</a>
+      <a href="series.html">SERIES</a>
+  </nav>
+
+    <!-- Container principal do cabeçalho -->
+    <div class="headerContainer container">
+        <div class="row">
+            <div class="firstColumn">
+                <a href="../index.html">
+                    <img src="../src/img/logo-branco.png" alt="" class="logo">
+                </a>
+            </div>
+
+            <div class="lastColumn">
+
+                <div class="userDropdown">
+                    <div id="dropdownUser">
+                        <div id="userToggle">
+                            <img src="../src/img/icon.jpg" alt="" id="avatar">
+                            <span class="username">USER <i class="fa fa-caret-down"></i></span>
+                        </div>
+                        <ul id="userOptions">
+                            <li><a href="../index.html">Home</a></li>
+                            <li><a href="../profile/profile.html">Profile</a></li>
+                            <li><a href="../profile/watched.html">Watched</a></li>
+                            <li><a href="../profile/profile.html">Reviews</a></li>
+                            <li><a href="../profile/liked.html">Liked</a></li>
+                            <li><a href="../profile/lists.html">Lists</a></li>
+                            <li><a href="../settings/user.html">Settings</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div>
+                  <a href="../ranking/rankFilmes.html">TRENDING</a>
+                </div>
+
+
+                <div class="catalogDropdown">
+                    <p id="catalogToggle">CATALOG <i class="fa fa-caret-down"></i></p>
+                    <ul id="catalogOptions">
+                        <li><a href="#">Movies</a></li>
+                        <li><a href="series.html">Series</a></li>
+                    </ul>
+                </div>
+
+
+
+                <div class="searchBarContainer">
+                  <div class="searchBar">
+                      <form action="">
+                          <input type="text" placeholder="Search...">
+                          <button type="submit"><i class="fa fa-search"></i></button>
+                      </form>
+                  </div>
+              </div>
+
+            </div>
+        </div>
+    </div>
+</header>
+
+  <div class="corpo container">
+    <section>
+      <div class="filters">
+        <div class="buttons_side">
+          <span>FILTRAR POR</span>
+          <button>Avaliação</button>
+          <button>Populares</button>
+          <button>Gênero</button>
+        </div>
+        <div class="search_side">
+          <input type="text" placeholder="Pesquisar filme..." />
+        </div>
+      </div>
+      <hr class="divisoria">
+    </section>
+
+
+
+    <main>
+      <div class="category">
+        <h2>Filmes Populares</h2>
+        <div class="carrossel-container">
+          <button class="seta" id="seta-esquerda">◀</button>
+
+          <div class="carrossel" id="carrossel">
+            <div class="card">Card 1</div>
+            <div class="card">Card 2</div>
+            <div class="card">Card 3</div>
+            <div class="card">Card 4</div>
+            <div class="card">Card 5</div>
+            <div class="card">Card 6</div>
+            <div class="card">Card 7</div>
+            <div class="card">Card 8</div>
+          </div>
+
+          <button class="seta" id="seta-direita">▶</button>
+        </div>
+
+      </div>
+
+      <div class="category">
+        <h2>Recomendados para Você</h2>
+        <div class="carrossel-container">
+          <button class="seta" id="seta-esquerda2">◀</button>
+
+          <div class="carrossel" id="carrossel2">
+            <div class="card">Card 1</div>
+            <div class="card">Card 2</div>
+            <div class="card">Card 3</div>
+            <div class="card">Card 4</div>
+            <div class="card">Card 5</div>
+            <div class="card">Card 6</div>
+            <div class="card">Card 7</div>
+            <div class="card">Card 8</div>
+          </div>
+
+          <button class="seta" id="seta-direita2">▶</button>
+        </div>
+
+      </div>
+
+      <div class="category">
+        <h2>Estreias da Semana</h2>
+        <div class="carrossel-container">
+          <button class="seta" id="seta-esquerda3">◀</button>
+
+          <div class="carrossel" id="carrossel3">
+            <div class="card">Card 1</div>
+            <div class="card">Card 2</div>
+            <div class="card">Card 3</div>
+            <div class="card">Card 4</div>
+            <div class="card">Card 5</div>
+            <div class="card">Card 6</div>
+            <div class="card">Card 7</div>
+            <div class="card">Card 8</div>
+          </div>
+
+          <button class="seta" id="seta-direita3">▶</button>
+        </div>
+
+      </div>
+
+      <hr class="divisoria">
+
+      <section class="reviews">
+        <h3>REVIEWS MAIS POPULARES ESSA SEMANA</h3>
+
+        <div class="comment-section">
+          <div class="review-card">
+            <div class="movie-thumbnail"></div>
+            <div class="review-main">
+              <h4 class="review-title">Nome Do Filme</h4>
+
+              <div class="review-user">
+                <div class="user-avatar-circle"></div>
+                <div class="user-info">
+                  <span class="username">FULANINHO123</span>
+                  <span class="stars">★★★★★</span>
+                </div>
+              </div>
+              <div class="comment-and-actions">
+                <p class="comment">AAAAAAAAAAAAAAAAAAAAAAAAAAAAA AAAAAAAAAAAAAAAAAAAAAAAAAAAA AAAAAAAA</p>
+                <div class="actions">
+                  <span class="like"><i class='bx bx-like'></i></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr class="divisoria">
+
+        <div class="comment-section">
+          <div class="review-card">
+            <div class="movie-thumbnail"></div>
+            <div class="review-main">
+              <h4 class="review-title">Nome Do Filme</h4>
+
+              <div class="review-user">
+                <div class="user-avatar-circle"></div>
+                <div class="user-info">
+                  <span class="username">FULANINHO123</span>
+                  <span class="stars">★★★★★</span>
+                </div>
+              </div>
+              <div class="comment-and-actions">
+                <p class="comment">AAAAAAAAAAAAAAAAAAAAAAAAAAAAA AAAAAAAAAAAAAAAAAAAAAAAAAAAA AAAAAAAA</p>
+                <div class="actions">
+                  <span class="like"><i class='bx bx-like'></i></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+
+    <div class="footerContent container">
+
+        <div class="upInfo">
+            <div class="browseLinks">
+                <a href="../index.html">Home</a>
+                <!-- <a href="">About</a> -->
+                <a href="../contact.html">
+                    Contact
+                </a>
+                <a href="">
+                    Search
+                </a>
+            </div> <!-- .browseLinks -->
+
+            <div class="socials">
+                <a href="https://www.threads.net/@taylorswift?hl=pt-br" target="_blank">
+                    <i class="fa-brands fa-threads"></i>
+                </a>
+
+                <a href="https://www.instagram.com/taylorswift" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="https://x.com/taylorswift13" target="_blank">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+
+            </div> <!-- .socials -->
+
+        </div> <!-- .upInfo -->
+
+        <div class="copyright">
+            <p>&copy IFSP-CAR. Made by students. Film data from TMDB.</p>
+        </div>
+
+    </div>
+
+</footer>
+
+  </footer>
+  <script src="../src/js/movies.js"></script>
+  <script src="../src/js/header.js"></script>
+  <script src="../src/js/login-signup.js"></script>
+  <script src="../src/js/dropdown-catalog.js"></script>
+  <script src="../src/js/dropdown-user.js"></script>
+</body>
+
+</html>

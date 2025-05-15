@@ -1,0 +1,144 @@
+.preferencesContent {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    width: 450px;
+    margin-top: 20px;
+}
+
+.preferenceOption {
+    background-color: lightgray;
+    border-radius: 5px;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-between;
+
+    P {
+        font-size: 20px;
+        color: black;
+        font-weight: bold;
+    }
+}
+
+/* DROPDOWN */
+.languageSelector {
+    position: relative;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#languageToggle {
+    background-color: lightgray;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    i {
+        font-size: 25px;
+    }
+}
+
+#languageOptions {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    /* background-color: #d3d3d3; */
+    background-color: #363541;
+    border-radius: 5px;
+    width: 100%;
+
+    li {
+        padding: 10px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: white;
+        transition: color 0.3s ease;
+    }
+
+    li:hover {
+        background-color: #4d4c57;
+        border-radius: 5px;
+    }
+}
+
+
+#languageOptions li#selectedLanguage {
+    color: #fada5e;
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* SLIDER TOGGLE */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 32px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #1c1b25;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 24px;
+    width: 24px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #fada5e;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #fada5e;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}

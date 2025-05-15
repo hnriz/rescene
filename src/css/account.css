@@ -1,0 +1,68 @@
+.contaContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 30px;
+
+    h3 {
+        font-size: 25px;
+    }
+}
+
+.input {
+    background-color: white;
+    width: 400px;
+    height: 35px;
+    padding-left: 10px;
+}
+
+.field input[type=text] {
+    font-family: 'Nunito Sans';
+    border-radius: 5px;
+    margin: 10px 0 20px 0;
+}
+
+/* ---------------- DEACTIVATE OPTIONS ---------------- */
+
+#separatorAccount {
+    height: 1px;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.redBtn {
+    background-color: rgb(199, 77, 77);
+    color: white;
+    margin-top: 5px;
+}
+
+.redBtn:hover {
+    box-shadow: 0 4px 8px rgb(119, 48, 48);
+}
+
+.accountContent input[type=text] {
+    font-family: 'Nunito Sans';
+    border-radius: 5px;
+    margin: 10px 0 20px 0;
+}
+
+.accountContainer2 {
+    line-height: 30px;
+    margin-top: 20px;
+
+    h3 {
+        font-size: 25px;
+    }
+}
+
+.accountContent {
+    h3 {
+        margin: 0 0 10px 0;
+    }
+}
+
+.confirmation {
+    margin-top: 15px;
+}
