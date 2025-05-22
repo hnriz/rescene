@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rescene</title>
+
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/footer.css">
+    <link rel="stylesheet" href="src/css/header.css">
+    <link rel="stylesheet" href="src/css/movies.css">
+    <link rel="stylesheet" href="src/css/index.css">
+    <link rel="stylesheet" href="src/css/signin-signup.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <link rel="icon" type="image/x-icon" href="src/img/favicon.ico">
+</head>
+
+<body>
+    <header>
+        <!-- Ícone do menu hambúrguer (mobile) -->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Menu mobile -->
+        <nav class="mobileMenu" id="mobileMenu">
+            <a href="">
+                <img src="src/img/logo-branco.png" alt="" class="logo">
+            </a>
+            <a href="profile/profile.html">USER</a>
+            <a href="catalog/movies.html">MOVIES</a>
+            <a href="catalog/series.html">SERIES</a>
+        </nav>
+
+        <!-- Container principal do cabeçalho -->
+        <div class="headerContainer container">
+            <div class="row">
+                <div class="firstColumn">
+                    <a href="#">
+                        <img src="src/img/logo-branco.png" alt="" class="logo">
+                    </a>
+                </div>
+
+                <div class="lastColumn">
+
+                    <div class="userDropdown">
+                        <div id="dropdownUser">
+                            <div id="userToggle">
+                                <img src="src/img/icon.jpg" alt="" id="avatar">
+                                <span class="username">USER <i class="fa fa-caret-down"></i></span>
+                            </div>
+                            <ul id="userOptions">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="profile/profile.html">Profile</a></li>
+                                <li><a href="profile/watched.html">Watched</a></li>
+                                <li><a href="profile/liked.html">Liked</a></li>
+                                <li><a href="profile/userLists.html">Lists</a></li>
+                                <li><a href="settings/user.html">Settings</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div>
+                        <a href="ranking/rankFilmes.html">TRENDING</a>
+                    </div>
+
+
+                    <div class="catalogDropdown">
+                        <p id="catalogToggle">CATALOG <i class="fa fa-caret-down"></i></p>
+                        <ul id="catalogOptions">
+                            <li><a href="catalog/movies.html">Movies</a></li>
+                            <li><a href="catalog/series.html">Series</a></li>
+                        </ul>
+                    </div>
+
+
+                    <div class="searchBarContainer">
+                        <div class="searchBar">
+                            <form action="">
+                                <input type="text" placeholder="Search...">
+                                <button type="submit"><i class="fa fa-search"></i></button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ------------------- LOGIN ------------------- -->
+    <div id="loginPopup" class="popup-overlay hidden">
+        <div class="popup">
+
+            <div id="loginForm" class="form-container">
+
+                <div class="topPopup">
+                    <h2>SIGN IN</h2>
+                    <span class="close-btn" onclick="togglePopup()"><img src="src/img/x.png"></span>
+                </div>
+
+                <div class="credentialFields">
+
+                    <div class="credentials">
+                        <label>Email address / username</label>
+                        <input type="text" placeholder="Enter email or username" />
+                    </div>
+
+                    <div class="credentials">
+                        <label>Password</label>
+                        <input type="password" placeholder="Enter password" />
+                    </div>
+
+                </div>
+
+                <a href="#" class="forgot">Forgot password?</a>
+
+                <div class="submitBtn">
+                    <button class="submit-btn" id="signin">SIGN IN</button>
+                    <p>Not a member? <span class="switch-link" onclick="showSignup()">Sign up</span></p>
+                </div>
+
+
+            </div>
+
+            <!-- SIGNUP POPUP  -->
+            <div id="signupForm" class="form-container hidden">
+
+                <div class="topPopup">
+                    <h2>JOIN RESCENE</h2>
+                    <span class="close-btn" onclick="togglePopup()"><img src="src/img/x.png"></span>
+                </div>
+
+                <div class="credentialFields">
+                    <div class="credentials">
+                        <label>Email address</label>
+                        <input type="email" placeholder="Enter email" />
+                    </div>
+
+                    <div class="credentials">
+                        <label>Username</label>
+                        <input type="text" placeholder="Choose a username" />
+                    </div>
+
+                    <div class="credentials">
+                        <label>Password</label>
+                        <input type="password" placeholder="Choose a password" />
+                    </div>
+
+                </div>
+
+                <div class="checkboxes">
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="terms" />
+                        <label for="terms">I accept the <a href="#" class="highlight">Terms of Use</a></label>
+                    </div>
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="privacy" />
+                        <label for="privacy">I accept the <a href="#" class="highlight">Privacy Policy</a></label>
+                    </div>
+                </div>
+
+                <div class="submitBtn">
+                    <button class="submit-btn" id="signup">SIGN UP</button>
+                    <p>Already a member? <span class="switch-link" onclick="showLogin()">Sign in</span></p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- ------------------- LOGIN END------------------- -->
+
+    <main>
+        <div class="containerIndex container">
+
+            <div class="hero">
+                <div class="hero-text">Watch.<br> Rate.<br> Remember.</div>
+                <img src="src/img/hero-banner.png" alt="banner">
+
+            </div>
+
+            <!-- filmes -->
+
+            <div class="category">
+                <h2>Filmes Populares</h2>
+                <div class="carrossel-container">
+                    <button class="seta" id="seta-esquerda">◀</button>
+
+                    <div class="carrossel" id="carrossel">
+                        <div class="card">Card 1</div>
+                        <div class="card">Card 2</div>
+                        <div class="card">Card 3</div>
+                        <div class="card">Card 4</div>
+                        <div class="card">Card 5</div>
+                        <div class="card">Card 6</div>
+                        <div class="card">Card 7</div>
+                        <div class="card">Card 8</div>
+                    </div>
+
+                    <button class="seta" id="seta-direita">▶</button>
+                </div>
+
+            </div>
+
+            <div class="category">
+                <h2>Séries Populares</h2>
+                <div class="carrossel-container">
+                    <button class="seta" id="seta-esquerda2">◀</button>
+
+                    <div class="carrossel" id="carrossel2">
+                        <div class="card">Card 1</div>
+                        <div class="card">Card 2</div>
+                        <div class="card">Card 3</div>
+                        <div class="card">Card 4</div>
+                        <div class="card">Card 5</div>
+                        <div class="card">Card 6</div>
+                        <div class="card">Card 7</div>
+                        <div class="card">Card 8</div>
+                    </div>
+
+                    <button class="seta" id="seta-direita2">▶</button>
+                </div>
+
+            </div>
+
+            <section class="reviews">
+                <h3>REVIEWS MAIS POPULARES ESSA SEMANA</h3>
+
+                    <div class="commentSection">
+                        <article class="reviewCard">
+
+                            <div class="movieThumbnail">
+                                <img src="src/img/postTemplate.jpg" alt="">
+                            </div>
+
+                            <div class="reviewMain">
+                                <div class="commentInfoContainer">
+                                    <a href="profile/profile.html" class="reviewUser">
+                                        <div class="userAvatarCircle" aria-hidden="true">
+                                            <img src="src/img/icon.jpg" alt="">
+                                        </div>
+                                        <span class="username">FULANINHO123</span>
+                                    </a>
+
+                                    <div class="userInfo">
+                                        <span class="stars" aria-label="4 out of 5 stars">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                        </span>
+                                    </div>
+                                </div>
+
+
+                                <div class="commentAndActions">
+                                    <p class="comment">AAAAA AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+                                        AAAAAAAA</p>
+                                    <div class="actions">
+                                        <button type="button" class="commentLike" aria-label="Like this review">
+                                            <span class="like"><i class='bx bx-like'></i></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                <hr class="divisoria">
+            </section>
+
+        </div>
+    </main>
+
+    </div>
+
+    <footer>
+
+        <div class="footerContent container">
+
+            <div class="upInfo">
+                <div class="browseLinks">
+                    <a href="index.html">Home</a>
+                    <!-- <a href="">About</a> -->
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                    <a href="search.html">
+                        Search
+                    </a>
+                </div> <!-- .browseLinks -->
+
+                <div class="socials">
+                    <a href="https://www.threads.net/@taylorswift?hl=pt-br" target="_blank">
+                        <i class="fa-brands fa-threads"></i>
+                    </a>
+
+                    <a href="https://www.instagram.com/taylorswift" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="https://x.com/taylorswift13" target="_blank">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+
+                </div> <!-- .socials -->
+
+            </div> <!-- .upInfo -->
+
+            <div class="copyright">
+                <p>&copy IFSP-CAR. Made by students. Film data from TMDB.</p>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script src="src/js/login-signup.js"></script>
+    <script src="src/js/dropdown-catalog.js"></script>
+    <script src="src/js/dropdown-user.js"></script>
+    <script src="src/js/main-page.js"></script>
+    <script src="src/js/movies.js"></script>
+    <script src="src/js/header.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rescene | Profile Settings</title>
+
+  <link rel="stylesheet" href="../src/css/reset.css">
+  <link rel="stylesheet" href="../src/css/footer.css">
+  <link rel="stylesheet" href="../src/css/body.css">
+  <link rel="stylesheet" href="../src/css/header.css">
+  <link rel="stylesheet" href="../src/css/settings-body.css">
+  <link rel="stylesheet" href="../src/css/user.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="icon" type="image/x-icon" href="../src/img/favicon.ico">
+
+<body>
+
+  <header>
+    <!-- Ícone do menu hambúrguer (mobile) -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Menu mobile -->
+    <nav class="mobileMenu" id="mobileMenu">
+      <a href="">
+        <img src="../src/img/logo-branco.png" alt="" class="logo">
+      </a>
+      <a href="../profile/profile.html">USER</a>
+      <a href="../ranking/rankFilmes.html">TRENDING</a>
+      <a href="../catalog/movies.html">MOVIES</a>
+      <a href="../catalog/series.html">SERIES</a>
+    </nav>
+
+    <!-- Container principal do cabeçalho -->
+    <div class="headerContainer container">
+      <div class="row">
+        <div class="firstColumn">
+          <a href="../index.html">
+            <img src="../src/img/logo-branco.png" alt="" class="logo">
+          </a>
+        </div>
+
+        <div class="lastColumn">
+
+          <div class="userDropdown">
+            <div id="dropdownUser">
+              <div id="userToggle">
+                <img src="../src/img/icon.jpg" alt="" id="avatar">
+                <span class="username">USER <i class="fa fa-caret-down"></i></span>
+              </div>
+              <ul id="userOptions">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../profile/profile.html">Profile</a></li>
+                <li><a href="../profile/watched.html">Films</a></li>
+                <li><a href="../profile/liked.html">Liked</a></li>
+                <li><a href="../profile/userLists.html">Lists</a></li>
+                <li><a href="#">Settings</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div>
+            <a href="../ranking/rankFilmes.html">TRENDING</a>
+          </div>
+
+          <div class="catalogDropdown">
+            <p id="catalogToggle">CATALOG <i class="fa fa-caret-down"></i></p>
+            <ul id="catalogOptions">
+              <li><a href="../catalog/movies.html">Movies</a></li>
+              <li><a href="../catalog/series.html">Series</a></li>
+            </ul>
+          </div>
+
+
+
+          <div class="searchBarContainer">
+            <div class="searchBar">
+              <form action="">
+                <input type="text" placeholder="Search...">
+                <button type="submit"><i class="fa fa-search"></i></button>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="containerSettings container">
+
+    <h2>SETTINGS</h2>
+
+
+    <div class="settingsNav">
+      <a href="#" id="current">Profile</a>
+      <a href="avatar.html">Avatar</a>
+      <a href="language.html">Language</a>
+      <a href="account.html">Account</a>
+    </div>
+
+    <div class="separatorSettings"></div>
+
+
+    <form action="">
+      <div class="userContent">
+        <div class="userCredentials">
+
+          <h3>Profile</h3>
+
+          <div class="typeFields">
+            <div class="field">
+              <p>New username:</p>
+              <input type="text" class="input">
+              <p></p>
+              </input>
+            </div>
+
+            <div class="field">
+              <p>New nickname:</p>
+              <input type="text" class="input">
+              <p></p>
+              </input>
+            </div>
+
+            <div class="field">
+              <p>New email:</p>
+              <input type="text" class="input">
+              <p></p>
+              </input>
+            </div>
+
+            <div class="field">
+              <p>New bio:</p>
+              <input type="text" class="input">
+              <p></p>
+              </input>
+            </div>
+
+            <div class="field">
+              <p>Pronouns:</p>
+              <input type="text" class="input">
+              <p></p>
+              </input>
+            </div>
+
+            <button type="submit" class="btn">
+              Save
+            </button>
+
+          </div>
+        </div>
+
+        <div class="favoritesContainer">
+          <h3>Favorite Movies</h3>
+          <section class="favoritesContent">
+
+
+            <a href="#" class="card addCard">
+              <i class="fa-solid fa-plus"></i>
+            </a>
+            <a href="#" class="card addCard">
+              <i class="fa-solid fa-plus"></i>
+            </a>
+            <a href="#" class="card addCard">
+              <i class="fa-solid fa-plus"></i>
+            </a>
+
+              <a href="#" class="card addCard">
+                <i class="fa-solid fa-plus"></i>
+              </a>
+
+          </section>
+        </div>
+
+
+      </div>
+    </form>
+
+  </div>
+
+  <footer>
+
+    <div class="footerContent container">
+
+      <div class="upInfo">
+        <div class="browseLinks">
+          <a href="../index.html">Home</a>
+          <!-- <a href="">About</a> -->
+          <a href="../contact.html">
+            Contact
+          </a>
+          <a href="../search.html">
+            Search
+          </a>
+        </div> <!-- .browseLinks -->
+
+        <div class="socials">
+          <a href="https://www.threads.net/@taylorswift?hl=pt-br" target="_blank">
+            <i class="fa-brands fa-threads"></i>
+          </a>
+
+          <a href="https://www.instagram.com/taylorswift" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+
+          <a href="https://x.com/taylorswift13" target="_blank">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+
+        </div> <!-- .socials -->
+
+      </div> <!-- .upInfo -->
+
+      <div class="copyright">
+        <p>&copy IFSP-CAR. Made by students. Film data from TMDB.</p>
+      </div>
+
+    </div>
+
+  </footer>
+
+  <script src="src/js/dropdown-catalog.js"></script>
+  <script src="src/js/dropdown-user.js"></script>
+  <script src="../src/js/header.js"></script>
+
+</body>
+
+</html>

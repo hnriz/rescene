@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rescene | Top 100 Series</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../src/css/reset.css">
+    <link rel="stylesheet" href="../src/css/footer.css">
+    <link rel="stylesheet" href="../src/css/header.css">
+    <link rel="stylesheet" href="../src/css/ranks.css">
+    <link rel="stylesheet" href="../src/css/animations.css">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="icon" href="img/logo-branco.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+        <link rel="icon" type="image/x-icon" href="../src/img/favicon.ico">
+</head>
+
+<body class="page-transition">
+    <header>
+        <!-- Ícone do menu hambúrguer (mobile) -->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Menu mobile -->
+        <nav class="mobileMenu" id="mobileMenu">
+            <a href="">
+                <img src="../src/img/logo-branco.png" alt="" class="logo">
+            </a>
+            <a href="../profile/profile.html">USER</a>
+            <a href="rankFilmes.html">TRENDING</a>
+            <a href="../catalog/movies.html">MOVIES</a>
+            <a href="../catalog/series.html">SERIES</a>
+        </nav>
+
+        <!-- Container principal do cabeçalho -->
+        <div class="headerContainer container">
+            <div class="row">
+                <div class="firstColumn">
+                    <a href="../index.html">
+                        <img src="../src/img/logo-branco.png" alt="" class="logo">
+                    </a>
+                </div>
+
+                <div class="lastColumn">
+
+                    <div class="userDropdown">
+                        <div id="dropdownUser">
+                            <div id="userToggle">
+                                <img src="../src/img/icon.jpg" alt="" id="avatar">
+                                <span class="username">USER <i class="fa fa-caret-down"></i></span>
+                            </div>
+                            <ul id="userOptions">
+                                <li><a href="../index.html">Home</a></li>
+                                <li><a href="../profile/profile.html">Profile</a></li>
+                                <li><a href="../profile/watched.html">Watched</a></li>
+                                <li><a href="../profile/liked.html">Liked</a></li>
+                                <li><a href="../profile/userLists.html">Lists</a></li>
+                                <li><a href="../settings/user.html">Settings</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div>
+                        <a href="rankFilmes.html">TRENDING</a>
+                    </div>
+
+
+                    <div class="catalogDropdown">
+                        <p id="catalogToggle">CATALOG <i class="fa fa-caret-down"></i></p>
+                        <ul id="catalogOptions">
+                            <li><a href="../catalog/movies.html">Movies</a></li>
+                            <li><a href="../catalog/series.html">Series</a></li>
+                        </ul>
+                    </div>
+
+
+
+                    <div class="searchBarContainer">
+                        <div class="searchBar">
+                            <form action="">
+                                <input type="text" placeholder="Search...">
+                                <button type="submit"><i class="fa fa-search"></i></button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content container">
+        <div class="ranking-navbar">
+            <nav class="ranking-tabs">
+                <a href="rankFilmes.html" class="ranking-tab" data-tab="filmes">
+                    <span class="tab-icon">🎬</span>
+                    <span class="tab-text">Top 100 Filmes</span>
+                    <span class="tab-underline"></span>
+                </a>
+                <a href="rankUsers.html" class="ranking-tab" data-tab="usuarios">
+                    <span class="tab-icon">👥</span>
+                    <span class="tab-text">Top 10 Usuários</span>
+                    <span class="tab-underline"></span>
+                </a>
+                <a href="rankMaisAtivos.html" class="ranking-tab" data-tab="ativos">
+                    <span class="tab-icon">⚡</span>
+                    <span class="tab-text">Top 10 Ativos</span>
+                    <span class="tab-underline"></span>
+                </a>
+                <a href="rankSeries.html" class="ranking-tab active" data-tab="series">
+                    <span class="tab-icon">📺</span>
+                    <span class="tab-text">Top 100 Séries</span>
+                    <span class="tab-underline"></span>
+                </a>
+                <a href="rankComents.html" class="ranking-tab" data-tab="comentarios">
+                    <span class="tab-icon">💬</span>
+                    <span class="tab-text">Top 10 Comentários</span>
+                    <span class="tab-underline"></span>
+                </a>
+            </nav>
+        </div>
+
+        <div class="ranking-container">
+            <div class="ranking-header">
+                <h1 class="ranking-title">Top 100 Séries</h1>
+                <p class="ranking-subtitle">Available em: <span class="highlight">15 Apr 2025</span></p>
+            </div>
+
+            <div class="ranking-table-container">
+                <table class="ranking-table">
+                    <thead>
+                        <tr>
+                            <th class="rank-col">#</th>
+                            <th class="main-col">Série</th>
+                            <th class="score-col">Nota</th>
+                            <th class="season-col">Temporadas</th>
+                        </tr>
+                    </thead>
+                    <tbody id="ranking-body">
+                        <!-- Conteúdo JS entra aqui -->
+                    </tbody>
+                </table>
+
+                <div class="see-more-container">
+                    <button id="see-more-btn" class="see-more">Ver Mais</button>
+                    <button id="see-less-btn" class="see-less" style="display: none;">Ver Menos</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <footer>
+
+        <div class="footerContent container">
+
+            <div class="upInfo">
+                <div class="browseLinks">
+                    <a href="../index.html">Home</a>
+                    <!-- <a href="">About</a> -->
+                    <a href="../contact.html">
+                        Contact
+                    </a>
+                    <a href="../search.html">
+                        Search
+                    </a>
+                </div> <!-- .browseLinks -->
+
+                <div class="socials">
+                    <a href="https://www.threads.net/@taylorswift?hl=pt-br" target="_blank">
+                        <i class="fa-brands fa-threads"></i>
+                    </a>
+
+                    <a href="https://www.instagram.com/taylorswift" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="https://x.com/taylorswift13" target="_blank">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+
+                </div> <!-- .socials -->
+
+            </div> <!-- .upInfo -->
+
+            <div class="copyright">
+                <p>&copy IFSP-CAR. Made by students. Film data from TMDB.</p>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- <script src="js/ranks.js" type="module"></script> -->
+    <!-- <script src="js/animationsRanks.js"></script> -->
+    <script src="../src/js/header.js"></script>
+    <script src="../src/js/dropdown-catalog.js"></script>
+    <script src="../src/js/dropdown-user.js"></script>
+    <script src="../src/js/header.js"></script>
+
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // Geração de séries com nota entre 3.00 e 5.00
+        const series = Array.from({ length: 100 }, (_, i) => ({
+            title: `Série ${i + 1}`,
+            description: `Descrição da série ${i + 1}`,
+            discipline: `Categoria ${Math.ceil((i + 1) / 10)}`,
+            score: (Math.random() * 2 + 3).toFixed(2), // entre 3 e 5
+            temporadas: Math.ceil(Math.random() * 10), // Número de temporadas aleatórias
+        }));
+
+        // Ordena do maior para o menor
+        series.sort((a, b) => b.score - a.score);
+        series.forEach((serie, index) => serie.rank = index + 1);
+
+        const tableBody = document.getElementById("ranking-body");
+        const seeMoreBtn = document.getElementById("see-more-btn");
+        const seeLessBtn = document.getElementById("see-less-btn");
+
+        let currentIndex = 0;
+        const increment = 25;
+
+        // Função para renderizar as séries do índice 0 até currentIndex
+        function renderRankingList(from = 0, to = increment) {
+            tableBody.innerHTML = ""; // Limpa a tabela
+            const itemsToRender = series.slice(from, to);
+            itemsToRender.forEach((serie) => {
+                const row = document.createElement("tr");
+                row.classList.add("ranking-item");
+                row.innerHTML = `
+                    <td class="rank-cell">
+                        <div class="rank-badge ${serie.rank === 1 ? "gold" : serie.rank === 2 ? "silver" : serie.rank === 3 ? "bronze" : ""}">${serie.rank}</div>
+                    </td>
+                    <td class="main-cell">
+                        <div class="item-content">
+                            <h3 class="item-title">${serie.title}</h3>
+                            <p class="item-description">${serie.description}</p>
+                            <div class="item-meta">
+                                <span class="meta-tag">Categoria: ${serie.discipline}</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="score-cell">
+                        <div class="score-value">${serie.score}</div>
+                    </td>
+                    <td class="season-cell">
+                        <div class="season-value">${serie.temporadas}</div>
+                    </td>
+                `;
+                tableBody.appendChild(row);
+            });
+        }
+
+        // Clique em "Ver mais"
+        seeMoreBtn.addEventListener("click", () => {
+            currentIndex += increment;
+            renderRankingList(0, currentIndex);
+            if (currentIndex >= series.length) {
+                seeMoreBtn.style.display = "none";
+                seeLessBtn.style.display = "inline-block";
+            }
+        });
+
+        // Clique em "Ver menos"
+        seeLessBtn.addEventListener("click", () => {
+            currentIndex = increment;
+            renderRankingList(0, currentIndex);
+            seeLessBtn.style.display = "none";
+            seeMoreBtn.style.display = "inline-block";
+        });
+
+        // Inicializa com os primeiros 25
+        currentIndex = increment;
+        renderRankingList(0, currentIndex);
+    });
+</script>
+
+</html>

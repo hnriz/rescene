@@ -1,0 +1,553 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+.profilePage {
+    /* background: #2b2a33; */
+    color: #fff;
+  }
+  
+  .profileHeader {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: linear-gradient(to bottom, #d1b241 0%, #1c1b25 100%);
+    color: #fff;
+    height: 350px;
+  }
+  
+  .profileInfo {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-left: 20%;
+  }
+  
+  .profileAvatar {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background-color: #ccc;
+  }
+  
+  .userDetails h1 {
+    margin-bottom: 10px;
+    font-size: 1.6em;
+  }
+  
+  .userDetails span {
+    font-size: 1.2em;
+    color: #ccc;
+  }
+  
+  .userDetails p {
+    margin-top: 30px;
+    font-size: 1.0 em;
+    color: #ccc;
+  }
+  
+  .profileStats {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-right: 20%;
+  }
+  
+  .stat {
+    text-align: center;
+  }
+  
+  .stat strong {
+    display: block;
+    font-size: 1.8em;
+    margin-bottom: 8px;
+  }
+  
+  .stat span {
+    font-size: 1.2em;
+    color: #ccc;
+  }
+  
+  .button {
+    font-size: 1.0em;
+    color: white;
+    background: #bfbfbf;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 150px;
+    height: 65px;
+    border-radius: 8px;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .button:hover{
+    background-color: #4d4c57;
+    transform: scale(1.03);
+    color: #ffe26c;
+  }
+  
+  .profileNav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: #4d4c57;
+    padding: 10px 0;
+    color: white;
+    font-weight: bold;
+    height: 60px;
+    /* margin: 0 20% 20px 20%; */
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .profileNav a {
+    text-decoration: none;
+    font-size: 1.4em;
+    transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+    display: inline-block;
+    color: white;
+  }
+  
+  .profileNav a:hover {
+    color: #b4b4b4;
+  }
+
+  .profileNav a[href="#"] {
+    color: #ffe26c;
+  }
+  
+  .profileContent {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 30px;
+      justify-content: center;
+      justify-items: center;
+    }
+  
+  .card {
+    width: 150px;
+    height: 210px;
+    background-color: #3e3c46;
+    border-radius: 8px;
+    margin: 20px;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 2px 10px #ffe26c;
+    transition: all .3s ease-in-out;
+  }
+
+
+  .listProfileContent {
+    /* margin: 0 20% 0 20%; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    justify-content: center;
+    justify-items: center;
+  }
+
+
+  .listCard {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    margin: 20px;
+    text-decoration: none;
+    width: 200px;
+    gap: 10px;
+    padding: 20px;
+  }
+
+  .listCard:hover {
+    transform: translateY(-5px);
+    transition: all .3s ease-in-out;
+    box-shadow: 0 2px 10px #ffe26c;
+
+    h3 {
+      color: #ffe26c;
+    }
+
+
+  }
+  
+  .listCard img {
+    width: 200px;
+    height: 200px;
+    border-radius: 8px;
+  }
+
+  .listCard h3 {
+    font-size: 25px;
+    transition: all .3s ease-in-out;
+  }
+
+  .listCard .user {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  
+  
+  img{
+    height: 25px;
+    width: 25px;
+    border-radius: 100%;
+    margin-right: 10px;
+}}
+
+.create {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 100px;
+  padding-bottom: 40px;
+  align-items: center;
+  font-size: 2.5rem;
+  color: #fff;
+  background-color: #2a2931;
+  border: 2px dashed #ffe26c;
+  cursor: pointer;
+
+  i {
+    font-size: 75px;
+    transition: all .3s ease-in-out;
+  }
+}
+
+.create:hover {
+  background-color: #3e3c46;
+  box-shadow: 0 2px 12px #ffe26c;
+
+  i {
+    color: #ffe26c;
+  }
+}
+
+
+
+.commentSection {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reviewCard {
+  display: flex;
+  gap: 1rem;
+  background-color: transparent;
+  padding: 1rem 0;
+}
+
+.movieThumbnail {
+  width: 180px;
+  height: 240px;
+  background-color: #3e3c46;
+  border-radius: 6px;
+}
+
+.reviewMain {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: min-content;
+}
+
+.reviewTitle {
+  font-weight: 600;
+  font-size: 1.4rem;
+  margin-bottom: 1.1rem;
+  margin-top: 0.8rem;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.1rem;
+}
+
+.userAvatarCircle {
+  width: 40px;
+  height: 40px;
+  background-color: #3d3a49;
+  border-radius: 50%;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  gap: 25px;
+}
+
+.user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 7px;
+}
+
+.stars {
+  color: gold;
+  font-size: 0.9rem;
+  height: 40px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.commentAndActions {
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
+  width: 550px;
+}
+
+.like i {
+   font-size: 25px;
+   margin-bottom: 5px;
+   transition: all .3s ease-in-out;
+}
+
+.like i:hover {
+  color: #ffe26c;
+  cursor: pointer;
+}
+
+.comment {
+  flex: 1;
+  background: #444150;
+  border: 1px solid rgba(255, 255, 255, 0.267);
+  padding: 0.7rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin: 0;
+  min-height: 100px;
+  text-align: justify;
+  min-width: 60%;
+}
+
+.actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 0.2rem;
+  gap: 0.4rem;
+}
+
+.actions span {
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin-right: 0.7rem;
+  transition: transform 0.2s;
+}
+
+.actions span:hover {
+  transform: scale(1.1);
+}
+
+ @media (max-width: 1024px) {
+    .profileHeader {
+      flex-direction: column;
+      align-items: center;
+      height: auto;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .profileInfo {
+      flex-direction: column;
+      margin: 0;
+      gap: 15px;
+    }
+
+    .profileStats {
+      margin: 20px 0 0;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .profileNav {
+      margin: 0 10% 20px;
+      flex-wrap: wrap;
+      justify-content: center; 
+      align-items: center;
+    }
+
+    .profileNav.container {
+      display: flex;
+      justify-content: center; 
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px; 
+      margin: 0 auto 20px; 
+      padding: 0 10px; 
+      max-width: 800px; 
+    }
+
+    .profileContent,
+    .listProfileContent {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      padding: 0 10px;
+    }
+
+    .card,
+    .listCard,
+    .create {
+      width: 100%;
+      max-width: 220px;
+      margin: 10px;
+    }
+
+    .listCard img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+    }
+
+    .create {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+      background-color: #2a2931;
+      border: 2px dashed #ffe26c;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      text-align: center;
+    }
+
+    .create i {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .reviewCard {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .movieThumbnail {
+      width: 100%;
+      max-width: 220px;
+      height: auto;
+    }
+
+    .reviewMain,
+    .commentAndActions {
+      width: 100%;
+      max-width: 90%;
+    }
+
+    .commentAndActions {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .comment {
+      width: 100%;
+      min-width: unset;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .profileHeader {
+      padding: 30px 10px;
+    }
+
+    .profileInfo {
+      gap: 10px;
+    }
+
+    .profileAvatar {
+      width: 130px;
+      height: 130px;
+    }
+
+    .userDetails h1 {
+      font-size: 1.3em;
+    }
+
+    .userDetails span,
+    .userDetails p {
+      font-size: 1em;
+    }
+
+    .profileStats {
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .profileNav a {
+      font-size: 1.1em;
+    }
+
+    .card,
+    .listCard,
+    .create {
+      max-width: 100%;
+      margin: 10px;
+    }
+
+    .listCard{
+      width: 230px;
+      height: 300px;
+    }
+
+    .card {
+      width: 105px;
+      height: 135px;
+    }
+
+    .listCard img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+    }
+
+    .create {
+      padding-top: 40px;
+      font-size: 1.8rem;
+    }
+
+    .create i {
+      font-size: 2.5rem;
+    }
+
+    .reviewTitle {
+      font-size: 1.2rem;
+    }
+
+    .stars {
+      justify-content: center;
+      width: 100%;
+    }
+
+    .userInfo {
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .commentAndActions {
+      gap: 0.5rem;
+    }
+
+    .like i {
+      font-size: 20px;
+    }
+  }

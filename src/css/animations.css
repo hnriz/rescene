@@ -1,0 +1,87 @@
+/* Animações de entrada */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Aplicando animações */
+.ranking-navbar {
+    animation: fadeInUp 0.6s ease both;
+}
+
+.ranking-header {
+    animation: fadeInUp 0.6s ease 0.2s both;
+}
+
+.ranking-table-container {
+    animation: scaleIn 0.6s ease 0.4s both;
+}
+
+.ranking-item {
+    animation: fadeInUp 0.5s ease both;
+}
+
+/* Animações de hover */
+.ranking-item:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.ranking-tab:hover .tab-underline {
+    transform: scaleX(1);
+}
+
+/* Efeito de onda ao clicar */
+.ripple-effect {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(0);
+    animation: ripple 0.6s linear;
+    pointer-events: none;
+}
+
+@keyframes ripple {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+/* Efeito de transição de página */
+.page-transition {
+    opacity: 1;
+    transition: opacity 0.4s ease;
+}
+
+.page-transition.fade-out {
+    opacity: 0;
+}
