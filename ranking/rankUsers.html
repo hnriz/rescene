@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranking | Top 10 Users</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../src/css/reset.css">
+    <link rel="stylesheet" href="../src/css/footer.css">
+    <link rel="stylesheet" href="../src/css/header.css">
+    <link rel="stylesheet" href="../src/css/ranks.css">
+    <link rel="stylesheet" href="../src/css/animations.css">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="icon" href="../src/img/logo-branco.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <link rel="icon" type="image/x-icon" href="../src/img/favicon.ico">
+</head>
+
+<body>
+    <header>
+        <!-- Ícone do menu hambúrguer (mobile) -->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Menu mobile -->
+        <nav class="mobileMenu" id="mobileMenu">
+            <a href="../index.html">
+                <img src="../src/img/logo-branco.png" class="logo">
+            </a>
+            <a href="../profile/profile.html">PERFIL</a>
+            <a href="../catalog/movies.html">FILMES</a>
+            <a href="../catalog/series.html">SÉRIES</a>
+            <a href="../ranking/rankFilmes.html">POPULARES</a>
+            <a href="../settings/user.html">CONFIGURAÇÕES</a>
+        </nav>
+
+
+        <!-- Container principal do cabeçalho -->
+        <div class="headerContainer container">
+            <div class="row">
+                <div class="firstColumn">
+                    <a href="../index.html">
+                        <img src="../src/img/logo-branco.png" alt="" class="logo">
+                    </a>
+                </div>
+
+                <div class="lastColumn">
+
+                    <div class="userDropdown">
+                        <div id="dropdownUser">
+                            <div id="userToggle">
+                                <img src="../src/img/icon.jpg" alt="" id="avatar">
+                                <span class="username">LOG IN <i class="fa fa-caret-down"></i></span>
+                            </div>
+                            <ul id="userOptions">
+                                <li><a href="../index.html">Página Inicial</a></li>
+                                <li><a href="../profile/profile.html">Perfil</a></li>
+                                <li><a href="../profile/watched.html">Assistido</a></li>
+                                <li><a href="../profile/liked.html">Favoritadado</a></li>
+                                <li><a href="../profile/userLists.html">Listas</a></li>
+                                <li><a href="../settings/user.html">Configurações</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div>
+                        <a href="../ranking/rankFilmes.html">POPULARES</a>
+                    </div>
+
+
+                    <div class="catalogDropdown">
+                        <p id="catalogToggle">CATÁLOGO <i class="fa fa-caret-down"></i></p>
+                        <ul id="catalogOptions">
+                            <li><a href="../catalog/movies.html">Filmes</a></li>
+                            <li><a href="../catalog/series.html">Séries</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="searchBarContainer">
+                        <div class="searchBar">
+                            <form action="">
+                                <input type="text" placeholder="Search...">
+                                <button type="submit"><i class="fa fa-search"></i></button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content container">
+        <div class="ranking-navbar">
+            <nav class="ranking-tabs">
+                <a href="rankFilmes.html" class="ranking-tab" data-tab="filmes">
+                    <span class="tab-icon"><i class="fa-solid fa-clapperboard"></i></span>
+                    <span class="tab-text">Top 100 Filmes</span>
+                    <span class="tab-underline"></span>
+                </a>
+                <a href="rankUsers.html" class="ranking-tab active" data-tab="usuarios">
+                    <span class="tab-icon"><i class="fa-solid fa-user-group"></i></span>
+                    <span class="tab-text">Top 10 Usuários</span>
+                    <span class="tab-underline"></span>
+                </a>
+                <a href="rankMaisAtivos.html" class="ranking-tab" data-tab="ativos">
+                    <span class="tab-icon"><i class="fa-solid fa-bolt"></i></span>
+                    <span class="tab-text">Top 10 Ativos</span>
+                    <span class="tab-underline"></span>
+                </a>
+                <a href="rankSeries.html" class="ranking-tab" data-tab="series">
+                    <span class="tab-icon"><i class="fa-solid fa-tv"></i></span>
+                    <span class="tab-text">Top 100 Séries</span>
+                    <span class="tab-underline"></span>
+                </a>
+                <a href="rankComents.html" class="ranking-tab" data-tab="comentarios">
+                    <span class="tab-icon"><i class="fa-solid fa-comment"></i></span>
+                    <span class="tab-text">Top 10 Comentários</span>
+                    <span class="tab-underline"></span>
+                </a>
+            </nav>
+        </div>
+
+        <div class="ranking-container">
+            <div class="ranking-header">
+                <h2 class="ranking-title">Top 10 Usuários Mais Seguidos</h2>
+            </div>
+
+            <div class="ranking-table-container">
+                <table class="ranking-table">
+                    <thead>
+                        <tr class="ranking-item">
+                            <th class="rank-col">#</th>
+                            <th class="avatar-col">Avatar</th>
+                            <th class="main-col">Usuário</th>
+                            <th class="score-col">Seguidores</th>
+                        </tr>
+                    </thead>
+                    <tbody id="user-ranking-body">
+                        <!-- Inseridos por JS -->
+                    </tbody>
+                </table>
+                <div class="see-more-container">
+                    <button id="see-more-users" class="see-more">Ver mais</button>
+                    <button id="see-less-users" class="see-less" style="display: none;">Ver menos</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+
+        <div class="footerContent container">
+    
+            <div class="upInfo">
+                <div class="browseLinks">
+                    <a href="../index.html">Página Inicial</a>
+                    <!-- <a href="">About</a> -->
+                    <a href="../contact.html">
+                        Contate
+                    </a>
+                    <a href="../search.html">
+                        Pesquisa
+                    </a>
+                </div> <!-- .browseLinks -->
+    
+                <div class="socials">
+                    <a href="https://www.threads.com/@resceneoficial" target="_blank">
+                        <i class="fa-brands fa-threads"></i>
+                    </a>
+
+                    <a href="https://www.instagram.com/resceneoficial/" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="https://x.com/resceneoficial" target="_blank">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+    
+                </div> <!-- .socials -->
+    
+            </div> <!-- .upInfo -->
+    
+            <div class="copyright">
+                <p>&copy IFSP-CAR. Feito por estudates. Dados por TMDB.</p>
+            </div>
+    
+        </div>
+    
+    </footer>
+
+    <!-- <script src="js/animationsRanks.js"></script> -->
+    <script src="../src/js/header.js"></script>
+    <script src="../src/js/dropdown-catalog.js"></script>
+    <script src="../src/js/dropdown-user.js"></script>
+    <script src="../src/js/header.js"></script>
+</body>
+
+<script>
+    const usersData = [
+        { nome: "MovieLover42", avatar: "assets/avatars/avatar1.jpg", tipo: "Crítico profissional", reviews: "1.200 reviews", seguidores: "300K" },
+        { nome: "CinemaAddict", avatar: "assets/avatars/avatar2.jpg", tipo: "Fã de terror", reviews: "850 reviews", seguidores: "295K" },
+        { nome: "DramaQueen", avatar: "assets/avatars/avatar3.jpg", tipo: "Dramas intensos", reviews: "1.000 reviews", seguidores: "290K" },
+        { nome: "RetroCine", avatar: "assets/avatars/avatar4.jpg", tipo: "Amante do cinema clássico", reviews: "600 reviews", seguidores: "275K" },
+        { nome: "PopcornFan", avatar: "assets/avatars/avatar5.jpg", tipo: "Pipoca e ação", reviews: "700 reviews", seguidores: "260K" },
+        { nome: "HorrorHunter", avatar: "assets/avatars/avatar6.jpg", tipo: "Especialista em horror", reviews: "530 reviews", seguidores: "250K" },
+        { nome: "SeriesJunkie", avatar: "assets/avatars/avatar7.jpg", tipo: "Maratonador oficial", reviews: "900 reviews", seguidores: "245K" },
+        { nome: "DocuLover", avatar: "assets/avatars/avatar8.jpg", tipo: "Documentarista", reviews: "480 reviews", seguidores: "240K" },
+        { nome: "IndieSoul", avatar: "assets/avatars/avatar9.jpg", tipo: "Cinema alternativo", reviews: "390 reviews", seguidores: "235K" },
+        { nome: "BlockbusterKing", avatar: "assets/avatars/avatar10.jpg", tipo: "Explosões e bilheteria", reviews: "850 reviews", seguidores: "230K" },
+    ];
+
+    const tbody = document.getElementById("user-ranking-body");
+
+    usersData.forEach((user, index) => {
+        const tr = document.createElement("tr");
+        tr.classList.add("ranking-item");
+        tr.innerHTML = `
+            <td class="rank-cell">
+                <div class="rank-badge ${index === 0 ? "gold" : index === 1 ? "silver" : index === 2 ? "bronze" : ""}">${index + 1}</div>
+            </td>
+            <td class="avatar-cell">
+                <div class="avatar-wrapper">
+                    <img src="${user.avatar}" alt="${user.nome}" class="user-avatar">
+                </div>
+            </td>
+            <td class="main-cell">
+                <div class="item-content">
+                    <h3 class="item-title">${user.nome}</h3>
+                    <div class="item-meta">
+                        <span class="meta-tag">${user.tipo}</span>
+                        <span class="meta-tag">${user.reviews}</span>
+                    </div>
+                </div>
+            </td>
+            <td class="score-cell">
+                <div class="score-value">${user.seguidores}</div>
+                <div class="score-label">seguidores</div>
+            </td>
+        `;
+        tbody.appendChild(tr);
+    });
+
+    // Lógica de exibição parcial
+    const allUserRows = document.querySelectorAll(".ranking-item");
+    const seeMoreUsersBtn = document.getElementById("see-more-users");
+    const seeLessUsersBtn = document.getElementById("see-less-users");
+
+    let userVisibleCount = 5;
+
+    function updateUserVisibility() {
+        allUserRows.forEach((row, index) => {
+            row.style.display = index < userVisibleCount ? "table-row" : "none";
+        });
+
+        seeMoreUsersBtn.style.display = userVisibleCount >= allUserRows.length ? "none" : "inline-block";
+        seeLessUsersBtn.style.display = userVisibleCount >= allUserRows.length ? "inline-block" : "none";
+    }
+
+    updateUserVisibility();
+
+    seeMoreUsersBtn.addEventListener("click", () => {
+        userVisibleCount = allUserRows.length;
+        updateUserVisibility();
+    });
+
+    seeLessUsersBtn.addEventListener("click", () => {
+        userVisibleCount = 5;
+        updateUserVisibility();
+    });
+</script>
+
+</html>

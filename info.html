@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rescene | Cassandra</title>
+
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/footer.css">
+    <link rel="stylesheet" href="src/css/body.css">
+    <link rel="stylesheet" href="src/css/header.css">
+    <link rel="stylesheet" href="src/css/info.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="icon" type="image/x-icon" href="src/img/favicon.ico">
+</head>
+
+<body>
+
+    <header>
+        <!-- Ícone do menu hambúrguer (mobile) -->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Menu mobile -->
+        <nav class="mobileMenu" id="mobileMenu">
+            <a href="../index.html">
+                <img src="../src/img/logo-branco.png" class="logo">
+            </a>
+            <a href="../profile/profile.html">PERFIL</a>
+            <a href="../catalog/movies.html">FILMES</a>
+            <a href="../catalog/series.html">SÉRIES</a>
+            <a href="../ranking/rankFilmes.html">POPULARES</a>
+            <a href="../settings/user.html">CONFIGURAÇÕES</a>
+        </nav>
+
+
+        <!-- Container principal do cabeçalho -->
+        <div class="headerContainer container">
+            <div class="row">
+                <div class="firstColumn">
+                    <a href="index.html">
+                        <img src="src/img/logo-branco.png" alt="" class="logo">
+                    </a>
+                </div>
+
+                <div class="lastColumn">
+
+                    <div class="userDropdown">
+                        <div id="dropdownUser">
+
+                            <div id="userToggle">
+                                <img src="src/img/icon.jpg" alt="" id="avatar">
+                                <span class="username">LOG IN <i class="fa fa-caret-down"></i></span>
+                            </div>
+
+                            <ul id="userOptions">
+                                <li><a href="index.html">Página Inicial</a></li>
+                                <li><a href="profile/profile.html">Perfil</a></li>
+                                <li><a href="profile/watched.html">Assistido</a></li>
+                                <li><a href="profile/liked.html">Favoritado</a></li>
+                                <li><a href="profile/userLists.html">Listas</a></li>
+                                <li><a href="settings/user.html">Configurações</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div>
+                        <a href="ranking/rankFilmes.html">POPULARES</a>
+                    </div>
+
+
+                    <div class="catalogDropdown">
+                        <p id="catalogToggle">CATÁLOGO <i class="fa fa-caret-down"></i></p>
+                        <ul id="catalogOptions">
+                            <li><a href="catalog/movies.html">Filmes</a></li>
+                            <li><a href="catalog/series.html">Series</a></li>
+                        </ul>
+                    </div>
+
+
+                    <div class="searchBarContainer">
+                        <div class="searchBar">
+                            <form action="">
+                                <input type="text" placeholder="Search...">
+                                <button type="submit"><i class="fa fa-search"></i></button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="mediaBanner"></div>
+
+        <div class="mediaInfo">
+            <aside class="columnOne">
+                <div class="containerImg">
+                    <img src="src/img/postTemplate.jpg" alt="Cassandra movie poster">
+                </div>
+
+
+                <div class="responsive mainInfo">
+                    <div class="responsive infoRow">
+                        <h2>Cassandra</h2>
+                    </div>
+                    <div class="responsive director">
+                        <h3 class="responsive">Dirigido por Benjamin Gutsche</h3>
+                        <h3 id="year" class="responsive">2024</h3>
+                    </div>
+                </div>
+
+
+                <div class="infoRow responsive">
+                    <p class="description responsive">Uma família se muda para uma casa inteligente antiga e descobre que ela é controlada por uma assistente virtual que faz de tudo para mantê-los lá.
+                    </p>
+                    <div class="userScore responsive">
+                        <p class="number responsive">4.5</p>
+                        <p class="scoreId responsive">Rating</p>
+                    </div>
+                </div>
+
+                <div class="topic responsive">
+                    <h3>Genres</h3>
+                    <div class="separatorGenre responsive"></div>
+                    <p class="genres responsive">Drama, Terror, Sci-Fi, Suspense</p>
+                </div>
+
+                <div class="buttonContainer">
+                    <div class="options responsive">
+                        <button type="button" class="watched responsive" aria-label="Mark as watched">
+                            <i class="fa-regular fa-eye"></i>
+                            ASSISTIDO
+                        </button>
+                        <button type="button" class="like responsive" aria-label="Like this movie">
+                            <i class="fa-regular fa-heart"></i>
+                            CURTIR
+                        </button>
+                        <button type="button" class="addTo responsive" aria-label="Add to list">
+                            <i class="fa-solid fa-plus"></i>
+                            ADICIONAR
+                        </button>
+                    </div>
+                </div>
+
+
+                <section class="review">
+
+                    <div class="buttonContainer">
+                        <form action="" class="rate">
+                            <label for="star1" aria-label="1 stars"><i class="fa-regular fa-star"></i></label>
+                            <label for="star2" aria-label="2 stars"><i class="fa-regular fa-star"></i></label>
+                            <label for="star3" aria-label="3 stars"><i class="fa-regular fa-star"></i></label>
+                            <label for="star4" aria-label="4 stars"><i class="fa-regular fa-star"></i></label>
+                            <label for="star5" aria-label="5 star"><i class="fa-regular fa-star"></i></label>
+                        </form>
+                    </div>
+
+
+                    <form action="">
+                        <textarea id="reviewText" placeholder="Escreva sua avaliação aqui..." class="reviewTyper"></textarea>
+
+                        <button type="submit" class="btn">Enviar</button>
+                    </form>
+
+                </section>
+            </aside>
+
+            <section class="columnTwo">
+                <article class="mediaData">
+
+                    <div class="mainInfo normal">
+                        <div class="infoRow normal">
+                            <h2>Cassandra</h2>
+                        </div>
+                        <div class="director normal">
+                            <h3>Dirigido por Benjamin Gutsche</h3>
+                            <h3 id="year normal">2024</h3>
+                        </div>
+                    </div>
+
+
+                    <div class="infoRow normal">
+                        <p class="description normal">Uma família se muda para uma casa inteligente antiga e descobre que ela é controlada por uma assistente virtual que faz de tudo para mantê-los lá.
+                        </p>
+                        <div class="userScore normal">
+                            <p class="number normal">4.5</p>
+                            <p class="scoreId normal">Avaliação</p>
+                        </div>
+                    </div>
+
+                    <div class="topic normal">
+                        <h3>Gêneros</h3>
+                        <div class="separatorGenre normal"></div>
+                        <p class="genres normal">Drama, Terror, Sci-Fi, Suspense</p>
+                    </div>
+
+
+
+                </article>
+
+                <section class="reviews" aria-labelledby="main-reviews">
+                    <div class="commentSection">
+                        <article class="reviewCard">
+                            <div class="reviewMain">
+                                <div class="commentInfoContainer">
+                                    <a href="profile/profile.html" class="reviewUser">
+                                        <div class="userAvatarCircle" aria-hidden="true"></div>
+                                        <span class="username">FULANINHO123</span>
+                                    </a>
+
+                                    <div class="userInfo">
+                                        <span class="stars" aria-label="4 out of 5 stars">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                        </span>
+                                    </div>
+                                </div>
+
+
+                                <div class="commentAndActions">
+                                    <p class="comment">AAAAAAAAAAAAAAAAAAAAAAAAAAAAA AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+                                        AAAAAAAA</p>
+                                    <div class="actions">
+                                        <button type="button" class="commentLike" aria-label="Like this review">
+                                            <span class="like"><i class='bx bx-like'></i></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                </section>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+
+        <div class="footerContent container">
+
+            <div class="upInfo">
+                <div class="browseLinks">
+                    <a href="index.html">Página Inicial</a>
+                    <!-- <a href="">About</a> -->
+                    <a href="contact.html">
+                        Contate
+                    </a>
+                    <a href="search.html">
+                        Pesquisa
+                    </a>
+                </div> <!-- .browseLinks -->
+
+                <div class="socials">
+                    <a href="https://www.threads.com/@resceneoficial" target="_blank">
+                        <i class="fa-brands fa-threads"></i>
+                    </a>
+
+                    <a href="https://www.instagram.com/resceneoficial/" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="https://x.com/resceneoficial" target="_blank">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+
+                </div> <!-- .socials -->
+
+            </div> <!-- .upInfo -->
+
+            <div class="copyright">
+                <p>&copy IFSP-CAR. Feito por estudates. Dados por TMDB.</p>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script src="src/js/dropdown-catalog.js"></script>
+    <script src="src/js/dropdown-user.js"></script>
+    <script src="src/js/header.js"></script>
+</body>
+
+</html>
