@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+.upperListInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.column1 {
+  width: 250px;
+}
+
+.listAvatar {
+  max-width: 250px;
+  max-height: 250px;
+  border-radius: 5px;
+}
+
+.column2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 70%;
+}
+
+.geralInfo {
+  display: flex;
+  align-content: center;
+  gap: 15px;
+
+  h3 {
+    display: flex;
+  }
+
+  i {
+    display: flex;
+    height: 100%;
+    font-size: 10px;
+    align-items: center;
+    color: white;
+  }
+
+}
+
+.user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+
+.user img {
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+}
+
+.options {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-right: 25px;
+}
+
+.listOptions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.listOptions i {
+  font-size: 30px;
+  margin: 10px 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.listOptions h3 {
+  transition: all 0.3s ease-in-out;
+}
+
+.listOptions:hover {
+  color: #ffe26c;
+  transform: scale(1.05);
+}
+
+.listOptions:hover h3 {
+  color: #ffe26c;
+}
+
+.listOptions:hover i {
+  color: #ffe26c;
+}
+
+.mainInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.mainInfo h2 {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.mainInfo h3 {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.listContent {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 30px;
+  justify-content: center;
+  justify-items: center;
+}
+
+.card {
+  width: 140px;
+  height: 180px;
+  background-color: #3e3c46;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 2px 10px #ffe26c;
+}
+
+.addCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  color: #fff;
+  background-color: #2a2931;
+  border: 2px dashed #ffe26c;
+  cursor: pointer;
+}
+
+.addCard:hover {
+  background-color: #3e3c46;
+  transform: scale(1.05);
+  box-shadow: 0 2px 12px #ffe26c;
+}
+
+.listSeparator {
+  width: 100%;
+  height: 2px;
+  background-color: #444;
+  margin: 30px 0;
+  border-radius: 2px;
+  opacity: 0.7;
+}
+
+
+.column2 .listOptions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease-in-out;
+
+  h3 {
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+.column2 .listOptions:hover {
+  color: #ffe26c;
+  transform: scale(1.05);
+
+  h3 {
+    color: #ffe26c;
+  }
+}
+
+.column2 .listOptions:hover i {
+  color: #ffe26c;
+  transition: all 0.3s ease-in-out;
+}
+
+.column2 .editOptions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-right: 0;
+  padding-right: 30px;
+  align-items: start;
+
+  button {
+    background: none;
+    border: none;
+  }
+}
+
+.column2 .optionsContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.column2 .editOption,
+.saveOption {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: auto;
+  cursor: pointer;
+
+  h3 {
+    font-size: 15px;
+  }
+
+  i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 100%;
+    font-size: 25px;
+    margin: 10px 0 10px 0;
+    color: white;
+    background-color: #464646;
+    width: 50px;
+    height: 50px;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+.column2 .editOption:hover {
+  i {
+    background-color: rgb(224, 57, 57);
+  }
+}
+
+.column2 .saveOption:hover {
+  i {
+    background-color: rgb(30, 136, 30);
+  }
+}
+
+.removeCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  color: #fff;
+  background-color: #2a2931;
+  border: 2px dashed #ffe26c;
+  cursor: pointer;
+}
+
+.removeCard:hover {
+  background-color: #dd020233;
+  transform: scale(1.05);
+  box-shadow: 0 2px 12px #ffe26c;
+}
+
+.mainInfo input[type=text] {
+  font-family: 'Nunito Sans';
+  font-size: 40px;
+  font-weight: bold;
+  padding: 8px 10px 8px 10px;
+  border-radius: 8px;
+  max-width: 93%;
+}
+
+@media (max-width: 800px) {
+  input[type=text] {
+    width: 70%;
+  }
+}
+
+@media (max-width: 660px) {
+  .upperListInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .column1, .column2 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .column2 {
+    gap: 30px;
+
+    .editOptions {
+      padding: 0;
+      gap: 20px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+    }
+  }
+
+  .options {
+    padding: 0;
+  }
+  
+  .input {
+    width: 100%;
+  }
+
+  input[type=text] {
+    width: 93%;
+  }
+}
+
+@media (max-width: 515px) {
+  .geralInfo {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .fa-solid.fa-circle {
+    display: none;
+  }
+
+  .listOptions {
+    i {
+      width: 30px;
+      height: 30px;
+    }
+
+    h3 {
+      font-size: 10px;
+    }
+  }
+
+  .card {
+    width: 105px;
+    height: 135px;
+  }
+}
+
+@media (max-width: 465px) {
+  .column2 .saveOption h3 {
+      font-size: 10px;
+  }
+
+  .column2 .editOption h3 {
+    font-size: 10px;
+  }
+}
+
+/* @media(max-width: 330px) {
+  .browseLinks{
+    flex-direction: row;
+    justify-content: center;
+    display: flex;
+  }
+} */

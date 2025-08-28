@@ -1,0 +1,299 @@
+/* Fonte */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+/* Header */
+header {
+  height: 110px;
+  background-image: linear-gradient(to bottom, #36353d 0%, #333241 50%, #1c1b25 100%);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* Linha de conteúdo */
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+}
+
+/* Estilo da fonte e cor dos links e inputs */
+.row a,
+.searchBar input,
+.row span {
+  font-family: 'Nunito Sans';
+  font-weight: 600;
+}
+
+.row a,
+a:hover,
+a:active,
+a:visited,
+.row span {
+  text-decoration: none;
+  color: white;
+}
+
+/* Avatar */
+.row .user img {
+  height: 30px;
+  border-radius: 100%;
+  margin-right: 10px;
+}
+
+/* Itens dentro da row */
+.row div,
+.searchBarContainer {
+  display: flex;
+  align-items: center;
+  height: 75px;
+  font-size: 17px;
+  padding: 14px 0;
+}
+
+/* Logo */
+.row .logo {
+  height: 100px;
+}
+
+/* Primeira coluna (logo) */
+.row .firstColumn {
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* Última coluna (menus, search, avatar) */
+.row .lastColumn {
+  display: flex;
+  justify-content: flex-end;
+  gap: 30px;
+}
+
+/* Estilo do usuário */
+.row .user {
+  display: flex;
+  align-items: center;
+}
+
+/* Search bar */
+.row .searchBarContainer {
+  display: flex;
+}
+
+.row .searchBar {
+  display: flex;
+  background-color: white;
+  height: 30px;
+  border-radius: 50px;
+  gap: 10px;
+  width: 200px;
+  align-items: center;
+  padding: 0 10px;
+  flex-direction: row-reverse;
+}
+
+.row input[type=text] {
+  border: none;
+  font-size: 17px;
+  width: 150px;
+  outline: none;
+}
+
+.row button[type=submit] {
+  border: none;
+  font-size: 20px;
+  background: none;
+  color: #5f5f5f;
+  cursor: pointer;
+}
+
+
+/* DROPDOWN CATALOG */
+.catalogDropdown {
+  position: relative;
+  color: white;
+  font-family: 'Nunito Sans';
+  font-weight: 600;
+}
+
+#catalogToggle {
+  cursor: pointer;
+}
+
+#catalogOptions {
+  position: absolute;
+  top: 70%;
+  left: 0;
+  background-color: #1c1b25;
+  border: 1px solid #444;
+  border-radius: 5px;
+  list-style: none;
+  padding: 0;
+  display: none;
+  z-index: 999;
+}
+
+#catalogOptions li {
+  padding: 10px 15px;
+}
+
+#catalogOptions li a {
+  color: white;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+#catalogOptions li:hover a {
+  color: #fada5e;
+}
+
+/* DROPDOWN USER */
+.userDropdown {
+  position: relative;
+}
+
+#userToggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  border-radius: 4px;
+
+  img {
+    height: 30px;
+    border-radius: 100%;
+  }
+}
+
+#userOptions {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #1c1b25;
+  border: 1px solid #444;
+  border-radius: 5px;
+  list-style: none;
+  padding: 0;
+  display: none;
+  z-index: 999;
+}
+
+#userOptions li {
+  padding: 12px 15px;
+}
+
+#userOptions li a {
+  color: white;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+#userOptions li:hover a {
+  color: #fada5e;
+}
+
+/* Logo do menu mobile */
+nav .logo {
+  height: 70px;
+}
+
+/* Menu hambúrguer */
+.hamburger {
+  display: none;
+  width: 30px;
+  height: 24px;
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  z-index: 1001;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.hamburger span {
+  display: block;
+  height: 4px;
+  width: 100%;
+  background: white;
+  border-radius: 2px;
+  transition: all 0.4s ease;
+  margin-bottom: 6px;
+}
+
+/* Animação do ícone ativo */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translateY(15px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-14px);
+}
+
+/* Menu Mobile */
+.mobileMenu {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to bottom, #36353d 10%, #19191d 100%);
+  width: 100%;
+  height: 400px;
+  transform: translateY(-110%);
+  transition: transform 0.4s ease-in-out;
+  padding-top: 100px;
+  z-index: 1000;
+  transform: translateY(-100%);
+  transition: transform 0.4s ease-in-out;
+}
+
+.mobileMenu.show {
+  transform: translateY(0%);
+}
+
+.mobileMenu a {
+  color: white;
+  padding: 15px 30px;
+  text-align: left;
+  font-size: 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.mobileMenu a:hover {
+  color: #ffe26c;
+}
+
+
+.mobileMenu.show {
+  transform: translateY(0%);
+}
+
+/* Botão de fechar (não usado ainda no HTML) */
+.closeBtn {
+  position: absolute;
+  top: 25px;
+  left: 20px;
+  font-size: 36px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsividade */
+@media (max-width: 1001px) {
+  .row .lastColumn {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}

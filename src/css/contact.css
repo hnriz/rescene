@@ -1,0 +1,133 @@
+.contactContent {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 70px;
+
+    .posterSide {
+        width: 50%;
+        
+        img {
+        height: auto;
+        width: 100%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+        border-radius: 4px;
+    }}
+
+    .infoSide {
+        width: 90%;
+    }
+
+    .btn {
+        background-color: #ffe26c;
+        border: none;
+        width: fit-content;
+        border-radius: 3px;
+        padding: 14px;
+        margin-top: 20px;
+        transition: transform .2s;
+
+        a {
+            color: black;
+            font-size: 15px;
+            font-weight: bold;
+        }
+    }
+
+    .btn:hover {
+        transform: scale(1.02);
+        cursor: pointer;
+        box-shadow: 0 4px 8px #a3881a;
+    }
+
+    h2 {
+        font-size: 3.125rem;
+        padding-bottom: 30px;
+    }
+
+    p {
+        letter-spacing: 1px;
+        line-height: 25px;
+        font-size: 1.125rem;
+    }
+
+    .textContact {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        img {
+            height: 25px;
+            width: min-content;
+        }
+
+        .email {
+            margin: 10px 0 10px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            a {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                font-size: 18px;
+                letter-spacing: 1.5px;
+                font-weight: 500;
+                color: #f7e084;
+                width: fit-content;
+            }
+
+            a:hover {
+                color: white
+            }
+        }
+
+    }
+}
+
+@media (max-width: 1024px) {
+    .contactContent .posterSide {
+        width: 60%;
+    }
+}
+
+@media (max-width: 768px) {
+    .contactContent {
+        display: flex;
+        flex-direction: column;
+            display: flex;
+            align-items: center;
+
+        .posterSide {
+            width: 50%;
+
+        }
+
+        .infoSide {
+            width: 60%;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .contactContent {
+        h2 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    a {
+        font-size: 1.1rem;
+    }
+}
+}
+
+@media (max-width: 400px) {
+    .contactContent .posterSide {
+        width: 60%;
+    }
+}

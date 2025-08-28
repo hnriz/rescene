@@ -1,0 +1,94 @@
+footer {
+  background-color: #3b3a4b;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-top: 50px;
+}
+
+.footerContent {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  gap: 35px;
+  width: 100%;
+}
+
+.footerContent .upInfo {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.footerContent .browseLinks {
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+}
+
+.footerContent .browseLinks a,
+.footerContent .browseLinks p {
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(192, 192, 192);
+  text-decoration: none;
+  transition: .15s all;
+}
+
+.footerContent .browseLinks a:hover {
+  color: white;
+}
+
+.footerContent .socials {
+  display: flex;
+  gap: 50px;
+}
+
+.footerContent .socials i {
+  font-size: 32px;
+  color: rgb(192, 192, 192);
+  transition: .15s all;
+}
+
+.footerContent .socials i:hover {
+  color: white;
+}
+
+.footerContent .copyright {
+  font-size: 13px;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 867px) {
+  .upInfo {
+    flex-direction: column;
+    gap: 40px !important;
+    flex-wrap: wrap;
+  }
+
+  .copyright {
+    p {
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+
+  .footer {
+    element.container {
+      display: none;
+    }
+  }
+
+  .browseLinks {
+    flex-direction: column !important;
+    gap: 30px !important;
+    text-align: center;
+
+  }
+}
+
+
