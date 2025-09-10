@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rescene | List</title>
+
+  <link rel="stylesheet" href="../src/css/reset.css">
+  <link rel="stylesheet" href="../src/css/footer.css">
+  <link rel="stylesheet" href="../src/css/body.css">
+  <link rel="stylesheet" href="../src/css/header.css">
+  <link rel="stylesheet" href="../src/css/lists.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="icon" type="image/x-icon" href="../src/img/favicon.ico">
+</head>
+
+<body>
+
+  <!-------------HEADER------------------>
+  <div class="wrapper">
+    <header class="main-header">
+      <div class="header-container">
+          <!-- Logo e Menu Mobile -->
+          <div class="header-left">
+              <div class="hamburger" id="hamburger">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+              </div>
+              
+              <a href="../index.html" class="logo-link">
+                  <img src="../src/img/logo-branco.png" alt="Rescene" class="logo">
+              </a>
+          </div>
+
+          <!-- Menu de Navegação Principal -->
+          <nav class="main-nav">
+              <a href="../catalog/movies.html" class="nav-link">
+                  <i class="fas fa-film"></i>
+                  <span>Filmes</span>
+              </a>
+              <a href="../catalog/series.html" class="nav-link">
+                  <i class="fas fa-tv"></i>
+                  <span>Séries</span>
+              </a>
+              <a href="../ranking/rankFilmes.html" class="nav-link">
+                  <i class="fas fa-chart-line"></i>
+                  <span>Populares</span>
+              </a>
+          </nav>
+
+          <!-- Barra de Pesquisa Aprimorada com Auto-typing -->
+          <div class="search-container">
+              <div class="search-bar">
+                  <input type="text" id="search-input" placeholder=" " autocomplete="off">
+                  <div id="search-placeholder"></div>
+                  <button type="submit" class="search-btn">
+                      <i class="fas fa-search"></i>
+                  </button>
+                  <div class="search-results" id="search-results"></div>
+              </div>
+              <div class="search-suggestions">
+                  <span class="suggestion-tag">Trending:</span>
+                  <div class="suggestions-list">
+                      <span class="suggestion-item">Interestelar</span>
+                      <span class="suggestion-item">Breaking Bad</span>
+                      <span class="suggestion-item">The Last of Us</span>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Área do Usuário Aprimorada -->
+          <div class="user-area">
+              <!-- Notificações com ícone maior -->
+              <div class="notification-dropdown">
+                  <button class="icon-btn notification-btn" id="notification-btn">
+                      <i class="fas fa-bell"></i>
+                      <span class="notification-count">3</span>
+                  </button>
+                  <div class="dropdown-content notification-content">
+                      <div class="dropdown-header">
+                          <h3>Notificações</h3>
+                          <a href="#" class="mark-all-read">Marcar todas como lida</a>
+                      </div>
+                      <div class="notification-list">
+                          <div class="notification-item unread">
+                              <div class="notification-avatar">
+                                  <img src="../src/img/user1.jpg" alt="Usuário">
+                              </div>
+                              <div class="notification-text">
+                                  <p><strong>Maria Silva</strong> curtiu sua avaliação de <strong>Interestelar</strong></p>
+                                  <span class="notification-time">há 2 minutos</span>
+                              </div>
+                          </div>
+                          <div class="notification-item unread">
+                              <div class="notification-avatar">
+                                  <img src="../src/img/user2.jpg" alt="Usuário">
+                              </div>
+                              <div class="notification-text">
+                                  <p><strong>João Santos</strong> começou a seguir você</p>
+                                  <span class="notification-time">há 15 minutos</span>
+                              </div>
+                          </div>
+                          <div class="notification-item">
+                              <div class="notification-avatar">
+                                  <img src="../src/img/user3.jpg" alt="Usuário">
+                              </div>
+                              <div class="notification-text">
+                                  <p>Novo episódio de <strong>The Last of Us</strong> disponível</p>
+                                  <span class="notification-time">há 1 hora</span>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="dropdown-footer">
+                          <a href="../notifications.html">Ver todas as notificações</a>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Menu do Usuário com Email -->
+              <div class="user-dropdown">
+                  <button class="user-btn" id="user-btn">
+                      <img src="../src/img/icon.jpg" alt="Avatar" class="user-avatar">
+                      <div class="user-info-short">
+                          <span class="username">NomeUsuário</span>
+                          <span class="user-email">usuario@email.com</span>
+                      </div>
+                      <i class="fas fa-chevron-down"></i>
+                  </button>
+                  <div class="dropdown-content user-content">
+                      <div class="user-info">
+                          <img src="../src/img/icon.jpg" alt="Avatar" class="user-avatar-large">
+                          <div class="user-details">
+                              <h3>NomeUsuário</h3>
+                              <p>@username</p>
+                              <p class="user-email">usuario@email.com</p>
+                          </div>
+                      </div>
+                      <div class="dropdown-links">
+                          <a href="../profile/profile.html">
+                              <i class="fas fa-user"></i>
+                              <span>Meu Perfil</span>
+                          </a>
+                          <a href="../profile/watched.html">
+                              <i class="fas fa-eye"></i>
+                              <span>Assistidos</span>
+                          </a>
+                          <a href="../profile/liked.html">
+                              <i class="fas fa-heart"></i>
+                              <span>Favoritos</span>
+                          </a>
+                          <a href="../profile/userLists.html">
+                              <i class="fas fa-list"></i>
+                              <span>Minhas Listas</span>
+                          </a>
+                          <a href="../settings/settings.html">
+                              <i class="fas fa-cog"></i>
+                              <span>Configurações</span>
+                          </a>
+                          <a href="#" id="logout-btn">
+                              <i class="fas fa-sign-out-alt"></i>
+                              <span>Sair</span>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <!-- Menu Mobile -->
+      <nav class="mobile-menu" id="mobileMenu">
+          <div class="mobile-menu-header">
+              <div class="mobile-logo">
+                  <img src="../src/img/logo-branco.png" class="logo">
+                  <span class="logo-text">Rescene</span>
+              </div>
+              <button class="close-menu" id="closeMenu">
+                  <i class="fas fa-times"></i>
+              </button>
+          </div>
+          <div class="mobile-user-info">
+              <img src="../src/img/icon.jpg" alt="Avatar" class="mobile-user-avatar">
+              <div class="mobile-user-details">
+                  <h3>NomeUsuário</h3>
+                  <p>usuario@email.com</p>
+              </div>
+          </div>
+          <div class="mobile-menu-content">
+              <a href="../index.html" class="mobile-menu-link">
+                  <i class="fas fa-home"></i>
+                  <span>Página Inicial</span>
+              </a>
+              <a href="../profile/profile.html" class="mobile-menu-link">
+                  <i class="fas fa-user"></i>
+                  <span>Meu Perfil</span>
+              </a>
+              <a href="../catalog/movies.html" class="mobile-menu-link">
+                  <i class="fas fa-film"></i>
+                  <span>Filmes</span>
+              </a>
+              <a href="../catalog/series.html" class="mobile-menu-link">
+                  <i class="fas fa-tv"></i>
+                  <span>Séries</span>
+              </a>
+              <a href="../ranking/rankFilmes.html" class="mobile-menu-link">
+                  <i class="fas fa-chart-line"></i>
+                  <span>Populares</span>
+              </a>
+              <a href="../profile/watched.html" class="mobile-menu-link">
+                  <i class="fas fa-eye"></i>
+                  <span>Assistidos</span>
+              </a>
+              <a href="../profile/liked.html" class="mobile-menu-link">
+                  <i class="fas fa-heart"></i>
+                  <span>Favoritos</span>
+              </a>
+              <a href="../profile/userLists.html" class="mobile-menu-link">
+                  <i class="fas fa-list"></i>
+                  <span>Listas</span>
+              </a>
+              <a href="../settings/settings.html" class="mobile-menu-link">
+                  <i class="fas fa-cog"></i>
+                  <span>Configurações</span>
+              </a>
+              <a href="#" class="mobile-menu-link" id="mobile-logout">
+                  <i class="fas fa-sign-out-alt"></i>
+                  <span>Sair</span>
+              </a>
+          </div>
+      </nav>
+  </header>
+
+
+    <!------------- MAIN ------------------>
+    <main class="list-page">
+        <!-- Cabeçalho da Lista -->
+        <section class="list-header">
+          <div class="container">
+            <div class="list-hero">
+              <div class="list-cover">
+                <img src="../src/img/poster9.png" alt="Capa da Lista" class="cover-image">
+                <div class="cover-overlay">
+                  <button class="change-cover-btn">
+                    <i class="fas fa-camera"></i>
+                    Alterar capa
+                  </button>
+                </div>
+              </div>
+              
+              <div class="list-info">
+                <div class="list-meta">
+                  <span class="list-visibility public">
+                    <i class="fas fa-globe-americas"></i>
+                    Pública
+                  </span>
+                  <span class="list-stats">
+                    <i class="fas fa-eye"></i> 1.2K visualizações
+                  </span>
+                  <span class="list-stats">
+                    <i class="fas fa-heart"></i> 86 curtidas
+                  </span>
+                </div>
+                
+                <h1 class="list-title">Minha Lista de Favoritos</h1>
+                
+                <p class="list-description">
+                  Uma coleção pessoal dos melhores filmes e séries que já assisti. 
+                  Cada obra aqui marcou minha jornada cinematográfica de alguma forma especial.
+                </p>
+                
+                <div class="list-owner">
+                  <img src="../src/img/icon.jpg" alt="Criador da lista" class="owner-avatar">
+                  <div class="owner-info">
+                    <span class="owner-name">Carlos Silva</span>
+                    <span class="list-date">Criada em 15 de Jan, 2024 • Atualizada hoje</span>
+                  </div>
+                </div>
+                
+                <div class="list-actions">
+                  <button class="action-btn primary">
+                    <i class="fas fa-play"></i>
+                    Assistir aleatório
+                  </button>
+                  <button class="action-btn secondary">
+                    <i class="fas fa-heart"></i>
+                    Curtir
+                  </button>
+                  <button class="action-btn secondary">
+                    <i class="fas fa-bookmark"></i>
+                    Salvar
+                  </button>
+                  <div class="more-actions">
+                    <button class="action-btn more">
+                      <i class="fas fa-ellipsis-h"></i>
+                    </button>
+                    <div class="action-menu">
+                      <a href="#"><i class="fas fa-share-alt"></i> Compartilhar</a>
+                      <a href="#"><i class="fas fa-link"></i> Copiar link</a>
+                      <a href="../list/editList.html"><i class="fas fa-edit"></i> Editar lista</a>
+                      <a href="#" class="danger"><i class="fas fa-flag"></i> Reportar</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <!-- Conteúdo da Lista -->
+        <section class="list-content">
+          <div class="container">
+            <div class="content-header">
+              <div class="content-info">
+                <h2>Conteúdo da Lista <span class="items-count">(24 itens)</span></h2>
+                <p>Organizados por ordem de adição</p>
+              </div>
+              
+              <div class="content-actions">
+                <div class="view-options">
+                  <button class="view-btn active" data-view="grid">
+                    <i class="fas fa-th"></i>
+                  </button>
+                  <button class="view-btn" data-view="list">
+                    <i class="fas fa-list"></i>
+                  </button>
+                </div>
+                
+                <div class="filter-sort">
+                  <select class="filter-select">
+                    <option value="all">Todos os itens</option>
+                    <option value="movies">Apenas filmes</option>
+                    <option value="series">Apenas séries</option>
+                  </select>
+                  
+                  <select class="sort-select">
+                    <option value="recent">Mais recentes</option>
+                    <option value="oldest">Mais antigos</option>
+                    <option value="rating">Melhor avaliados</option>
+                    <option value="title">Ordem alfabética</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+  
+            <div class="items-grid">
+              <!-- Item 1 -->
+              <div class="list-item" data-type="movie" data-rating="4.8" data-date="2024-03-25">
+                <div class="item-image">
+                  <img src="../src/img/poster11.jpg" alt="Interestelar">
+                  <div class="item-overlay">
+                    <button class="item-action-btn">
+                      <i class="fas fa-play"></i>
+                    </button>
+                    <button class="item-action-btn">
+                      <i class="fas fa-info-circle"></i>
+                    </button>
+                  </div>
+                  <span class="item-rating">4.8</span>
+                </div>
+                
+                <div class="item-info">
+                  <h3 class="item-title">Interestelar</h3>
+                  <div class="item-meta">
+                    <span class="item-year">2014</span>
+                    <span class="item-duration">169min</span>
+                    <span class="item-type">Filme</span>
+                  </div>
+                  <p class="item-description">
+                    Uma equipe de exploradores viaja através de um buraco de minhoca no espaço na tentativa de garantir a sobrevivência da humanidade.
+                  </p>
+                  
+                  <div class="item-actions">
+                    <button class="remove-btn">
+                      <i class="fas fa-times"></i>
+                      Remover
+                    </button>
+                    <span class="added-date">Adicionado há 2 dias</span>
+                  </div>
+                </div>
+              </div>
+  
+              <!-- Item 2 -->
+              <div class="list-item" data-type="series" data-rating="4.9" data-date="2024-03-20">
+                <div class="item-image">
+                  <img src="../src/img/poster10.webp" alt="Breaking Bad">
+                  <div class="item-overlay">
+                    <button class="item-action-btn">
+                      <i class="fas fa-play"></i>
+                    </button>
+                    <button class="item-action-btn">
+                      <i class="fas fa-info-circle"></i>
+                    </button>
+                  </div>
+                  <span class="item-rating">4.9</span>
+                </div>
+                
+                <div class="item-info">
+                  <h3 class="item-title">Breaking Bad</h3>
+                  <div class="item-meta">
+                    <span class="item-year">2008-2013</span>
+                    <span class="item-duration">5 temporadas</span>
+                    <span class="item-type">Série</span>
+                  </div>
+                  <p class="item-description">
+                    Um professor de química com câncer se associa a um ex-aluno para produzir e vender metanfetamina para garantir o futuro de sua família.
+                  </p>
+                  
+                  <div class="item-actions">
+                    <button class="remove-btn">
+                      <i class="fas fa-times"></i>
+                      Remover
+                    </button>
+                    <span class="added-date">Adicionado há 1 semana</span>
+                  </div>
+                </div>
+              </div>
+  
+              <!-- Adicione mais itens aqui -->
+              
+              <!-- Card de Adicionar -->
+              <div class="list-item add-item">
+                <div class="add-item-content">
+                  <i class="fas fa-plus-circle"></i>
+                  <h3>Adicionar item</h3>
+                  <p>Clique para adicionar um novo filme ou série à lista</p>
+                </div>
+              </div>
+            </div>
+  
+            <!-- Paginação -->
+            <div class="pagination">
+              <button class="pagination-btn" disabled>
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              <button class="pagination-btn active">1</button>
+              <button class="pagination-btn">2</button>
+              <button class="pagination-btn">3</button>
+              <button class="pagination-btn">
+                <i class="fas fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+        </section>
+  
+        <!-- Listas Relacionadas -->
+        <section class="related-lists">
+          <div class="container">
+            <h2>Listas relacionadas</h2>
+            <div class="related-grid">
+              <!-- Lista relacionada 1 -->
+              <div class="related-list">
+                <img src="../src/img/poster15.jpeg" alt="Lista de Ação">
+                <div class="related-info">
+                  <h3>Melhores Filmes de Ação</h3>
+                  <p>18 itens • Por Maria Santos</p>
+                  <span class="related-stats">
+                    <i class="fas fa-heart"></i> 142
+                  </span>
+                </div>
+              </div>
+  
+              <!-- Lista relacionada 2 -->
+              <div class="related-list">
+                <img src="../src/img/poster3.jpg" alt="Lista de Clássicos">
+                <div class="related-info">
+                  <h3>Clássicos do Cinema</h3>
+                  <p>22 itens • Por João Silva</p>
+                  <span class="related-stats">
+                    <i class="fas fa-heart"></i> 89
+                  </span>
+                </div>
+              </div>
+  
+              <!-- Lista relacionada 3 -->
+              <div class="related-list">
+                <img src="../src/img/poster11.jpg" alt="Lista de Ficção Científica">
+                <div class="related-info">
+                  <h3>Ficção Científica Essencial</h3>
+                  <p>15 itens • Por Ana Costa</p>
+                  <span class="related-stats">
+                    <i class="fas fa-heart"></i> 203
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+  
+   
+  
+  
+   
+
+
+    <!-------------- FOOTER ----------------->
+    <footer class="main-footer">
+        <div class="footer-wave">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+                <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+                <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+            </svg>
+        </div>
+        
+        <div class="footer-container">
+            <!-- Seção Principal -->
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="../src/img/logo-branco.png" alt="Rescene">
+                        <span class="logo-text">Rescene</span>
+                    </div>
+                    <p class="footer-description">
+                        Sua plataforma para descobrir, avaliar e compartilhar filmes e séries. Conecte-se com outros cinéfilos e expanda seu universo cinematográfico.
+                    </p>
+                    <div class="footer-newsletter">
+                        <h3>Receba novidades</h3>
+                        <div class="newsletter-form">
+                            <input type="email" placeholder="Seu e-mail">
+                            <button type="submit">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="links-column">
+                        <h3>Navegação</h3>
+                        <ul>
+                            <li><a href="../index.html">Página Inicial</a></li>
+                            <li><a href="../catalog/movies.html">Filmes</a></li>
+                            <li><a href="../catalog/series.html">Séries</a></li>
+                            <li><a href="../ranking/rankFilmes.html">Populares</a></li>
+                            <li><a href="../profile/profile.html">Meu Perfil</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="links-column">
+                        <h3>Recursos</h3>
+                        <ul>
+                            <li><a href="../profile/watched.html">Assistidos</a></li>
+                            <li><a href="../profile/liked.html">Favoritos</a></li>
+                            <li><a href="../profile/userLists.html">Listas</a></li>
+                            <li><a href="../settings/settings.html">Configurações</a></li>
+                            <li><a href="../search.html">Pesquisa Avançada</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="links-column">
+                        <h3>Suporte</h3>
+                        <ul>
+                            <li><a href="../contact.html">Contate-nos</a></li>
+                            <li><a href="../help.html">Ajuda & FAQ</a></li>
+                            <li><a href="../about.html">Sobre nós</a></li>
+                            <li><a href="../privacy.html">Privacidade</a></li>
+                            <li><a href="../terms.html">Termos de uso</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Divisor -->
+            <div class="footer-divider"></div>
+            
+            <!-- Seção Inferior -->
+            <div class="footer-bottom">
+                <div class="footer-social">
+                    <h3>Siga-nos</h3>
+                    <div class="social-icons">
+                        <a href="https://www.threads.com/@resceneoficial" target="_blank" class="social-icon">
+                            <i class="fab fa-threads"></i>
+                        </a>
+                        <a href="https://www.instagram.com/resceneoficial/" target="_blank" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://x.com/resceneoficial" target="_blank" class="social-icon">
+                            <i class="fab fa-x-twitter"></i>
+                        </a>
+                        <a href="https://www.facebook.com/resceneoficial" target="_blank" class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@resceneoficial" target="_blank" class="social-icon">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@resceneoficial" target="_blank" class="social-icon">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-copyright">
+                    <p>&copy; 2025 Rescene. Todos os direitos reservados.</p>
+                    <p>Feito por estudantes do IFSP-CAR</p>
+                    <p>Dados por <a href="https://www.themoviedb.org/" target="_blank">TMDB</a></p>
+                </div>
+                
+                <div class="footer-badges">
+                    <div class="badge">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Site seguro</span>
+                    </div>
+                    <div class="badge">
+                        <i class="fas fa-lock"></i>
+                        <span>Privacidade</span>
+                    </div>
+                    <div class="badge">
+                        <i class="fas fa-award"></i>
+                        <span>Melhor plataforma 2025</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Botão Voltar ao Topo -->
+        <button class="back-to-top" id="backToTop">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </footer>
+
+    <script src="../src/js/dropdown-catalog.js"></script>
+    <script src="../src/js/dropdown-user.js"></script>
+    <script src="../src/js/header.js"></script>
+
+    <script src="../src/js/footer.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          // Alternar entre visualização em grade e lista
+          const viewButtons = document.querySelectorAll('.view-btn');
+          const itemsGrid = document.querySelector('.items-grid');
+          
+          viewButtons.forEach(button => {
+            button.addEventListener('click', function() {
+              const viewType = this.getAttribute('data-view');
+              
+              viewButtons.forEach(btn => btn.classList.remove('active'));
+              this.classList.add('active');
+              
+              if (viewType === 'list') {
+                itemsGrid.classList.add('list-view');
+              } else {
+                itemsGrid.classList.remove('list-view');
+              }
+            });
+          });
+    
+          // Menu de ações
+          const moreBtn = document.querySelector('.more-actions .more');
+          const actionMenu = document.querySelector('.action-menu');
+          
+          moreBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            actionMenu.classList.toggle('show');
+          });
+          
+          document.addEventListener('click', function() {
+            actionMenu.classList.remove('show');
+          });
+          
+          actionMenu.addEventListener('click', function(e) {
+            e.stopPropagation();
+          });
+    
+          // Filtros e ordenação
+          const filterSelect = document.querySelector('.filter-select');
+          const sortSelect = document.querySelector('.sort-select');
+          const listItems = document.querySelectorAll('.list-item:not(.add-item)');
+          
+          function filterAndSortItems() {
+            const filterValue = filterSelect.value;
+            const sortValue = sortSelect.value;
+            
+            // Filtrar itens
+            listItems.forEach(item => {
+              const itemType = item.getAttribute('data-type');
+              
+              if (filterValue === 'all' || itemType === filterValue) {
+                item.style.display = 'flex';
+              } else {
+                item.style.display = 'none';
+              }
+            });
+            
+            // Ordenar itens (simulação)
+            const visibleItems = Array.from(listItems).filter(item => 
+              item.style.display !== 'none'
+            );
+            
+            visibleItems.sort((a, b) => {
+              if (sortValue === 'rating') {
+                return parseFloat(b.getAttribute('data-rating')) - parseFloat(a.getAttribute('data-rating'));
+              } else if (sortValue === 'title') {
+                return a.querySelector('.item-title').textContent.localeCompare(
+                  b.querySelector('.item-title').textContent
+                );
+              } else if (sortValue === 'oldest') {
+                return new Date(a.getAttribute('data-date')) - new Date(b.getAttribute('data-date'));
+              }
+              return new Date(b.getAttribute('data-date')) - new Date(a.getAttribute('data-date'));
+            });
+            
+            // Reordenar no DOM
+            const container = itemsGrid;
+            const addItem = document.querySelector('.add-item');
+            
+            // Remover todos os itens exceto o de adicionar
+            listItems.forEach(item => container.removeChild(item));
+            
+            // Adicionar os itens ordenados
+            visibleItems.forEach(item => container.insertBefore(item, addItem));
+          }
+          
+          filterSelect.addEventListener('change', filterAndSortItems);
+          sortSelect.addEventListener('change', filterAndSortItems);
+    
+          // Botão de remover item
+          const removeButtons = document.querySelectorAll('.remove-btn');
+          removeButtons.forEach(button => {
+            button.addEventListener('click', function() {
+              const item = this.closest('.list-item');
+              item.style.opacity = '0';
+              item.style.transform = 'translateX(100px)';
+              
+              setTimeout(() => {
+                item.remove();
+                // Atualizar contador
+                const itemsCount = document.querySelectorAll('.list-item:not(.add-item)').length;
+                document.querySelector('.items-count').textContent = `(${itemsCount} itens)`;
+              }, 300);
+            });
+          });
+    
+          // Animação de entrada dos itens
+          const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+          };
+          
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+                observer.unobserve(entry.target);
+              }
+            });
+          }, observerOptions);
+          
+          // Observar itens para animação
+          document.querySelectorAll('.list-item').forEach(item => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(20px)';
+            item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(item);
+          });
+        });
+      </script>
+</body>
+
+</html>
