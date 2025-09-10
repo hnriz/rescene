@@ -406,7 +406,7 @@
 
 
 /* Navbar de opções do perfil */
-/* .profileNav {
+ .profileNav {
   margin: 20px auto 30px;
   max-width: 1000px;
   position: relative;
@@ -448,14 +448,14 @@
 
 .navItem.active i {
   color: #fada5e;
-} */
+} 
 
-/* .navItem:hover:not(.active) {
+.navItem:hover:not(.active) {
   color: rgba(255, 255, 255, 0.9);
   background: rgba(255, 255, 255, 0.05);
-} */
+} 
 
-/* .navIndicator {
+.navIndicator {
   position: absolute;
   bottom: 5px;
   height: calc(100% - 10px);
@@ -464,7 +464,7 @@
   transition: all 0.4s cubic-bezier(0.65, 0, 0.35, 1);
   border: 1px solid rgba(250, 218, 94, 0.3);
   z-index: 0;
-} */
+}
 
 /* Responsividade */
 @media (max-width: 768px) {
@@ -1641,9 +1641,9 @@
   }
 
   .listCard {
-    width: 185px;
+    /* width: 185px; */
     padding: 0px;
-    margin: 30px;
+    /* margin: 30px; */
   }
 
   .listProfileContent {
@@ -1663,9 +1663,9 @@
   }
 
   .listCard {
-    width: 185px;
+    /* width: 185px; */
     padding: 0px;
-    margin: 30px;
+    /* margin: 30px; */
   }
 
   .listProfileContent {
@@ -1685,9 +1685,9 @@
   }
 
   .listCard {
-    width: 185px;
+    /* width: 185px; */
     padding: 0px;
-    margin: 30px;
+    /* margin: 30px; */
   }
 
   .listProfileContent {
@@ -1707,9 +1707,9 @@
   }
 
   .listCard {
-    width: 185px;
+    /* width: 185px; */
     padding: 0px;
-    margin: 30px;
+    /* margin: 30px; */
   }
 
   .listProfileContent {
@@ -1729,9 +1729,9 @@
   }
 
   .listCard {
-    width: 180px;
+    /* width: 180px; */
     padding: 0px;
-    margin: 30px;
+    /* margin: 30px; */
   }
 
   .listProfileContent {
@@ -1751,9 +1751,9 @@
   }
 
   .listCard {
-    width: 180px;
+    /* width: 180px; */
     padding: 0px;
-    margin: 30px;
+    /* margin: 30px; */
   }
 
   .listProfileContent {
@@ -1773,9 +1773,9 @@
   }
 
   .listCard {
-    width: 180px;
+    /* width: 180px; */
     padding: 0px;
-    margin: 30px;
+    /* margin: 30px; */
   }
 
   .listProfileContent {
@@ -1795,9 +1795,9 @@
   }
 
   .listCard {
-    width: 180px;
+    /* width: 180px; */
     padding: 0px;
-    margin: 30px;
+    /* margin: 30px; */
   }
 
   .listProfileContent {
@@ -1817,9 +1817,9 @@
   }
 
   .listCard {
-    width: 180px;
+    /* width: 180px; */
     padding: 0px;
-    margin: 30px;
+    /* margin: 30px; */
   }
 
   .listProfileContent {
@@ -1839,9 +1839,9 @@
   }
 
   .listCard {
-    width: 180px;
+    /* width: 180px; */
     padding: 0px;
-    margin: 30px;
+    /* margin: 30px; */
   }
 
   .listProfileContent {
@@ -1855,15 +1855,15 @@
 
 @media(max-width:900px) {
   .create {
-    width: 120px;
+    /* width: 120px; */
     height: 245px;
-    margin-top: 29.5px;
+    /* margin-top: 29.5px; */
   }
 
   .listCard {
     width: 180px;
     padding: 0px;
-    margin: 30px;
+    /* margin: 30px; */
   }
 
   .listProfileContent {
@@ -1883,9 +1883,9 @@
   }
 
   .listCard {
-    width: 180px !important;
+    /* width: 180px !important; */
     padding: 0px;
-    margin: 30px;
+    /* margin: 30px; */
   }
 
   .listProfileContent {
@@ -1906,7 +1906,7 @@
   .listCard {
     width: 200px;
     padding: 0px;
-    margin: 30px;
+    /* margin: 30px; */
   }
 
   .listProfileContent {
