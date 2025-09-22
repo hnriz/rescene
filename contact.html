@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rescene | Contato</title>
+  <link rel="stylesheet" href="src/css/reset.css">
+  <link rel="stylesheet" href="src/css/footer.css">
+  <link rel="stylesheet" href="src/css/body.css">
+  <link rel="stylesheet" href="src/css/header.css">
+  <link rel="stylesheet" href="src/css/contact.css">
+  <link rel="stylesheet" href="src/css/signin-signup.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="icon" type="image/x-icon" href="src/img/favicon.ico">
+</head>
+
+<body>
+  <header class="main-header">
+    <div class="header-container">
+      <!-- Logo e Menu Mobile -->
+      <div class="header-left">
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <a href="index.html" class="logo-link">
+          <img src="src/img/logo-branco.png" alt="Rescene" class="logo">
+        </a>
+      </div>
+
+      <!-- Menu de Navegação Principal -->
+      <nav class="main-nav">
+        <a href="catalog/movies.html" class="nav-link">
+          <i class="fas fa-film"></i>
+          <span>Filmes</span>
+        </a>
+        <a href="catalog/series.html" class="nav-link">
+          <i class="fas fa-tv"></i>
+          <span>Séries</span>
+        </a>
+        <a href="ranking/rankFilmes.html" class="nav-link">
+          <i class="fas fa-chart-line"></i>
+          <span>Populares</span>
+        </a>
+      </nav>
+
+      <!-- Barra de Pesquisa -->
+      <div class="search-container">
+        <input type="text" placeholder="Pesquisar..." class="search-input">
+        <button class="search-btn"><i class="fas fa-search"></i></button>
+      </div>
+
+      <!-- Área do Usuário -->
+      <div class="user-area">
+        <!-- Notificações -->
+        <div class="notification-dropdown">
+          <button class="icon-btn notification-btn" id="notification-btn">
+            <i class="fas fa-bell"></i>
+            <span class="notification-count">3</span>
+          </button>
+          <div class="dropdown-content notification-content">
+            <div class="dropdown-header">
+              <h4>Notificações</h4>
+              <button class="mark-all-read">Marcar todas como lidas</button>
+            </div>
+            <div class="notification-list">
+              <div class="notification-item unread">
+                <div class="notification-avatar">
+                  <img src="src/img/user1.jpg" alt="Usuário">
+                </div>
+                <div class="notification-text">
+                  <p><strong>Ana</strong> comentou no seu post.</p>
+                  <span class="time">2 min atrás</span>
+                </div>
+              </div>
+              <div class="notification-item unread">
+                <div class="notification-avatar">
+                  <img src="src/img/user2.jpg" alt="Usuário">
+                </div>
+                <div class="notification-text">
+                  <p><strong>João</strong> curtiu sua avaliação.</p>
+                  <span class="time">10 min atrás</span>
+                </div>
+              </div>
+              <div class="notification-item">
+                <div class="notification-avatar">
+                  <img src="src/img/user3.jpg" alt="Usuário">
+                </div>
+                <div class="notification-text">
+                  <p><strong>Maria</strong> começou a te seguir.</p>
+                  <span class="time">1 h atrás</span>
+                </div>
+              </div>
+            </div>
+            <div class="dropdown-footer">
+              <a href="notifications.html">Ver todas as notificações</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Usuário -->
+        <div class="user-dropdown">
+          <button class="user-btn" id="user-btn">
+            <img src="src/img/icon.jpg" alt="Avatar" class="user-avatar">
+            <span class="username">Henrique</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="dropdown-content user-content">
+            <div class="user-info">
+              <img src="src/img/icon.jpg" alt="Avatar" class="user-avatar-large">
+              <div>
+                <h4>Henrique</h4>
+                <p>henrique@email.com</p>
+              </div>
+            </div>
+            <div class="dropdown-links">
+              <a href="profile/profile.html"><i class="fas fa-user"></i><span>Meu Perfil</span></a>
+              <a href="profile/watched.html"><i class="fas fa-eye"></i><span>Assistidos</span></a>
+              <a href="profile/liked.html"><i class="fas fa-heart"></i><span>Curtidos</span></a>
+              <a href="settings.html"><i class="fas fa-cog"></i><span>Configurações</span></a>
+              <a href="logout.html"><i class="fas fa-sign-out-alt"></i><span>Sair</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="contact-section">
+      <h2>Entre em Contato</h2>
+      <form class="contact-form">
+        <label for="name">Nome</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Mensagem</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit" class="submit-btn">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="src/img/logo-branco.png" alt="Rescene">
+      </div>
+      <div class="footer-links">
+        <a href="about.html">Sobre</a>
+        <a href="contact.html">Contato</a>
+        <a href="privacy.html">Privacidade</a>
+      </div>
+      <div class="footer-social">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="src/js/menu.js"></script>
+  <script src="src/js/notifications.js"></script>
+  <script src="src/js/contact.js"></script>
+  <script src="src/js/footer.js"></script>
+
+
+<script>
+  // Script para a página de contato
+  document.addEventListener('DOMContentLoaded', function() {
+    // Elementos do DOM
+    const contactForm = document.getElementById('contactForm');
+    const successModal = document.getElementById('successModal');
+    const closeModalBtn = document.getElementById('closeModal');
+    const modalOkBtn = document.getElementById('modalOk');
+    const scrollToFormBtn = document.querySelector('.scroll-to-form');
+    
+    // Scroll suave para o formulário
+    if (scrollToFormBtn) {
+      scrollToFormBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.getElementById('contact-form').scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    }
+    
+    // Envio do formulário
+    if (contactForm) {
+      contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Validação básica
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+        const subjectInput = document.getElementById('subject');
+        const categoryInput = document.getElementById('category');
+        const messageInput = document.getElementById('message');
+        
+        let isValid = true;
+        
+        // Reset de estilos de erro
+        document.querySelectorAll('.form-group').forEach(group => {
+          group.classList.remove('error');
+        });
+        
+        // Validação de campos
+        if (!nameInput.value.trim()) {
+          nameInput.closest('.form-group').classList.add('error');
+          isValid = false;
+        }
+        
+        if (!emailInput.value.trim() || !isValidEmail(emailInput.value)) {
+          emailInput.closest('.form-group').classList.add('error');
+          isValid = false;
+        }
+        
+        if (!subjectInput.value.trim()) {
+          subjectInput.closest('.form-group').classList.add('error');
+          isValid = false;
+        }
+        
+        if (!categoryInput.value) {
+          categoryInput.closest('.form-group').classList.add('error');
+          isValid = false;
+        }
+        
+        if (!messageInput.value.trim()) {
+          messageInput.closest('.form-group').classList.add('error');
+          isValid = false;
+        }
+        
+        if (isValid) {
+          // Simulação de envio (em produção, isso seria uma requisição AJAX)
+          setTimeout(() => {
+            // Mostrar modal de sucesso
+            successModal.classList.add('active');
+            
+            // Limpar formulário
+            contactForm.reset();
+          }, 1000);
+        }
+      });
+    }
+    
+    // Fechar modal
+    function closeModal() {
+      successModal.classList.remove('active');
+    }
+    
+    if (closeModalBtn) {
+      closeModalBtn.addEventListener('click', closeModal);
+    }
+    
+    if (modalOkBtn) {
+      modalOkBtn.addEventListener('click', closeModal);
+    }
+    
+    // Fechar modal clicando fora
+    successModal.addEventListener('click', function(e) {
+      if (e.target === successModal) {
+        closeModal();
+      }
+    });
+    
+    // Função de validação de email
+    function isValidEmail(email) {
+      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return re.test(email);
+    }
+    
+    // Animações de entrada para os elementos
+    const animateOnScroll = function() {
+      const elements = document.querySelectorAll('.option-card, .form-container, .info-card, .faq-item');
+      
+      elements.forEach(element => {
+        const elementPosition = element.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight / 1.3;
+        
+        if (elementPosition < screenPosition) {
+          element.style.opacity = '1';
+          element.style.transform = 'translateY(0)';
+        }
+      });
+    };
+    
+    // Configurar observador de interseção para animações
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-in');
+        }
+      });
+    }, observerOptions);
+    
+    // Observar elementos para animação
+    document.querySelectorAll('.option-card, .form-container, .info-card, .faq-item').forEach(item => {
+      // Configurar estado inicial para animação
+      item.style.opacity = '0';
+      item.style.transform = 'translateY(20px)';
+      item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+      
+      // Iniciar observação
+      observer.observe(item);
+    });
+    
+    // Inicializar animações no scroll
+    window.addEventListener('scroll', animateOnScroll);
+    // Executar uma vez ao carregar para elementos já visíveis
+    animateOnScroll();
+  });
+</script>
+</body>
+
+</html>

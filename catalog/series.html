@@ -1,0 +1,1634 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rescene | Series</title>
+
+  <link rel="stylesheet" href="../src/css/reset.css">
+  <link rel="stylesheet" href="../src/css/footer.css">
+  <link rel="stylesheet" href="../src/css/header.css">
+  <link rel="stylesheet" href="../src/css/movies.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="icon" type="image/x-icon" href="../src/img/favicon.ico">
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="main-header">
+      <div class="header-container">
+          <!-- Logo e Menu Mobile -->
+          <div class="header-left">
+              <div class="hamburger" id="hamburger">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+              </div>
+              
+              <a href="../index.html" class="logo-link">
+                  <img src="../src/img/logo-branco.png" alt="Rescene" class="logo">
+              </a>
+          </div>
+
+          <!-- Menu de Navegação Principal -->
+          <nav class="main-nav">
+              <a href="../catalog/movies.html" class="nav-link">
+                  <i class="fas fa-film"></i>
+                  <span>Filmes</span>
+              </a>
+              <a href="../catalog/series.html" class="nav-link">
+                  <i class="fas fa-tv"></i>
+                  <span>Séries</span>
+              </a>
+              <a href="../ranking/rankFilmes.html" class="nav-link">
+                  <i class="fas fa-chart-line"></i>
+                  <span>Populares</span>
+              </a>
+          </nav>
+
+          <!-- Barra de Pesquisa Aprimorada com Auto-typing -->
+          <div class="search-container">
+              <div class="search-bar">
+                  <input type="text" id="search-input" placeholder=" " autocomplete="off">
+                  <div id="search-placeholder"></div>
+                  <button type="submit" class="search-btn">
+                      <i class="fas fa-search"></i>
+                  </button>
+                  <div class="search-results" id="search-results"></div>
+              </div>
+              <div class="search-suggestions">
+                  <span class="suggestion-tag">Trending:</span>
+                  <div class="suggestions-list">
+                      <span class="suggestion-item">Interestelar</span>
+                      <span class="suggestion-item">Breaking Bad</span>
+                      <span class="suggestion-item">The Last of Us</span>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Área do Usuário Aprimorada -->
+          <div class="user-area">
+              <!-- Notificações com ícone maior -->
+              <div class="notification-dropdown">
+                  <button class="icon-btn notification-btn" id="notification-btn">
+                      <i class="fas fa-bell"></i>
+                      <span class="notification-count">3</span>
+                  </button>
+                  <div class="dropdown-content notification-content">
+                      <div class="dropdown-header">
+                          <h3>Notificações</h3>
+                          <a href="#" class="mark-all-read">Marcar todas como lida</a>
+                      </div>
+                      <div class="notification-list">
+                          <div class="notification-item unread">
+                              <div class="notification-avatar">
+                                  <img src="../src/img/user1.jpg" alt="Usuário">
+                              </div>
+                              <div class="notification-text">
+                                  <p><strong>Maria Silva</strong> curtiu sua avaliação de <strong>Interestelar</strong></p>
+                                  <span class="notification-time">há 2 minutos</span>
+                              </div>
+                          </div>
+                          <div class="notification-item unread">
+                              <div class="notification-avatar">
+                                  <img src="../src/img/user2.jpg" alt="Usuário">
+                              </div>
+                              <div class="notification-text">
+                                  <p><strong>João Santos</strong> começou a seguir você</p>
+                                  <span class="notification-time">há 15 minutos</span>
+                              </div>
+                          </div>
+                          <div class="notification-item">
+                              <div class="notification-avatar">
+                                  <img src="../src/img/user3.jpg" alt="Usuário">
+                              </div>
+                              <div class="notification-text">
+                                  <p>Novo episódio de <strong>The Last of Us</strong> disponível</p>
+                                  <span class="notification-time">há 1 hora</span>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="dropdown-footer">
+                          <a href="../notifications.html">Ver todas as notificações</a>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Menu do Usuário com Email -->
+              <div class="user-dropdown">
+                  <button class="user-btn" id="user-btn">
+                      <img src="../src/img/icon.jpg" alt="Avatar" class="user-avatar">
+                      <div class="user-info-short">
+                          <span class="username">NomeUsuário</span>
+                          <span class="user-email">usuario@email.com</span>
+                      </div>
+                      <i class="fas fa-chevron-down"></i>
+                  </button>
+                  <div class="dropdown-content user-content">
+                      <div class="user-info">
+                          <img src="../src/img/icon.jpg" alt="Avatar" class="user-avatar-large">
+                          <div class="user-details">
+                              <h3>NomeUsuário</h3>
+                              <p>@username</p>
+                              <p class="user-email">usuario@email.com</p>
+                          </div>
+                      </div>
+                      <div class="dropdown-links">
+                          <a href="../profile/profile.html">
+                              <i class="fas fa-user"></i>
+                              <span>Meu Perfil</span>
+                          </a>
+                          <a href="../profile/watched.html">
+                              <i class="fas fa-eye"></i>
+                              <span>Assistidos</span>
+                          </a>
+                          <a href="../profile/liked.html">
+                              <i class="fas fa-heart"></i>
+                              <span>Favoritos</span>
+                          </a>
+                          <a href="../profile/userLists.html">
+                              <i class="fas fa-list"></i>
+                              <span>Minhas Listas</span>
+                          </a>
+                          <a href="../settings/settings.html">
+                              <i class="fas fa-cog"></i>
+                              <span>Configurações</span>
+                          </a>
+                          <a href="#" id="logout-btn">
+                              <i class="fas fa-sign-out-alt"></i>
+                              <span>Sair</span>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <!-- Menu Mobile -->
+      <nav class="mobile-menu" id="mobileMenu">
+          <div class="mobile-menu-header">
+              <div class="mobile-logo">
+                  <img src="../src/img/logo-branco.png" class="logo">
+                  <span class="logo-text">Rescene</span>
+              </div>
+              <button class="close-menu" id="closeMenu">
+                  <i class="fas fa-times"></i>
+              </button>
+          </div>
+          <div class="mobile-user-info">
+              <img src="../src/img/icon.jpg" alt="Avatar" class="mobile-user-avatar">
+              <div class="mobile-user-details">
+                  <h3>NomeUsuário</h3>
+                  <p>usuario@email.com</p>
+              </div>
+          </div>
+          <div class="mobile-menu-content">
+              <a href="../index.html" class="mobile-menu-link">
+                  <i class="fas fa-home"></i>
+                  <span>Página Inicial</span>
+              </a>
+              <a href="../profile/profile.html" class="mobile-menu-link">
+                  <i class="fas fa-user"></i>
+                  <span>Meu Perfil</span>
+              </a>
+              <a href="../catalog/movies.html" class="mobile-menu-link">
+                  <i class="fas fa-film"></i>
+                  <span>Filmes</span>
+              </a>
+              <a href="../catalog/series.html" class="mobile-menu-link">
+                  <i class="fas fa-tv"></i>
+                  <span>Séries</span>
+              </a>
+              <a href="../ranking/rankFilmes.html" class="mobile-menu-link">
+                  <i class="fas fa-chart-line"></i>
+                  <span>Populares</span>
+              </a>
+              <a href="../profile/watched.html" class="mobile-menu-link">
+                  <i class="fas fa-eye"></i>
+                  <span>Assistidos</span>
+              </a>
+              <a href="../profile/liked.html" class="mobile-menu-link">
+                  <i class="fas fa-heart"></i>
+                  <span>Favoritos</span>
+              </a>
+              <a href="../profile/userLists.html" class="mobile-menu-link">
+                  <i class="fas fa-list"></i>
+                  <span>Listas</span>
+              </a>
+              <a href="../settings/settings.html" class="mobile-menu-link">
+                  <i class="fas fa-cog"></i>
+                  <span>Configurações</span>
+              </a>
+              <a href="#" class="mobile-menu-link" id="mobile-logout">
+                  <i class="fas fa-sign-out-alt"></i>
+                  <span>Sair</span>
+              </a>
+          </div>
+      </nav>
+  </header>
+
+  <main class="movies-page">
+    <!-- Seção Herói com Filme em Destaque -->
+    <section class="hero-section">
+      <div class="hero-background">
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>Descubra Séries Incríveis</h1>
+            <p>Explore nosso catálogo com milhares de séries, avaliações da comunidade e recomendações personalizadas.</p>
+            <div class="hero-cta">
+              <button class="cta-btn primary">Explorar Catálogo</button>
+              <button class="cta-btn secondary">Ver Tendências</button>
+            </div>
+          </div>
+          <div class="hero-featured">
+            <div class="featured-movie">
+              <div class="movie-poster">
+                <img src="../src/img/poster1.jpg" alt="Filme em Destaque">
+                <div class="movie-badge">Em Destaque</div>
+              </div>
+              <div class="movie-info">
+                <h3>Interestelar</h3>
+                <div class="movie-meta">
+                  <span>2014</span>
+                  <span>2h 49m</span>
+                  <span>Ficção Científica</span>
+                </div>
+                <div class="movie-rating">
+                  <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                  </div>
+                  <span>4.5/5</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Filtros e Busca -->
+    <section class="filters-section">
+      <div class="container">
+        <div class="filters-container">
+          <div class="filters-header">
+            <h2>Encontre Seu Próximo Filme</h2>
+            <p>Filtre por gênero, ano, avaliação e muito mais</p>
+          </div>
+          
+          <div class="filters-grid">
+            <div class="filter-group">
+              <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Buscar séries..." id="movie-search">
+                <button class="search-btn">
+                  <i class="fas fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+            
+            <div class="filter-group">
+              <div class="filter-tags">
+                <button class="filter-tag active">Todos</button>
+                <button class="filter-tag">Ação</button>
+                <button class="filter-tag">Drama</button>
+                <button class="filter-tag">Comédia</button>
+                <button class="filter-tag">Ficção Científica</button>
+                <button class="filter-tag">Ver Todos</button>
+              </div>
+            </div>
+            
+            <div class="filter-group">
+              <div class="filter-options">
+                <select class="filter-select">
+                  <option value="">Ordenar por</option>
+                  <option value="popularity">Popularidade</option>
+                  <option value="rating">Avaliação</option>
+                  <option value="newest">Mais Recentes</option>
+                  <option value="oldest">Mais Antigos</option>
+                </select>
+                
+                <select class="filter-select">
+                  <option value="">Ano</option>
+                  <option value="2024">2024</option>
+                  <option value="2023">2023</option>
+                  <option value="2020-2022">2020-2022</option>
+                  <option value="2010-2019">2010-2019</option>
+                </select>
+                
+                <select class="filter-select">
+                  <option value="">Avaliação Mínima</option>
+                  <option value="4">⭐ 4+</option>
+                  <option value="3">⭐ 3+</option>
+                  <option value="2">⭐ 2+</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Catálogo de Filmes - Layout Aprimorado -->
+    <section class="catalog-section">
+      <div class="container">
+        <div class="catalog-header">
+          <h2>Catálogo de Séries</h2>
+          <div class="view-options">
+            <button class="view-btn active" data-view="grid">
+              <i class="fas fa-th"></i>
+            </button>
+            <button class="view-btn" data-view="list">
+              <i class="fas fa-list"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="movies-grid" id="movies-container">
+          <!-- Filme 1 -->
+          <div class="movie-card">
+            <div class="movie-poster">
+              <img src="../src/img/poster1.jpg" alt="Interestelar">
+              <div class="movie-overlay">
+                <button class="play-btn">
+                  <i class="fas fa-play"></i>
+                </button>
+                <div class="movie-actions">
+                  <button class="action-btn">
+                    <i class="far fa-heart"></i>
+                  </button>
+                  <button class="action-btn">
+                    <i class="far fa-bookmark"></i>
+                  </button>
+                  <button class="action-btn">
+                    <i class="far fa-eye"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="movie-rating-badge">4.5</div>
+            </div>
+            <div class="movie-info">
+              <h3 class="movie-title">Interestelar</h3>
+              <div class="movie-meta">
+                <span>2014</span>
+                <span>2h 49m</span>
+                <span>Ficção Científica</span>
+              </div>
+              <p class="movie-description">Uma equipe de exploradores viaja através de um buraco de minhoca no espaço na tentativa de garantir a sobrevivência da humanidade.</p>
+              <div class="movie-stats">
+                <span class="stat">
+                  <i class="fas fa-eye"></i>
+                  2.4M
+                </span>
+                <span class="stat">
+                  <i class="fas fa-heart"></i>
+                  98K
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Filme 2 -->
+          <div class="movie-card">
+            <div class="movie-poster">
+              <img src="../src/img/poster1.jpg" alt="O Poderoso Chefão">
+              <div class="movie-overlay">
+                <button class="play-btn">
+                  <i class="fas fa-play"></i>
+                </button>
+                <div class="movie-actions">
+                  <button class="action-btn">
+                    <i class="far fa-heart"></i>
+                  </button>
+                  <button class="action-btn">
+                    <i class="far fa-bookmark"></i>
+                  </button>
+                  <button class="action-btn">
+                    <i class="far fa-eye"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="movie-rating-badge">4.8</div>
+            </div>
+            <div class="movie-info">
+              <h3 class="movie-title">O Poderoso Chefão</h3>
+              <div class="movie-meta">
+                <span>1972</span>
+                <span>2h 55m</span>
+                <span>Drama</span>
+              </div>
+              <p class="movie-description">A saga da família Corleone, uma das mais poderosas famílias da máfia italiana em Nova York.</p>
+              <div class="movie-stats">
+                <span class="stat">
+                  <i class="fas fa-eye"></i>
+                  1.8M
+                </span>
+                <span class="stat">
+                  <i class="fas fa-heart"></i>
+                  87K
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Filme 3 -->
+          <div class="movie-card">
+            <div class="movie-poster">
+              <img src="../src/img/poster1.jpg" alt="O Senhor dos Anéis">
+              <div class="movie-overlay">
+                <button class="play-btn">
+                  <i class="fas fa-play"></i>
+                </button>
+                <div class="movie-actions">
+                  <button class="action-btn">
+                    <i class="far fa-heart"></i>
+                  </button>
+                  <button class="action-btn">
+                    <i class="far fa-bookmark"></i>
+                  </button>
+                  <button class="action-btn">
+                    <i class="far fa-eye"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="movie-rating-badge">4.7</div>
+            </div>
+            <div class="movie-info">
+              <h3 class="movie-title">O Senhor dos Anéis</h3>
+              <div class="movie-meta">
+                <span>2001</span>
+                <span>2h 58m</span>
+                <span>Fantasia</span>
+              </div>
+              <p class="movie-description">Um humilde hobbit da Terra-média assume a tarefa de destruir o Um Anel para salvar a Terra-média das trevas.</p>
+              <div class="movie-stats">
+                <span class="stat">
+                  <i class="fas fa-eye"></i>
+                  2.1M
+                </span>
+                <span class="stat">
+                  <i class="fas fa-heart"></i>
+                  92K
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Filme 4 -->
+          <div class="movie-card">
+            <div class="movie-poster">
+              <img src="../src/img/poster1.jpg" alt="Clube da Luta">
+              <div class="movie-overlay">
+                <button class="play-btn">
+                  <i class="fas fa-play"></i>
+                </button>
+                <div class="movie-actions">
+                  <button class="action-btn">
+                    <i class="far fa-heart"></i>
+                  </button>
+                  <button class="action-btn">
+                    <i class="far fa-bookmark"></i>
+                  </button>
+                  <button class="action-btn">
+                    <i class="far fa-eye"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="movie-rating-badge">4.3</div>
+            </div>
+            <div class="movie-info">
+              <h3 class="movie-title">Clube da Luta</h3>
+              <div class="movie-meta">
+                <span>1999</span>
+                <span>2h 19m</span>
+                <span>Drama</span>
+              </div>
+              <p class="movie-description">Um homem insatisfeito forma um clube de luta clandestino como forma de terapia alternativa.</p>
+              <div class="movie-stats">
+                <span class="stat">
+                  <i class="fas fa-eye"></i>
+                  1.6M
+                </span>
+                <span class="stat">
+                  <i class="fas fa-heart"></i>
+                  78K
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Filme 5 -->
+          <div class="movie-card">
+            <div class="movie-poster">
+              <img src="../src/img/poster1.jpg" alt="Pulp Fiction">
+              <div class="movie-overlay">
+                <button class="play-btn">
+                  <i class="fas fa-play"></i>
+                </button>
+                <div class="movie-actions">
+                  <button class="action-btn">
+                    <i class="far fa-heart"></i>
+                  </button>
+                  <button class="action-btn">
+                    <i class="far fa-bookmark"></i>
+                  </button>
+                  <button class="action-btn">
+                    <i class="far fa-eye"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="movie-rating-badge">4.6</div>
+            </div>
+            <div class="movie-info">
+              <h3 class="movie-title">Pulp Fiction</h3>
+              <div class="movie-meta">
+                <span>1994</span>
+                <span>2h 34m</span>
+                <span>Crime</span>
+              </div>
+              <p class="movie-description">As vidas de dois assassinos da máfia, um boxeador e um par de bandidos se entrelaçam em quatro histórias de violência.</p>
+              <div class="movie-stats">
+                <span class="stat">
+                  <i class="fas fa-eye"></i>
+                  1.9M
+                </span>
+                <span class="stat">
+                  <i class="fas fa-heart"></i>
+                  85K
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Filme 6 -->
+          <div class="movie-card">
+            <div class="movie-poster">
+              <img src="../src/img/poster1.jpg" alt="Forrest Gump">
+              <div class="movie-overlay">
+                <button class="play-btn">
+                  <i class="fas fa-play"></i>
+                </button>
+                <div class="movie-actions">
+                  <button class="action-btn">
+                    <i class="far fa-heart"></i>
+                  </button>
+                  <button class="action-btn">
+                    <i class="far fa-bookmark"></i>
+                  </button>
+                  <button class="action-btn">
+                    <i class="far fa-eye"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="movie-rating-badge">4.4</div>
+            </div>
+            <div class="movie-info">
+              <h3 class="movie-title">Forrest Gump</h3>
+              <div class="movie-meta">
+                <span>1994</span>
+                <span>2h 22m</span>
+                <span>Drama</span>
+              </div>
+              <p class="movie-description">A presença de Forrest Gump em importantes eventos históricos dos EUA, enquanto ele persegue seu amor de infância.</p>
+              <div class="movie-stats">
+                <span class="stat">
+                  <i class="fas fa-eye"></i>
+                  2.2M
+                </span>
+                <span class="stat">
+                  <i class="fas fa-heart"></i>
+                  95K
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Filme 7 -->
+          <div class="movie-card">
+            <div class="movie-poster">
+              <img src="../src/img/poster1.jpg" alt="O Rei Leão">
+              <div class="movie-overlay">
+                <button class="play-btn">
+                  <i class="fas fa-play"></i>
+                </button>
+                <div class="movie-actions">
+                  <button class="action-btn">
+                    <i class="far fa-heart"></i>
+                  </button>
+                  <button class="action-btn">
+                    <i class="far fa-bookmark"></i>
+                  </button>
+                  <button class="action-btn">
+                    <i class="far fa-eye"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="movie-rating-badge">4.2</div>
+            </div>
+            <div class="movie-info">
+              <h3 class="movie-title">O Rei Leão</h3>
+              <div class="movie-meta">
+                <span>1994</span>
+                <span>1h 28m</span>
+                <span>Animação</span>
+              </div>
+              <p class="movie-description">Um jovem leão príncipe luta para reclaimar seu trono depois que seu tio malvado assassina seu pai.</p>
+              <div class="movie-stats">
+                <span class="stat">
+                  <i class="fas fa-eye"></i>
+                  2.0M
+                </span>
+                <span class="stat">
+                  <i class="fas fa-heart"></i>
+                  88K
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Filme 8 -->
+          <div class="movie-card">
+            <div class="movie-poster">
+              <img src="../src/img/poster1.jpg" alt="Matrix">
+              <div class="movie-overlay">
+                <button class="play-btn">
+                  <i class="fas fa-play"></i>
+                </button>
+                <div class="movie-actions">
+                  <button class="action-btn">
+                    <i class="far fa-heart"></i>
+                  </button>
+                  <button class="action-btn">
+                    <i class="far fa-bookmark"></i>
+                  </button>
+                  <button class="action-btn">
+                    <i class="far fa-eye"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="movie-rating-badge">4.3</div>
+            </div>
+            <div class="movie-info">
+              <h3 class="movie-title">Matrix</h3>
+              <div class="movie-meta">
+                <span>1999</span>
+                <span>2h 16m</span>
+                <span>Ficção Científica</span>
+              </div>
+              <p class="movie-description">Um hacker descobre a verdade sobre sua realidade e sua função na guerra contra os controladores.</p>
+              <div class="movie-stats">
+                <span class="stat">
+                  <i class="fas fa-eye"></i>
+                  1.7M
+                </span>
+                <span class="stat">
+                  <i class="fas fa-heart"></i>
+                  82K
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Filme 9 -->
+          <div class="movie-card">
+            <div class="movie-poster">
+              <img src="../src/img/poster1.jpg" alt="Gladiador">
+              <div class="movie-overlay">
+                <button class="play-btn">
+                  <i class="fas fa-play"></i>
+                </button>
+                <div class="movie-actions">
+                  <button class="action-btn">
+                    <i class="far fa-heart"></i>
+                  </button>
+                  <button class="action-btn">
+                    <i class="far fa-bookmark"></i>
+                  </button>
+                  <button class="action-btn">
+                    <i class="far fa-eye"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="movie-rating-badge">4.5</div>
+            </div>
+            <div class="movie-info">
+              <h3 class="movie-title">Gladiador</h3>
+              <div class="movie-meta">
+                <span>2000</span>
+                <span>2h 35m</span>
+                <span>Ação</span>
+              </div>
+              <p class="movie-description">Um general romano traído busca vingança contra o corrupto imperador que matou sua família.</p>
+              <div class="movie-stats">
+                <span class="stat">
+                  <i class="fas fa-eye"></i>
+                  1.5M
+                </span>
+                <span class="stat">
+                  <i class="fas fa-heart"></i>
+                  76K
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Filme 10 -->
+          <div class="movie-card">
+            <div class="movie-poster">
+              <img src="../src/img/poster1.jpg" alt="Titanic">
+              <div class="movie-overlay">
+                <button class="play-btn">
+                  <i class="fas fa-play"></i>
+                </button>
+                <div class="movie-actions">
+                  <button class="action-btn">
+                    <i class="far fa-heart"></i>
+                  </button>
+                  <button class="action-btn">
+                    <i class="far fa-bookmark"></i>
+                  </button>
+                  <button class="action-btn">
+                    <i class="far fa-eye"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="movie-rating-badge">4.1</div>
+            </div>
+            <div class="movie-info">
+              <h3 class="movie-title">Titanic</h3>
+              <div class="movie-meta">
+                <span>1997</span>
+                <span>3h 14m</span>
+                <span>Romance</span>
+              </div>
+              <p class="movie-description">Um romance épico entre um artista pobre e uma jovem rica a bordo do fatídico RMS Titanic.</p>
+              <div class="movie-stats">
+                <span class="stat">
+                  <i class="fas fa-eye"></i>
+                  2.3M
+                </span>
+                <span class="stat">
+                  <i class="fas fa-heart"></i>
+                  96K
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Filme 11 -->
+          <div class="movie-card">
+            <div class="movie-poster">
+              <img src="../src/img/poster1.jpg" alt="Jurassic Park">
+              <div class="movie-overlay">
+                <button class="play-btn">
+                  <i class="fas fa-play"></i>
+                </button>
+                <div class="movie-actions">
+                  <button class="action-btn">
+                    <i class="far fa-heart"></i>
+                  </button>
+                  <button class="action-btn">
+                    <i class="far fa-bookmark"></i>
+                  </button>
+                  <button class="action-btn">
+                    <i class="far fa-eye"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="movie-rating-badge">4.0</div>
+            </div>
+            <div class="movie-info">
+              <h3 class="movie-title">Jurassic Park</h3>
+              <div class="movie-meta">
+                <span>1993</span>
+                <span>2h 7m</span>
+                <span>Aventura</span>
+              </div>
+              <p class="movie-description">Um parque temático com dinossauros clonados se torna uma luta pela sobrevivência quando os animais escapam.</p>
+              <div class="movie-stats">
+                <span class="stat">
+                  <i class="fas fa-eye"></i>
+                  1.8M
+                </span>
+                <span class="stat">
+                  <i class="fas fa-heart"></i>
+                  84K
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Filme 12 -->
+          <div class="movie-card">
+            <div class="movie-poster">
+              <img src="../src/img/poster1.jpg" alt="Avatar">
+              <div class="movie-overlay">
+                <button class="play-btn">
+                  <i class="fas fa-play"></i>
+                </button>
+                <div class="movie-actions">
+                  <button class="action-btn">
+                    <i class="far fa-heart"></i>
+                  </button>
+                  <button class="action-btn">
+                    <i class="far fa-bookmark"></i>
+                  </button>
+                  <button class="action-btn">
+                    <i class="far fa-eye"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="movie-rating-badge">4.2</div>
+            </div>
+            <div class="movie-info">
+              <h3 class="movie-title">Avatar</h3>
+              <div class="movie-meta">
+                <span>2009</span>
+                <span>2h 42m</span>
+                <span>Ficção Científica</span>
+              </div>
+              <p class="movie-description">Um marine paraplégico é enviado à lua Pandora em uma missão única, tornando-se dividido entre dois mundos.</p>
+              <div class="movie-stats">
+                <span class="stat">
+                  <i class="fas fa-eye"></i>
+                  2.5M
+                </span>
+                <span class="stat">
+                  <i class="fas fa-heart"></i>
+                  99K
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="load-more">
+          <button class="load-more-btn">
+            <i class="fas fa-plus"></i>
+            Carregar Mais Séries
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Banner Promocional Rescene Premium -->
+    <section class="promo-banner">
+      <div class="container">
+        <div class="banner-content">
+          <div class="banner-text">
+            <h2>Rescene Premium</h2>
+            <p>Desbloqueie recursos exclusivos, sem anúncios e recomendações personalizadas</p>
+            <ul class="banner-features">
+              <li><i class="fas fa-check"></i> Sem anúncios</li>
+              <li><i class="fas fa-check"></i> Recomendações exclusivas</li>
+              <li><i class="fas fa-check"></i> Downloads offline</li>
+              <li><i class="fas fa-check"></i> Suporte prioritário</li>
+            </ul>
+            <button class="premium-btn">
+              <i class="fas fa-crown"></i>
+              Assinar Agora
+            </button>
+          </div>
+          <div class="banner-visual">
+            <div class="floating-cards">
+              <div class="floating-card card-1">
+                <img src="../src/img/poster1.jpg" alt="Filme Premium">
+              </div>
+              <div class="floating-card card-2">
+                <img src="../src/img/poster1.jpg" alt="Filme Premium">
+              </div>
+              <div class="floating-card card-3">
+                <img src="../src/img/poster1.jpg" alt="Filme Premium">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categorias em Destaque -->
+    <section class="categories-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Explore por Categoria</h2>
+          <p>Descubra séries por gênero e tema</p>
+        </div>
+
+        <div class="categories-grid">
+          <div class="category-card">
+            <div class="category-icon">
+              <i class="fas fa-explosion"></i>
+            </div>
+            <h3>Ação</h3>
+            <p>1,245 séries</p>
+            <div class="category-preview">
+              <img src="../src/img/poster1.jpg" alt="Ação">
+            </div>
+          </div>
+
+          <div class="category-card">
+            <div class="category-icon">
+              <i class="fas fa-theater-masks"></i>
+            </div>
+            <h3>Comédia</h3>
+            <p>987 sér</p>
+            <div class="category-preview">
+              <img src="../src/img/poster1.jpg" alt="Comédia">
+            </div>
+          </div>
+
+          <div class="category-card">
+            <div class="category-icon">
+              <i class="fas fa-heart"></i>
+            </div>
+            <h3>Romance</h3>
+            <p>756 sér</p>
+            <div class="category-preview">
+              <img src="../src/img/poster1.jpg" alt="Romance">
+            </div>
+          </div>
+
+          <div class="category-card">
+            <div class="category-icon">
+              <i class="fas fa-robot"></i>
+            </div>
+            <h3>Ficção Científica</h3>
+            <p>543 sér</p>
+            <div class="category-preview">
+              <img src="../src/img/poster1.jpg" alt="Ficção Científica">
+            </div>
+          </div>
+
+          <div class="category-card">
+            <div class="category-icon">
+              <i class="fas fa-ghost"></i>
+            </div>
+            <h3>Terror</h3>
+            <p>432 sér</p>
+            <div class="category-preview">
+              <img src="../src/img/poster1.jpg" alt="Terror">
+            </div>
+          </div>
+
+          <div class="category-card">
+            <div class="category-icon">
+              <i class="fas fa-dragon"></i>
+            </div>
+            <h3>Fantasia</h3>
+            <p>321 sér</p>
+            <div class="category-preview">
+              <img src="../src/img/poster1.jpg" alt="Fantasia">
+            </div>
+          </div>
+
+          <!-- Novos cards adicionados -->
+          <div class="category-card">
+            <div class="category-icon">
+              <i class="fas fa-microphone"></i>
+            </div>
+            <h3>Musical</h3>
+            <p>234 sér</p>
+            <div class="category-preview">
+              <img src="../src/img/poster1.jpg" alt="Musical">
+            </div>
+          </div>
+
+          <div class="category-card">
+            <div class="category-icon">
+              <i class="fas fa-question"></i>
+            </div>
+            <h3>Mistério</h3>
+            <p>198 sér</p>
+            <div class="category-preview">
+              <img src="../src/img/poster1.jpg" alt="Mistério">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Banner Promocional 2 -->
+    <section class="promo-banner secondary">
+      <div class="container">
+          <div class="banner-content">
+              <div class="banner-text">
+                  <span class="banner-badge">Novidade</span>
+                  <h2>Coleção de Verão 2024</h2>
+                  <p>Os sér mais quentes para assistir nesta temporada com até 40% de desconto. Aproveite o calor com as melhores histórias!</p>
+                  <button class="promo-btn">
+                      <i class="fas fa-fire"></i>
+                      Ver Coleção
+                  </button>
+              </div>
+              <div class="banner-visual">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23e05252'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='24' fill='white'%3EColeção de Verão 2024%3C/text%3E%3C/svg%3E" alt="Coleção de Verão">
+              </div>
+          </div>
+      </div>
+  </section>
+
+    <!-- Seção de Filmes em Alta -->
+     <!-- Seção de Filmes em Alta -->
+     <section class="trending-section">
+      <div class="container">
+          <div class="section-header">
+              <h2>Séries em Alta esta Semana</h2>
+              <p>O que a comunidade está assistindo agora</p>
+          </div>
+
+          <div class="trending-grid">
+              <!-- Filme 1 -->
+              <div class="movie-card">
+                  <div class="movie-poster">
+                      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='280' height='350' viewBox='0 0 280 350'%3E%3Crect width='280' height='350' fill='%23222'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='18' fill='%23fada5e'%3EDuna: Parte Dois%3C/text%3E%3C/svg%3E" alt="Duna: Parte Dois">
+                      <div class="trending-badge">#1 Trending</div>
+                      <div class="movie-rating-badge">4.8</div>
+                  </div>
+                  <div class="movie-info">
+                      <h3 class="movie-title">Duna: Parte Dois</h3>
+                      <div class="movie-meta">
+                          <span>2024</span>
+                          <span>2h 46m</span>
+                          <span>Ficção Científica</span>
+                      </div>
+                      <div class="movie-stats">
+                          <span class="stat">
+                              <i class="fas fa-eye"></i>
+                              1.2M
+                          </span>
+                          <span class="stat">
+                              <i class="fas fa-heart"></i>
+                              86K
+                          </span>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Filme 2 -->
+              <div class="movie-card">
+                  <div class="movie-poster">
+                      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='280' height='350' viewBox='0 0 280 350'%3E%3Crect width='280' height='350' fill='%23222'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='18' fill='%23fada5e'%3EDevil%3C/text%3E%3C/svg%3E" alt="Devil">
+                      <div class="trending-badge">#2 Trending</div>
+                      <div class="movie-rating-badge">4.6</div>
+                  </div>
+                  <div class="movie-info">
+                      <h3 class="movie-title">Devil</h3>
+                      <div class="movie-meta">
+                          <span>2024</span>
+                          <span>2h 12m</span>
+                          <span>Terror</span>
+                      </div>
+                      <div class="movie-stats">
+                          <span class="stat">
+                              <i class="fas fa-eye"></i>
+                              980K
+                          </span>
+                          <span class="stat">
+                              <i class="fas fa-heart"></i>
+                              74K
+                          </span>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Filme 3 -->
+              <div class="movie-card">
+                  <div class="movie-poster">
+                      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='280' height='350' viewBox='0 0 280 350'%3E%3Crect width='280' height='350' fill='%23222'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='18' fill='%23fada5e'%3EFuriosa%3C/text%3E%3C/svg%3E" alt="Furiosa">
+                      <div class="trending-badge">#3 Trending</div>
+                      <div class="movie-rating-badge">4.7</div>
+                  </div>
+                  <div class="movie-info">
+                      <h3 class="movie-title">Furiosa</h3>
+                      <div class="movie-meta">
+                          <span>2024</span>
+                          <span>2h 28m</span>
+                          <span>Ação</span>
+                      </div>
+                      <div class="movie-stats">
+                          <span class="stat">
+                              <i class="fas fa-eye"></i>
+                              890K
+                          </span>
+                          <span class="stat">
+                              <i class="fas fa-heart"></i>
+                              68K
+                          </span>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Filme 4 -->
+              <div class="movie-card">
+                  <div class="movie-poster">
+                      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='280' height='350' viewBox='0 0 280 350'%3E%3Crect width='280' height='350' fill='%23222'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='18' fill='%23fada5e'%3EChallengers%3C/text%3E%3C/svg%3E" alt="Challengers">
+                      <div class="trending-badge">Em Alta</div>
+                      <div class="movie-rating-badge">4.3</div>
+                  </div>
+                  <div class="movie-info">
+                      <h3 class="movie-title">Challengers</h3>
+                      <div class="movie-meta">
+                          <span>2024</span>
+                          <span>2h 11m</span>
+                          <span>Drama</span>
+                      </div>
+                      <div class="movie-stats">
+                          <span class="stat">
+                              <i class="fas fa-eye"></i>
+                              760K
+                          </span>
+                          <span class="stat">
+                              <i class="fas fa-heart"></i>
+                              59K
+                          </span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- Mascote Call-to-Action com Estrela Cinéfila 3D -->
+  <section class="mascote-cta">
+    <div class="mascote-content">
+        <div class="mascote-character">
+            <div class="star-mascot">
+                <div class="star-body"></div>
+                <div class="shine"></div>
+                
+                <div class="star-face">
+                    <div class="star-eyes">
+                        <div class="eye">
+                            <div class="pupil"></div>
+                            <div class="eye-shine"></div>
+                        </div>
+                        <div class="eye">
+                            <div class="pupil"></div>
+                            <div class="eye-shine"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="director-bowtie"></div>
+                <div class="director-vest"></div>
+                
+                <div class="film-roll"></div>
+                <div class="film-strip"></div>
+                
+                <div class="clapboard">
+                    <div class="clapboard-top"></div>
+                    <div class="clapboard-detail"></div>
+                    <div class="clapboard-detail"></div>
+                    <div class="clapboard-detail"></div>
+                </div>
+                
+                <div class="camera">
+                    <div class="camera-lens"></div>
+                </div>
+                
+                <div class="movie-tape"></div>
+            </div>
+            
+            <div class="mascote-decoration decoration-1"></div>
+            <div class="mascote-decoration decoration-2"></div>
+            <div class="mascote-decoration decoration-3"></div>
+            
+            <div class="sparkle sparkle-1"></div>
+            <div class="sparkle sparkle-2"></div>
+            <div class="sparkle sparkle-3"></div>
+            
+            <div class="speech-bubble">
+                <p>Ei! Vamos encontrar o filme perfeito para você? 🎬</p>
+                <div class="typing-indicator">
+                    <div class="typing-dot"></div>
+                    <div class="typing-dot"></div>
+                    <div class="typing-dot"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mascote-info">
+            <h2>Estrela Cinéfila ao Seu Dispor!</h2>
+            <p>Nosso diretor estrela está aqui para guiá-lo pelas melhores recomendações de séries baseadas nos seus gostos!</p>
+            
+            <div class="mascote-actions">
+                <button class="mascote-btn primary">
+                    <i class="fas fa-film icon"></i>
+                    Descobrir Séries
+                </button>
+                <button class="mascote-btn secondary">
+                    <i class="fas fa-theater-masks icon"></i>
+                    Ver Recomendações
+                </button>
+            </div>
+            
+            <div class="mascote-features">
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <span class="feature-text">Estrela da Calçada da Fama</span>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-clapperboard"></i>
+                    </div>
+                    <span class="feature-text">Diretor Cinematográfico</span>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                    <span class="feature-text">Recomendações Mágicas</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Banner Promocional 3 -->
+    <section class="promo-banner tertiary">
+      <div class="container">
+          <div class="banner-content">
+              <div class="banner-text">
+                  <span class="banner-badge">Limitado</span>
+                  <h2>Oferta por Tempo Limitado</h2>
+                  <p>Assinatura anual com 50% de desconto - Apenas esta semana! Aproveite agora para ter acesso ilimitado a todos os séries.</p>
+                  
+                  <div class="countdown">
+                      <span class="countdown-item">2</span>d :
+                      <span class="countdown-item">14</span>h :
+                      <span class="countdown-item">32</span>m
+                  </div>
+                  
+                  <button class="promo-btn urgent">
+                      <i class="fas fa-bolt"></i>
+                      Garantir Agora
+                  </button>
+              </div>
+              <div class="banner-visual">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%2345a049'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='24' fill='white'%3EOferta por Tempo Limitado%3C/text%3E%3C/svg%3E" alt="Oferta Limitada">
+              </div>
+          </div>
+      </div>
+  </section>
+
+
+    <!-- Reviews em Destaque -->
+    <section class="reviews-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Reviews da Comunidade</h2>
+          <p>Veja o que outros cinéfilos estão dizendo</p>
+        </div>
+
+        <div class="reviews-grid">
+          <div class="review-card">
+            <div class="review-header">
+              <div class="reviewer">
+                <img src="../src/img/user1.jpg" alt="Usuário" class="reviewer-avatar">
+                <div class="reviewer-info">
+                  <h4>Maria Silva</h4>
+                  <span>@maria_cinefilia</span>
+                </div>
+              </div>
+              <div class="review-rating">
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+              </div>
+            </div>
+            <div class="review-content">
+              <h3>Interestelar</h3>
+              <p>Assisti novamente após 5 anos e a experiência foi ainda mais profunda. A direção de Nolan é magistral, e a trilha sonora de Zimmer é simplesmente épica.</p>
+            </div>
+            <div class="review-footer">
+              <span class="review-date">3 horas atrás</span>
+              <div class="review-actions">
+                <button class="like-btn">
+                  <i class="far fa-heart"></i>
+                  <span>248</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-header">
+              <div class="reviewer">
+                <img src="../src/img/user2.jpg" alt="Usuário" class="reviewer-avatar">
+                <div class="reviewer-info">
+                  <h4>João Santos</h4>
+                  <span>@joao_cinema</span>
+                </div>
+              </div>
+              <div class="review-rating">
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <div class="review-content">
+              <h3>O Poderoso Chefão</h3>
+              <p>Obra-prima absoluta do cinema. Cada cena, cada diálogo, cada performance é perfeita. Marlon Brando está sublime.</p>
+            </div>
+            <div class="review-footer">
+              <span class="review-date">1 dia atrás</span>
+              <div class="review-actions">
+                <button class="like-btn">
+                  <i class="far fa-heart"></i>
+                  <span>187</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-header">
+              <div class="reviewer">
+                <img src="../src/img/user3.jpg" alt="Usuário" class="reviewer-avatar">
+                <div class="reviewer-info">
+                  <h4>Ana Costa</h4>
+                  <span>@ana_filmes</span>
+                </div>
+              </div>
+              <div class="review-rating">
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <div class="review-content">
+              <h3>Clube da Luta</h3>
+              <p>Um filme que te pega de surpresa e não te solta mais. A crítica social é afiada, a direção é inovadora e o final é brilhante.</p>
+            </div>
+            <div class="review-footer">
+              <span class="review-date">2 dias atrás</span>
+              <div class="review-actions">
+                <button class="like-btn">
+                  <i class="far fa-heart"></i>
+                  <span>156</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter-section">
+      <div class="container">
+        <div class="newsletter-content">
+          <div class="newsletter-text">
+            <h2>Fique por Dentro das Novidades</h2>
+            <p>Receba as últimas atualizações de séries, reviews exclusivos e promoções especiais</p>
+          </div>
+          <div class="newsletter-form">
+            <input type="email" placeholder="Seu melhor email" class="newsletter-input">
+            <button class="newsletter-btn">
+              <i class="fas fa-paper-plane"></i>
+              Assinar
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+    <footer class="main-footer">
+      <div class="footer-wave">
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+              <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+              <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+              <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+          </svg>
+      </div>
+      
+      <div class="footer-container">
+          <!-- Seção Principal -->
+          <div class="footer-main">
+              <div class="footer-brand">
+                  <div class="footer-logo">
+                      <img src="../src/img/logo-branco.png" alt="Rescene">
+                      <span class="logo-text">Rescene</span>
+                  </div>
+                  <p class="footer-description">
+                      Sua plataforma para descobrir, avaliar e compartilhar séries e séries. Conecte-se com outros cinéfilos e expanda seu universo cinematográfico.
+                  </p>
+                  <div class="footer-newsletter">
+                      <h3>Receba novidades</h3>
+                      <div class="newsletter-form">
+                          <input type="email" placeholder="Seu e-mail">
+                          <button type="submit">
+                              <i class="fas fa-paper-plane"></i>
+                          </button>
+                      </div>
+                  </div>
+              </div>
+              
+              <div class="footer-links">
+                  <div class="links-column">
+                      <h3>Navegação</h3>
+                      <ul>
+                          <li><a href="../index.html">Página Inicial</a></li>
+                          <li><a href="../catalog/movies.html">Filmes</a></li>
+                          <li><a href="../catalog/series.html">Séries</a></li>
+                          <li><a href="../ranking/rankFilmes.html">Populares</a></li>
+                          <li><a href="../profile/profile.html">Meu Perfil</a></li>
+                      </ul>
+                  </div>
+                  
+                  <div class="links-column">
+                      <h3>Recursos</h3>
+                      <ul>
+                          <li><a href="../profile/watched.html">Assistidos</a></li>
+                          <li><a href="../profile/liked.html">Favoritos</a></li>
+                          <li><a href="../profile/userLists.html">Listas</a></li>
+                          <li><a href="../settings/settings.html">Configurações</a></li>
+                          <li><a href="../search.html">Pesquisa Avançada</a></li>
+                      </ul>
+                  </div>
+                  
+                  <div class="links-column">
+                      <h3>Suporte</h3>
+                      <ul>
+                          <li><a href="../contact.html">Contate-nos</a></li>
+                          <li><a href="../help.html">Ajuda & FAQ</a></li>
+                          <li><a href="../about.html">Sobre nós</a></li>
+                          <li><a href="../privacy.html">Privacidade</a></li>
+                          <li><a href="../terms.html">Termos de uso</a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+          
+          <!-- Divisor -->
+          <div class="footer-divider"></div>
+          
+          <!-- Seção Inferior -->
+          <div class="footer-bottom">
+              <div class="footer-social">
+                  <h3>Siga-nos</h3>
+                  <div class="social-icons">
+                      <a href="https://www.threads.com/@resceneoficial" target="_blank" class="social-icon">
+                          <i class="fab fa-threads"></i>
+                      </a>
+                      <a href="https://www.instagram.com/resceneoficial/" target="_blank" class="social-icon">
+                          <i class="fab fa-instagram"></i>
+                      </a>
+                      <a href="https://x.com/resceneoficial" target="_blank" class="social-icon">
+                          <i class="fab fa-x-twitter"></i>
+                      </a>
+                      <a href="https://www.facebook.com/resceneoficial" target="_blank" class="social-icon">
+                          <i class="fab fa-facebook-f"></i>
+                      </a>
+                      <a href="https://www.youtube.com/@resceneoficial" target="_blank" class="social-icon">
+                          <i class="fab fa-youtube"></i>
+                      </a>
+                      <a href="https://www.tiktok.com/@resceneoficial" target="_blank" class="social-icon">
+                          <i class="fab fa-tiktok"></i>
+                      </a>
+                  </div>
+              </div>
+              
+              <div class="footer-copyright">
+                  <p>&copy; 2025 Rescene. Todos os direitos reservados.</p>
+                  <p>Feito por estudantes do IFSP-CAR</p>
+                  <p>Dados por <a href="https://www.themoviedb.org/" target="_blank">TMDB</a></p>
+              </div>
+              
+              <div class="footer-badges">
+                  <div class="badge">
+                      <i class="fas fa-shield-alt"></i>
+                      <span>Site seguro</span>
+                  </div>
+                  <div class="badge">
+                      <i class="fas fa-lock"></i>
+                      <span>Privacidade</span>
+                  </div>
+                  <div class="badge">
+                      <i class="fas fa-award"></i>
+                      <span>Melhor plataforma 2025</span>
+                  </div>
+              </div>
+          </div>
+      </div>
+      
+      <!-- Botão Voltar ao Topo -->
+      <button class="back-to-top" id="backToTop">
+          <i class="fas fa-arrow-up"></i>
+      </button>
+  </footer>
+
+    
+    <script src="../src/js/movies.js"></script>
+    <script src="../src/js/header.js"></script>
+    <script src="../src/js/login-signup.js"></script>
+    <script src="../src/js/dropdown-catalog.js"></script>
+    <script src="../src/js/dropdown-user.js"></script>
+
+    <script src="../src/js/footer.js"></script>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script>
+      // Interatividade para o mascote
+      document.addEventListener('DOMContentLoaded', function() {
+          const starMascot = document.querySelector('.star-mascot');
+          const speechBubble = document.querySelector('.speech-bubble');
+          const eyes = document.querySelectorAll('.pupil');
+          const messages = [
+              "Ei! Vamos encontrar o filme perfeito para você? 🎬",
+              "Baseado no que você assistiu, tenho ótimas recomendações! 🌟",
+              "Sua próxima obsessão cinematográfica está a um clique! 🍿",
+              "Lights, camera, action! Vamos começar? 🎥"
+          ];
+          
+          let currentMessage = 0;
+          
+          // Movimento dos olhos seguindo o cursor
+          document.addEventListener('mousemove', (e) => {
+              const mouseX = e.clientX;
+              const mouseY = e.clientY;
+              
+              eyes.forEach(eye => {
+                  const eyeRect = eye.getBoundingClientRect();
+                  const eyeCenterX = eyeRect.left + eyeRect.width / 2;
+                  const eyeCenterY = eyeRect.top + eyeRect.height / 2;
+                  
+                  const angle = Math.atan2(mouseY - eyeCenterY, mouseX - eyeCenterX);
+                  const distance = Math.min(5, Math.sqrt(Math.pow(mouseX - eyeCenterX, 2) + Math.pow(mouseY - eyeCenterY, 2)) / 20);
+                  
+                  const moveX = Math.cos(angle) * distance;
+                  const moveY = Math.sin(angle) * distance;
+                  
+                  eye.style.transform = `translate(calc(-50% + ${moveX}px), calc(-50% + ${moveY}px))`;
+              });
+          });
+          
+          // Alternar mensagens a cada 8 segundos
+          setInterval(() => {
+              currentMessage = (currentMessage + 1) % messages.length;
+              speechBubble.querySelector('p').textContent = messages[currentMessage];
+              speechBubble.style.animation = 'none';
+              setTimeout(() => {
+                  speechBubble.style.animation = 'fadeIn 0.8s ease-out, wiggle 7s ease-in-out infinite';
+              }, 10);
+          }, 8000);
+          
+          // Efeito de interação ao passar o mouse
+          starMascot.addEventListener('mouseenter', () => {
+              starMascot.style.animation = 'pulse 1s ease-in-out';
+              speechBubble.querySelector('p').textContent = "Olá! Pronto para uma maratona? 🎉";
+          });
+          
+          starMascot.addEventListener('mouseleave', () => {
+              starMascot.style.animation = 'float 6s ease-in-out infinite';
+          });
+          
+          // Efeito de clique nos botões
+          document.querySelectorAll('.mascote-btn').forEach(btn => {
+              btn.addEventListener('click', function() {
+                  this.style.transform = 'scale(0.95)';
+                  setTimeout(() => {
+                      this.style.transform = '';
+                  }, 200);
+                  
+                  // Feedback visual
+                  if (this.classList.contains('primary')) {
+                      speechBubble.querySelector('p').textContent = "Ótima escolha! Analisando seu gosto cinematográfico...";
+                  } else {
+                      speechBubble.querySelector('p').textContent = "Aqui estão recomendações especiais para você!";
+                  }
+              });
+          });
+      });
+  </script>
+  </body>
+
+</html>

@@ -1,0 +1,1461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rescene | Cassandra</title>
+
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/footer.css">
+    <link rel="stylesheet" href="src/css/header.css">
+    <link rel="stylesheet" href="src/css/info.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="icon" type="image/x-icon" href="src/img/favicon.ico">
+</head>
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="header-container">
+            <!-- Logo e Menu Mobile -->
+            <div class="header-left">
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                
+                <a href="index.html" class="logo-link">
+                    <img src="src/img/logo-branco.png" alt="Rescene" class="logo">
+                </a>
+            </div>
+  
+            <!-- Menu de Navegação Principal -->
+            <nav class="main-nav">
+                <a href="catalog/movies.html" class="nav-link">
+                    <i class="fas fa-film"></i>
+                    <span>Filmes</span>
+                </a>
+                <a href="catalog/series.html" class="nav-link">
+                    <i class="fas fa-tv"></i>
+                    <span>Séries</span>
+                </a>
+                <a href="ranking/rankFilmes.html" class="nav-link">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Populares</span>
+                </a>
+            </nav>
+  
+            <!-- Barra de Pesquisa Aprimorada com Auto-typing -->
+            <div class="search-container">
+                <div class="search-bar">
+                    <input type="text" id="search-input" placeholder=" " autocomplete="off">
+                    <div id="search-placeholder"></div>
+                    <button type="submit" class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <div class="search-results" id="search-results"></div>
+                </div>
+                <div class="search-suggestions">
+                    <span class="suggestion-tag">Trending:</span>
+                    <div class="suggestions-list">
+                        <span class="suggestion-item">Interestelar</span>
+                        <span class="suggestion-item">Breaking Bad</span>
+                        <span class="suggestion-item">The Last of Us</span>
+                    </div>
+                </div>
+            </div>
+  
+            <!-- Área do Usuário Aprimorada -->
+            <div class="user-area">
+                <!-- Notificações com ícone maior -->
+                <div class="notification-dropdown">
+                    <button class="icon-btn notification-btn" id="notification-btn">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-count">3</span>
+                    </button>
+                    <div class="dropdown-content notification-content">
+                        <div class="dropdown-header">
+                            <h3>Notificações</h3>
+                            <a href="#" class="mark-all-read">Marcar todas como lida</a>
+                        </div>
+                        <div class="notification-list">
+                            <div class="notification-item unread">
+                                <div class="notification-avatar">
+                                    <img src="src/img/user1.jpg" alt="Usuário">
+                                </div>
+                                <div class="notification-text">
+                                    <p><strong>Maria Silva</strong> curtiu sua avaliação de <strong>Interestelar</strong></p>
+                                    <span class="notification-time">há 2 minutos</span>
+                                </div>
+                            </div>
+                            <div class="notification-item unread">
+                                <div class="notification-avatar">
+                                    <img src="src/img/user2.jpg" alt="Usuário">
+                                </div>
+                                <div class="notification-text">
+                                    <p><strong>João Santos</strong> começou a seguir você</p>
+                                    <span class="notification-time">há 15 minutos</span>
+                                </div>
+                            </div>
+                            <div class="notification-item">
+                                <div class="notification-avatar">
+                                    <img src="src/img/user3.jpg" alt="Usuário">
+                                </div>
+                                <div class="notification-text">
+                                    <p>Novo episódio de <strong>The Last of Us</strong> disponível</p>
+                                    <span class="notification-time">há 1 hora</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dropdown-footer">
+                            <a href="notifications.html">Ver todas as notificações</a>
+                        </div>
+                    </div>
+                </div>
+  
+                <!-- Menu do Usuário com Email -->
+                <div class="user-dropdown">
+                    <button class="user-btn" id="user-btn">
+                        <img src="src/img/icon.jpg" alt="Avatar" class="user-avatar">
+                        <div class="user-info-short">
+                            <span class="username">NomeUsuário</span>
+                            <span class="user-email">usuario@email.com</span>
+                        </div>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="dropdown-content user-content">
+                        <div class="user-info">
+                            <img src="src/img/icon.jpg" alt="Avatar" class="user-avatar-large">
+                            <div class="user-details">
+                                <h3>NomeUsuário</h3>
+                                <p>@username</p>
+                                <p class="user-email">usuario@email.com</p>
+                            </div>
+                        </div>
+                        <div class="dropdown-links">
+                            <a href="profile/profile.html">
+                                <i class="fas fa-user"></i>
+                                <span>Meu Perfil</span>
+                            </a>
+                            <a href="profile/watched.html">
+                                <i class="fas fa-eye"></i>
+                                <span>Assistidos</span>
+                            </a>
+                            <a href="profile/liked.html">
+                                <i class="fas fa-heart"></i>
+                                <span>Favoritos</span>
+                            </a>
+                            <a href="profile/userLists.html">
+                                <i class="fas fa-list"></i>
+                                <span>Minhas Listas</span>
+                            </a>
+                            <a href="settings/settings.html">
+                                <i class="fas fa-cog"></i>
+                                <span>Configurações</span>
+                            </a>
+                            <a href="#" id="logout-btn">
+                                <i class="fas fa-sign-out-alt"></i>
+                                <span>Sair</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+  
+        <!-- Menu Mobile -->
+        <nav class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu-header">
+                <div class="mobile-logo">
+                    <img src="src/img/logo-branco.png" class="logo">
+                    <span class="logo-text">Rescene</span>
+                </div>
+                <button class="close-menu" id="closeMenu">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="mobile-user-info">
+                <img src="src/img/icon.jpg" alt="Avatar" class="mobile-user-avatar">
+                <div class="mobile-user-details">
+                    <h3>NomeUsuário</h3>
+                    <p>usuario@email.com</p>
+                </div>
+            </div>
+            <div class="mobile-menu-content">
+                <a href="index.html" class="mobile-menu-link">
+                    <i class="fas fa-home"></i>
+                    <span>Página Inicial</span>
+                </a>
+                <a href="profile/profile.html" class="mobile-menu-link">
+                    <i class="fas fa-user"></i>
+                    <span>Meu Perfil</span>
+                </a>
+                <a href="catalog/movies.html" class="mobile-menu-link">
+                    <i class="fas fa-film"></i>
+                    <span>Filmes</span>
+                </a>
+                <a href="catalog/series.html" class="mobile-menu-link">
+                    <i class="fas fa-tv"></i>
+                    <span>Séries</span>
+                </a>
+                <a href="ranking/rankFilmes.html" class="mobile-menu-link">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Populares</span>
+                </a>
+                <a href="profile/watched.html" class="mobile-menu-link">
+                    <i class="fas fa-eye"></i>
+                    <span>Assistidos</span>
+                </a>
+                <a href="profile/liked.html" class="mobile-menu-link">
+                    <i class="fas fa-heart"></i>
+                    <span>Favoritos</span>
+                </a>
+                <a href="profile/userLists.html" class="mobile-menu-link">
+                    <i class="fas fa-list"></i>
+                    <span>Listas</span>
+                </a>
+                <a href="settings/settings.html" class="mobile-menu-link">
+                    <i class="fas fa-cog"></i>
+                    <span>Configurações</span>
+                </a>
+                <a href="#" class="mobile-menu-link" id="mobile-logout">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Sair</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="movie-info-page">
+        <!-- Hero Section com Banner do Filme -->
+        <section class="movie-hero">
+            <div class="hero-backdrop">
+                <div class="backdrop-image" style="background-image: url('src/img/postTemplate.jpg')"></div>
+                <div class="backdrop-overlay"></div>
+            </div>
+            
+            <div class="container">
+                <div class="movie-hero-content">
+                    <div class="movie-poster-large">
+                        <img src="src/img/postTemplate.jpg" alt="Cassandra">
+                        <div class="movie-badge">Em Exibição</div>
+                        <button class="play-trailer-btn">
+                            <i class="fas fa-play"></i>
+                            Assistir Trailer
+                        </button>
+                    </div>
+                    
+                    <div class="movie-hero-info">
+                        <h1 class="movie-title">Cassandra</h1>
+                        
+                        <div class="movie-meta">
+                            <span class="meta-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                2024
+                            </span>
+                            <span class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                1h 45m
+                            </span>
+                            <span class="meta-item">
+                                <i class="fas fa-film"></i>
+                                Terror, Suspense
+                            </span>
+                            <span class="meta-item rating">
+                                <i class="fas fa-star"></i>
+                                4.5/5
+                            </span>
+                        </div>
+                        
+                        <div class="movie-actions">
+                            <button class="action-btn watched" data-action="watched">
+                                <i class="far fa-eye"></i>
+                                <span>Assistido</span>
+                            </button>
+                            <button class="action-btn like" data-action="like">
+                                <i class="far fa-heart"></i>
+                                <span>Curtir</span>
+                            </button>
+                            <button class="action-btn add-list" data-action="addToList">
+                                <i class="fas fa-plus"></i>
+                                <span>Minha Lista</span>
+                            </button>
+                            <button class="action-btn share" data-action="share">
+                                <i class="fas fa-share-alt"></i>
+                                <span>Compartilhar</span>
+                            </button>
+                        </div>
+                        
+                        <div class="movie-description">
+                            <h3>Sinopse</h3>
+                            <p>Uma família se muda para uma casa inteligente antiga e descobre que ela é controlada por uma assistente virtual que faz de tudo para mantê-los lá.</p>
+                        </div>
+                        
+                        <div class="movie-details">
+                            <div class="detail-item">
+                                <span class="detail-label">Diretor:</span>
+                                <span class="detail-value">Benjamin Gutsche</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Elenco:</span>
+                                <span class="detail-value">Emma Roberts, Dan Stevens, Shameik Moore</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Gêneros:</span>
+                                <span class="detail-value">Drama, Terror, Sci-Fi, Suspense</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Classificação:</span>
+                                <span class="detail-value">16+</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conteúdo Principal -->
+        <section class="movie-content">
+            <div class="container">
+                <div class="content-grid">
+                    <!-- Coluna Esquerda - Informações Adicionais -->
+                    <aside class="content-sidebar">
+                        <div class="sidebar-card">
+                            <h3>Estatísticas</h3>
+                            <div class="stats-grid">
+                                <div class="stat-item">
+                                    <div class="stat-value">4.5</div>
+                                    <div class="stat-label">Avaliação</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value">86%</div>
+                                    <div class="stat-label">Recomendam</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value">12.4K</div>
+                                    <div class="stat-label">Avaliações</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value">45.7K</div>
+                                    <div class="stat-label">Assistiram</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="sidebar-card">
+                            <h3>Detalhes Técnicos</h3>
+                            <div class="tech-details">
+                                <div class="tech-item">
+                                    <span>Orçamento:</span>
+                                    <span>$15 milhões</span>
+                                </div>
+                                <div class="tech-item">
+                                    <span>Bilheteria:</span>
+                                    <span>$48 milhões</span>
+                                </div>
+                                <div class="tech-item">
+                                    <span>Idioma Original:</span>
+                                    <span>Inglês</span>
+                                </div>
+                                <div class="tech-item">
+                                    <span>País:</span>
+                                    <span>Estados Unidos</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="sidebar-card">
+                            <h3>Onde Assistir</h3>
+                            <div class="streaming-options">
+                                <div class="streaming-item">
+                                    <div class="streaming-logo netflix"></div>
+                                    <span>Netflix</span>
+                                </div>
+                                <div class="streaming-item">
+                                    <div class="streaming-logo prime"></div>
+                                    <span>Prime Video</span>
+                                </div>
+                                <div class="streaming-item">
+                                    <div class="streaming-logo apple"></div>
+                                    <span>Apple TV+</span>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                    
+                    <!-- Coluna Direita - Avaliações e Conteúdo Principal -->
+                    <div class="content-main">
+                        <!-- Seção de Avaliação do Usuário -->
+                        <div class="review-section">
+                            <h2>Sua Avaliação</h2>
+                            <div class="rating-widget">
+                                <div class="stars-rating">
+                                    <span class="star" data-value="1"><i class="far fa-star"></i></span>
+                                    <span class="star" data-value="2"><i class="far fa-star"></i></span>
+                                    <span class="star" data-value="3"><i class="far fa-star"></i></span>
+                                    <span class="star" data-value="4"><i class="far fa-star"></i></span>
+                                    <span class="star" data-value="5"><i class="far fa-star"></i></span>
+                                    <span class="rating-text">0/5</span>
+                                </div>
+                                
+                                <form class="review-form">
+                                    <textarea placeholder="Compartilhe sua opinião sobre este filme..." class="review-textarea"></textarea>
+                                    <button type="submit" class="submit-review-btn">
+                                        <i class="fas fa-paper-plane"></i>
+                                        Enviar Avaliação
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                        
+                        <!-- Avaliações da Comunidade -->
+                        <div class="community-reviews">
+                            <div class="section-header">
+                                <h2>Avaliações da Comunidade</h2>
+                                <div class="sort-options">
+                                    <select class="sort-select">
+                                        <option value="recent">Mais Recentes</option>
+                                        <option value="popular">Mais Úteis</option>
+                                        <option value="highest">Maiores Avaliações</option>
+                                        <option value="lowest">Menores Avaliações</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="reviews-list">
+                                <!-- Review 1 -->
+                                <div class="review-card">
+                                    <div class="reviewer-info">
+                                        <div class="reviewer-avatar">
+                                            <img src="src/img/user1.jpg" alt="Maria Silva">
+                                        </div>
+                                        <div class="reviewer-details">
+                                            <h4>Maria Silva</h4>
+                                            <span class="review-date">3 dias atrás</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="review-content">
+                                        <div class="review-rating">
+                                            <div class="stars">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                            </div>
+                                            <span>4/5</span>
+                                        </div>
+                                        
+                                        <p class="review-text">Um thriller psicológico incrível! A tensão é mantida do início ao fim. A atuação da Emma Roberts está simplesmente brilhante.</p>
+                                        
+                                        <div class="review-actions">
+                                            <button class="helpful-btn">
+                                                <i class="fas fa-thumbs-up"></i>
+                                                <span>Útil (124)</span>
+                                            </button>
+                                            <button class="reply-btn">
+                                                <i class="fas fa-reply"></i>
+                                                <span>Responder</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Review 2 -->
+                                <div class="review-card">
+                                    <div class="reviewer-info">
+                                        <div class="reviewer-avatar">
+                                            <img src="src/img/user2.jpg" alt="João Santos">
+                                        </div>
+                                        <div class="reviewer-details">
+                                            <h4>João Santos</h4>
+                                            <span class="review-date">1 semana atrás</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="review-content">
+                                        <div class="review-rating">
+                                            <div class="stars">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star-half-alt"></i>
+                                            </div>
+                                            <span>4.5/5</span>
+                                        </div>
+                                        
+                                        <p class="review-text">A premissa é interessante e a execução é competente. Os efeitos sonoros e a trilha sonora contribuem muito para a atmosfera claustrofóbica.</p>
+                                        
+                                        <div class="review-actions">
+                                            <button class="helpful-btn">
+                                                <i class="fas fa-thumbs-up"></i>
+                                                <span>Útil (89)</span>
+                                            </button>
+                                            <button class="reply-btn">
+                                                <i class="fas fa-reply"></i>
+                                                <span>Responder</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Review 3 -->
+                                <div class="review-card">
+                                    <div class="reviewer-info">
+                                        <div class="reviewer-avatar">
+                                            <img src="src/img/user3.jpg" alt="Ana Costa">
+                                        </div>
+                                        <div class="reviewer-details">
+                                            <h4>Ana Costa</h4>
+                                            <span class="review-date">2 semanas atrás</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="review-content">
+                                        <div class="review-rating">
+                                            <div class="stars">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                            </div>
+                                            <span>3/5</span>
+                                        </div>
+                                        
+                                        <p class="review-text">Começa promissor mas perde o fôlego no final. Algumas decisões dos personagens são questionáveis. No geral, é um entretenimento decente para uma noite de sexta-feira.</p>
+                                        
+                                        <div class="review-actions">
+                                            <button class="helpful-btn">
+                                                <i class="fas fa-thumbs-up"></i>
+                                                <span>Útil (67)</span>
+                                            </button>
+                                            <button class="reply-btn">
+                                                <i class="fas fa-reply"></i>
+                                                <span>Responder</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="load-more-reviews">
+                                <button class="load-more-btn">
+                                    <i class="fas fa-plus"></i>
+                                    Carregar Mais Avaliações
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Filmes Similares -->
+        <section class="similar-movies">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Filmes Similares</h2>
+                    <p>Baseado no que você está assistindo</p>
+                </div>
+                
+                <div class="movies-carousel">
+                    <div class="carousel-container">
+                        <div class="carousel-track">
+                            <!-- Filme 1 -->
+                            <div class="carousel-item">
+                                <div class="similar-movie-card">
+                                    <div class="movie-poster">
+                                        <img src="src/img/poster1.jpg" alt="A Casa do Lago">
+                                        <div class="movie-overlay">
+                                            <button class="play-btn">
+                                                <i class="fas fa-play"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="movie-info">
+                                        <h4>A Casa do Lago</h4>
+                                        <div class="movie-meta">
+                                            <span>2023</span>
+                                            <span>1h 38m</span>
+                                        </div>
+                                        <div class="movie-rating">
+                                            <i class="fas fa-star"></i>
+                                            <span>4.2</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Filme 2 -->
+                            <div class="carousel-item">
+                                <div class="similar-movie-card">
+                                    <div class="movie-poster">
+                                        <img src="src/img/poster1.jpg" alt="Ecos do Passado">
+                                        <div class="movie-overlay">
+                                            <button class="play-btn">
+                                                <i class="fas fa-play"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="movie-info">
+                                        <h4>Ecos do Passado</h4>
+                                        <div class="movie-meta">
+                                            <span>2022</span>
+                                            <span>2h 05m</span>
+                                        </div>
+                                        <div class="movie-rating">
+                                            <i class="fas fa-star"></i>
+                                            <span>4.0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Filme 3 -->
+                            <div class="carousel-item">
+                                <div class="similar-movie-card">
+                                    <div class="movie-poster">
+                                        <img src="src/img/poster1.jpg" alt="O Protocolo">
+                                        <div class="movie-overlay">
+                                            <button class="play-btn">
+                                                <i class="fas fa-play"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="movie-info">
+                                        <h4>O Protocolo</h4>
+                                        <div class="movie-meta">
+                                            <span>2023</span>
+                                            <span>1h 52m</span>
+                                        </div>
+                                        <div class="movie-rating">
+                                            <i class="fas fa-star"></i>
+                                            <span>4.3</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Filme 4 -->
+                            <div class="carousel-item">
+                                <div class="similar-movie-card">
+                                    <div class="movie-poster">
+                                        <img src="src/img/poster1.jpg" alt="Inteligência Artificial">
+                                        <div class="movie-overlay">
+                                            <button class="play-btn">
+                                                <i class="fas fa-play"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="movie-info">
+                                        <h4>Inteligência Artificial</h4>
+                                        <div class="movie-meta">
+                                            <span>2024</span>
+                                            <span>2h 11m</span>
+                                        </div>
+                                        <div class="movie-rating">
+                                            <i class="fas fa-star"></i>
+                                            <span>4.1</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Filme 5 -->
+                            <div class="carousel-item">
+                                <div class="similar-movie-card">
+                                    <div class="movie-poster">
+                                        <img src="src/img/poster1.jpg" alt="Código de Conduta">
+                                        <div class="movie-overlay">
+                                            <button class="play-btn">
+                                                <i class="fas fa-play"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="movie-info">
+                                        <h4>Código de Conduta</h4>
+                                        <div class="movie-meta">
+                                            <span>2022</span>
+                                            <span>1h 47m</span>
+                                        </div>
+                                        <div class="movie-rating">
+                                            <i class="fas fa-star"></i>
+                                            <span>4.4</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="carousel-btn carousel-prev">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="carousel-btn carousel-next">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="main-footer">
+        <div class="footer-wave">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+                <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+                <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+            </svg>
+        </div>
+        
+        <div class="footer-container">
+            <!-- Seção Principal -->
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="src/img/logo-branco.png" alt="Rescene">
+                        <span class="logo-text">Rescene</span>
+                    </div>
+                    <p class="footer-description">
+                        Sua plataforma para descobrir, avaliar e compartilhar filmes e séries. Conecte-se com outros cinéfilos e expanda seu universo cinematográfico.
+                    </p>
+                    <div class="footer-newsletter">
+                        <h3>Receba novidades</h3>
+                        <div class="newsletter-form">
+                            <input type="email" placeholder="Seu e-mail">
+                            <button type="submit">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="links-column">
+                        <h3>Navegação</h3>
+                        <ul>
+                            <li><a href="index.html">Página Inicial</a></li>
+                            <li><a href="catalog/movies.html">Filmes</a></li>
+                            <li><a href="catalog/series.html">Séries</a></li>
+                            <li><a href="ranking/rankFilmes.html">Populares</a></li>
+                            <li><a href="profile/profile.html">Meu Perfil</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="links-column">
+                        <h3>Recursos</h3>
+                        <ul>
+                            <li><a href="profile/watched.html">Assistidos</a></li>
+                            <li><a href="profile/liked.html">Favoritos</a></li>
+                            <li><a href="profile/userLists.html">Listas</a></li>
+                            <li><a href="settings/settings.html">Configurações</a></li>
+                            <li><a href="search.html">Pesquisa Avançada</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="links-column">
+                        <h3>Suporte</h3>
+                        <ul>
+                            <li><a href="contact.html">Contate-nos</a></li>
+                            <li><a href="help.html">Ajuda & FAQ</a></li>
+                            <li><a href="about.html">Sobre nós</a></li>
+                            <li><a href="privacy.html">Privacidade</a></li>
+                            <li><a href="terms.html">Termos de uso</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Divisor -->
+            <div class="footer-divider"></div>
+            
+            <!-- Seção Inferior -->
+            <div class="footer-bottom">
+                <div class="footer-social">
+                    <h3>Siga-nos</h3>
+                    <div class="social-icons">
+                        <a href="https://www.threads.com/@resceneoficial" target="_blank" class="social-icon">
+                            <i class="fab fa-threads"></i>
+                        </a>
+                        <a href="https://www.instagram.com/resceneoficial/" target="_blank" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://x.com/resceneoficial" target="_blank" class="social-icon">
+                            <i class="fab fa-x-twitter"></i>
+                        </a>
+                        <a href="https://www.facebook.com/resceneoficial" target="_blank" class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@resceneoficial" target="_blank" class="social-icon">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@resceneoficial" target="_blank" class="social-icon">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-copyright">
+                    <p>&copy; 2025 Rescene. Todos os direitos reservados.</p>
+                    <p>Feito por estudantes do IFSP-CAR</p>
+                    <p>Dados por <a href="https://www.themoviedb.org/" target="_blank">TMDB</a></p>
+                </div>
+                
+                <div class="footer-badges">
+                    <div class="badge">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Site seguro</span>
+                    </div>
+                    <div class="badge">
+                        <i class="fas fa-lock"></i>
+                        <span>Privacidade</span>
+                    </div>
+                    <div class="badge">
+                        <i class="fas fa-award"></i>
+                        <span>Melhor plataforma 2025</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Botão Voltar ao Topo -->
+        <button class="back-to-top" id="backToTop">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </footer>
+
+    <script src="src/js/dropdown-catalog.js"></script>
+    <script src="src/js/dropdown-user.js"></script>
+    <script src="src/js/header.js"></script>
+    <script src="src/js/footer.js"></script>
+    <script>
+        // info.js - Funcionalidades para a página de informações do filme
+
+document.addEventListener('DOMContentLoaded', function() {
+    // ===== VARIÁVEIS GLOBAIS =====
+    let currentRating = 0;
+    let isMovieWatched = false;
+    let isMovieLiked = false;
+    let isInWatchlist = false;
+    let currentCarouselPage = 0;
+    const carouselItemsPerPage = 5;
+
+    // ===== INICIALIZAÇÃO =====
+    init();
+
+    function init() {
+        setupRatingSystem();
+        setupMovieActions();
+        setupCarousel();
+        setupReviewForm();
+        setupMockData();
+        setupSmoothScrolling();
+        setupParallaxEffect();
+        setupScrollAnimations();
+    }
+
+    // ===== SISTEMA DE AVALIAÇÃO =====
+    function setupRatingSystem() {
+        const stars = document.querySelectorAll('.star');
+        const ratingText = document.querySelector('.rating-text');
+        
+        stars.forEach(star => {
+            star.addEventListener('click', function() {
+                const value = parseInt(this.dataset.value);
+                setRating(value);
+            });
+            
+            star.addEventListener('mouseenter', function() {
+                const value = parseInt(this.dataset.value);
+                highlightStars(value);
+            });
+            
+            star.addEventListener('mouseleave', function() {
+                highlightStars(currentRating);
+            });
+        });
+        
+        // Inicializar com avaliação zero
+        setRating(0);
+    }
+
+    function setRating(value) {
+        currentRating = value;
+        const stars = document.querySelectorAll('.star');
+        const ratingText = document.querySelector('.rating-text');
+        
+        stars.forEach(star => {
+            const starValue = parseInt(star.dataset.value);
+            if (starValue <= value) {
+                star.innerHTML = '<i class="fas fa-star"></i>';
+                star.classList.add('active');
+            } else {
+                star.innerHTML = '<i class="far fa-star"></i>';
+                star.classList.remove('active');
+            }
+        });
+        
+        ratingText.textContent = `${value}/5`;
+        
+        // Mostrar feedback
+        if (value > 0) {
+            showToast(`Avaliado com ${value} estrela${value > 1 ? 's' : ''}!`, 'success');
+        }
+    }
+
+    function highlightStars(value) {
+        const stars = document.querySelectorAll('.star');
+        
+        stars.forEach(star => {
+            const starValue = parseInt(star.dataset.value);
+            if (starValue <= value) {
+                star.innerHTML = '<i class="fas fa-star"></i>';
+            } else {
+                star.innerHTML = '<i class="far fa-star"></i>';
+            }
+        });
+    }
+
+    // ===== AÇÕES DO FILME =====
+    function setupMovieActions() {
+        // Botão de assistir trailer
+        document.querySelector('.play-trailer-btn')?.addEventListener('click', playTrailer);
+        
+        // Botões de ação
+        document.querySelectorAll('.action-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const action = this.dataset.action;
+                handleMovieAction(action, this);
+            });
+        });
+        
+        // Botões de avaliação da comunidade
+        document.querySelectorAll('.helpful-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                markReviewAsHelpful(this);
+            });
+        });
+        
+        document.querySelectorAll('.reply-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                replyToReview(this);
+            });
+        });
+    }
+
+    function handleMovieAction(action, button) {
+        const icon = button.querySelector('i');
+        
+        switch(action) {
+            case 'watched':
+                isMovieWatched = !isMovieWatched;
+                if (isMovieWatched) {
+                    icon.classList.replace('far', 'fas');
+                    button.style.color = 'var(--success)';
+                    showToast('Marcado como assistido!', 'success');
+                } else {
+                    icon.classList.replace('fas', 'far');
+                    button.style.color = '';
+                    showToast('Removido dos assistidos!', 'default');
+                }
+                break;
+                
+            case 'like':
+                isMovieLiked = !isMovieLiked;
+                if (isMovieLiked) {
+                    icon.classList.replace('far', 'fas');
+                    button.style.color = 'var(--danger)';
+                    showToast('Adicionado aos favoritos!', 'success');
+                } else {
+                    icon.classList.replace('fas', 'far');
+                    button.style.color = '';
+                    showToast('Removido dos favoritos!', 'default');
+                }
+                break;
+                
+            case 'addToList':
+                isInWatchlist = !isInWatchlist;
+                if (isInWatchlist) {
+                    icon.classList.replace('fa-plus', 'fa-check');
+                    button.style.color = 'var(--accent-color)';
+                    showToast('Adicionado à sua lista!', 'success');
+                } else {
+                    icon.classList.replace('fa-check', 'fa-plus');
+                    button.style.color = '';
+                    showToast('Removido da sua lista!', 'default');
+                }
+                break;
+                
+            case 'share':
+                shareMovie();
+                break;
+        }
+        
+        // Efeito de clique
+        button.style.transform = 'scale(0.95)';
+        setTimeout(() => {
+            button.style.transform = '';
+        }, 200);
+    }
+
+    function playTrailer() {
+        showToast('Reproduzindo trailer...', 'default');
+        // Em implementação real, isso abriria um modal com o trailer
+        console.log('Reproduzindo trailer do filme');
+    }
+
+    function shareMovie() {
+        // Simular funcionalidade de compartilhamento
+        if (navigator.share) {
+            navigator.share({
+                title: 'Cassandra - Rescene',
+                text: 'Confira este filme incrível no Rescene!',
+                url: window.location.href
+            })
+            .then(() => showToast('Compartilhado com sucesso!', 'success'))
+            .catch(() => showShareOptions());
+        } else {
+            showShareOptions();
+        }
+    }
+
+    function showShareOptions() {
+        // Simular modal de compartilhamento
+        showToast('Opções de compartilhamento', 'default');
+        console.log('Mostrar opções de compartilhamento');
+    }
+
+    function markReviewAsHelpful(button) {
+        const countElement = button.querySelector('span');
+        let count = parseInt(countElement.textContent.match(/\d+/)[0]);
+        count++;
+        countElement.textContent = `Útil (${count})`;
+        
+        button.style.color = 'var(--accent-color)';
+        button.disabled = true;
+        
+        showToast('Marcado como útil!', 'success');
+    }
+
+    function replyToReview(button) {
+        // Simular funcionalidade de resposta
+        const reviewCard = button.closest('.review-card');
+        const reviewerName = reviewCard.querySelector('h4').textContent;
+        
+        showToast(`Respondendo à avaliação de ${reviewerName}...`, 'default');
+    }
+
+    // ===== CARROSSEL DE FILMES SIMILARES =====
+    function setupCarousel() {
+        const track = document.querySelector('.carousel-track');
+        const items = document.querySelectorAll('.carousel-item');
+        const prevBtn = document.querySelector('.carousel-prev');
+        const nextBtn = document.querySelector('.carousel-next');
+        
+        if (!track || items.length === 0) return;
+        
+        const totalPages = Math.ceil(items.length / carouselItemsPerPage);
+        
+        // Configurar botões de navegação
+        prevBtn?.addEventListener('click', () => {
+            if (currentCarouselPage > 0) {
+                currentCarouselPage--;
+                updateCarousel();
+            }
+        });
+        
+        nextBtn?.addEventListener('click', () => {
+            if (currentCarouselPage < totalPages - 1) {
+                currentCarouselPage++;
+                updateCarousel();
+            }
+        });
+        
+        // Inicializar carrossel
+        updateCarousel();
+        
+        // Swipe para dispositivos móveis
+        setupCarouselSwipe(track);
+    }
+
+    function updateCarousel() {
+        const track = document.querySelector('.carousel-track');
+        const items = document.querySelectorAll('.carousel-item');
+        const itemWidth = items[0].offsetWidth + 20; // Largura do item + gap
+        const transformValue = -currentCarouselPage * carouselItemsPerPage * itemWidth;
+        
+        track.style.transform = `translateX(${transformValue}px)`;
+        
+        // Atualizar visibilidade dos botões
+        const prevBtn = document.querySelector('.carousel-prev');
+        const nextBtn = document.querySelector('.carousel-next');
+        const totalPages = Math.ceil(items.length / carouselItemsPerPage);
+        
+        if (prevBtn) {
+            prevBtn.style.display = currentCarouselPage === 0 ? 'none' : 'flex';
+        }
+        
+        if (nextBtn) {
+            nextBtn.style.display = currentCarouselPage === totalPages - 1 ? 'none' : 'flex';
+        }
+    }
+
+    function setupCarouselSwipe(track) {
+        let startX = 0;
+        let currentX = 0;
+        let isDragging = false;
+        
+        track.addEventListener('mousedown', handleSwipeStart);
+        track.addEventListener('touchstart', handleSwipeStart);
+        
+        track.addEventListener('mousemove', handleSwipeMove);
+        track.addEventListener('touchmove', handleSwipeMove);
+        
+        track.addEventListener('mouseup', handleSwipeEnd);
+        track.addEventListener('mouseleave', handleSwipeEnd);
+        track.addEventListener('touchend', handleSwipeEnd);
+        
+        function handleSwipeStart(e) {
+            isDragging = true;
+            startX = e.type.includes('mouse') ? e.clientX : e.touches[0].clientX;
+            track.style.cursor = 'grabbing';
+            track.style.transition = 'none';
+        }
+        
+        function handleSwipeMove(e) {
+            if (!isDragging) return;
+            
+            e.preventDefault();
+            currentX = e.type.includes('mouse') ? e.clientX : e.touches[0].clientX;
+            const diff = currentX - startX;
+            
+            // Mover o track durante o arrasto
+            const currentTransform = getComputedStyle(track).transform;
+            const matrix = new DOMMatrixReadOnly(currentTransform);
+            const currentTranslateX = matrix.m41;
+            
+            track.style.transform = `translateX(${currentTranslateX + diff}px)`;
+            startX = currentX;
+        }
+        
+        function handleSwipeEnd() {
+            if (!isDragging) return;
+            
+            isDragging = false;
+            track.style.cursor = 'grab';
+            track.style.transition = 'transform 0.5s ease';
+            
+            // Determinar se deve mudar de página baseado na velocidade do swipe
+            const currentTransform = getComputedStyle(track).transform;
+            const matrix = new DOMMatrixReadOnly(currentTransform);
+            const currentTranslateX = matrix.m41;
+            const itemWidth = document.querySelector('.carousel-item').offsetWidth + 20;
+            
+            // Voltar para a posição correta
+            const targetPage = Math.round(-currentTranslateX / (itemWidth * carouselItemsPerPage));
+            currentCarouselPage = Math.max(0, Math.min(targetPage, Math.ceil(document.querySelectorAll('.carousel-item').length / carouselItemsPerPage) - 1));
+            
+            updateCarousel();
+        }
+    }
+
+    // ===== FORMULÁRIO DE AVALIAÇÃO =====
+    function setupReviewForm() {
+        const form = document.querySelector('.review-form');
+        const textarea = document.querySelector('.review-textarea');
+        const submitBtn = document.querySelector('.submit-review-btn');
+        
+        if (!form) return;
+        
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            if (currentRating === 0) {
+                showToast('Por favor, selecione uma avaliação com estrelas', 'error');
+                document.querySelector('.stars-rating').style.animation = 'shake 0.5s';
+                setTimeout(() => {
+                    document.querySelector('.stars-rating').style.animation = '';
+                }, 500);
+                return;
+            }
+            
+            if (!textarea.value.trim()) {
+                showToast('Por favor, escreva uma avaliação', 'error');
+                textarea.focus();
+                return;
+            }
+            
+            // Simular envio da avaliação
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+            submitBtn.disabled = true;
+            
+            setTimeout(() => {
+                // Adicionar avaliação à lista
+                addNewReview(textarea.value, currentRating);
+                
+                // Limpar formulário
+                textarea.value = '';
+                setRating(0);
+                
+                submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Enviar Avaliação';
+                submitBtn.disabled = false;
+                
+                showToast('Avaliação enviada com sucesso!', 'success');
+            }, 1500);
+        });
+        
+        // Animação de crescimento automático do textarea
+        textarea.addEventListener('input', function() {
+            this.style.height = 'auto';
+            this.style.height = (this.scrollHeight) + 'px';
+        });
+    }
+
+    function addNewReview(text, rating) {
+        const reviewsList = document.querySelector('.reviews-list');
+        if (!reviewsList) return;
+        
+        // Criar elemento de avaliação
+        const reviewCard = document.createElement('div');
+        reviewCard.className = 'review-card';
+        reviewCard.innerHTML = `
+            <div class="reviewer-info">
+                <div class="reviewer-avatar">
+                    <img src="src/img/icon.jpg" alt="Você">
+                </div>
+                <div class="reviewer-details">
+                    <h4>Você</h4>
+                    <span class="review-date">Agora mesmo</span>
+                </div>
+            </div>
+            
+            <div class="review-content">
+                <div class="review-rating">
+                    <div class="stars">
+                        ${'<i class="fas fa-star"></i>'.repeat(rating)}${'<i class="far fa-star"></i>'.repeat(5 - rating)}
+                    </div>
+                    <span>${rating}/5</span>
+                </div>
+                
+                <p class="review-text">${text}</p>
+                
+                <div class="review-actions">
+                    <button class="helpful-btn">
+                        <i class="fas fa-thumbs-up"></i>
+                        <span>Útil (0)</span>
+                    </button>
+                    <button class="reply-btn">
+                        <i class="fas fa-reply"></i>
+                        <span>Responder</span>
+                    </button>
+                </div>
+            </div>
+        `;
+        
+        // Adicionar event listeners aos novos botões
+        reviewCard.querySelector('.helpful-btn').addEventListener('click', function() {
+            markReviewAsHelpful(this);
+        });
+        
+        reviewCard.querySelector('.reply-btn').addEventListener('click', function() {
+            replyToReview(this);
+        });
+        
+        // Adicionar com animação
+        reviewCard.style.opacity = '0';
+        reviewCard.style.transform = 'translateY(20px)';
+        reviewsList.prepend(reviewCard);
+        
+        // Animar entrada
+        setTimeout(() => {
+            reviewCard.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            reviewCard.style.opacity = '1';
+            reviewCard.style.transform = 'translateY(0)';
+        }, 10);
+    }
+
+    // ===== DADOS SIMULADOS =====
+    function setupMockData() {
+        // Simular dados do usuário
+        const usernameElements = document.querySelectorAll('.username, .user-details h3');
+        const userEmailElements = document.querySelectorAll('.user-email');
+        
+        usernameElements.forEach(el => {
+            el.textContent = 'Cinéfilo';
+        });
+        
+        userEmailElements.forEach(el => {
+            el.textContent = 'cinefilo@rescene.com';
+        });
+        
+        // Simular estatísticas de visualização
+        simulateViewCount();
+    }
+
+    function simulateViewCount() {
+        // Simular contador de visualizações em tempo real
+        const statItems = document.querySelectorAll('.stat-item');
+        if (statItems.length < 4) return;
+        
+        // Visualizações (último item)
+        const viewsStat = statItems[3].querySelector('.stat-value');
+        if (!viewsStat) return;
+        
+        let views = parseInt(viewsStat.textContent.replace('K', '')) * 1000;
+        
+        // Aumentar visualizações a cada 5 segundos (simulação)
+        setInterval(() => {
+            views += Math.floor(Math.random() * 10) + 1;
+            viewsStat.textContent = `${(views / 1000).toFixed(1)}K`;
+        }, 5000);
+    }
+
+    // ===== ANIMAÇÕES E EFEITOS =====
+    function setupSmoothScrolling() {
+        // Suavizar scroll para âncoras
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    }
+
+    function setupParallaxEffect() {
+        // Efeito parallax no banner do filme
+        const backdrop = document.querySelector('.backdrop-image');
+        if (!backdrop) return;
+        
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const rate = scrolled * -0.5;
+            backdrop.style.transform = `translate3d(0px, ${rate}px, 0px) scale(1.1)`;
+        });
+    }
+
+    function setupScrollAnimations() {
+        // Animação de elementos ao entrar na viewport
+        const animatedElements = document.querySelectorAll('.sidebar-card, .review-card, .similar-movie-card');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        animatedElements.forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(el);
+        });
+    }
+
+    // ===== NOTIFICAÇÕES E FEEDBACK =====
+    function showToast(message, type = "default") {
+        // Remover toasts existentes
+        const existingToasts = document.querySelectorAll('.toast');
+        existingToasts.forEach(toast => toast.remove());
+        
+        // Criar novo toast
+        const toast = document.createElement('div');
+        toast.className = `toast toast-${type}`;
+        toast.innerHTML = `
+            <div class="toast-content">
+                <i class="fas ${type === 'success' ? 'fa-check-circle' : type === 'error' ? 'fa-exclamation-circle' : 'fa-info-circle'}"></i>
+                <span>${message}</span>
+            </div>
+        `;
+        
+        // Estilizar o toast
+        toast.style.cssText = `
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: ${type === 'success' ? 'var(--success)' : type === 'error' ? 'var(--danger)' : 'var(--secondary-bg)'};
+            color: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            z-index: 1000;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        `;
+        
+        document.body.appendChild(toast);
+        
+        // Mostrar toast
+        setTimeout(() => {
+            toast.style.opacity = '1';
+            toast.style.transform = 'translateY(0)';
+        }, 10);
+        
+        // Remover toast após 3 segundos
+        setTimeout(() => {
+            toast.style.opacity = '0';
+            toast.style.transform = 'translateY(20px)';
+            setTimeout(() => {
+                if (toast.parentNode) {
+                    toast.parentNode.removeChild(toast);
+                }
+            }, 300);
+        }, 3000);
+    }
+
+    // ===== ANIMAÇÃO DE SHAKE =====
+    const style = document.createElement('style');
+    style.textContent = `
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            20%, 60% { transform: translateX(-5px); }
+            40%, 80% { transform: translateX(5px); }
+        }
+    `;
+    document.head.appendChild(style);
+
+    // ===== HANDLERS DE ERRO =====
+    window.addEventListener('error', function(e) {
+        console.error('Erro capturado:', e.error);
+        showToast("Ocorreu um erro inesperado. Por favor, recarregue a página.", "error");
+    });
+
+    // Expor funções globais se necessário
+    window.movieInfoApp = {
+        setRating,
+        playTrailer,
+        shareMovie
+    };
+});
+    </script>
+</body>
+
+</html>
