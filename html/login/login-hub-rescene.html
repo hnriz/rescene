@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rescene | Entrar</title>
+
+    <link rel="stylesheet" href="../src/css/reset.css">
+    <link rel="stylesheet" href="../src/css/footer.css">
+    <link rel="stylesheet" href="../src/css/header.css">
+    <link rel="stylesheet" href="../src/css/index.css">
+    <link rel="stylesheet" href="../src/css/login-hub-rescene.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="icon" type="image/x-icon" href="../src/img/favicon.ico">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="main-header">
+            <div class="header-container">
+                <!-- Logo e Menu Mobile -->
+                <div class="header-left">
+                    <div class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    
+                    <a href="../index.html" class="logo-link">
+                        <img src="../src/img/logo-branco.png" alt="Rescene" class="logo">
+                    </a>
+                </div>
+      
+                <!-- Menu de Navegação Principal -->
+                <nav class="main-nav">
+                    <a href="../catalog/movies.html" class="nav-link">
+                        <i class="fas fa-film"></i>
+                        <span>Filmes</span>
+                    </a>
+                    <a href="../catalog/series.html" class="nav-link">
+                        <i class="fas fa-tv"></i>
+                        <span>Séries</span>
+                    </a>
+                    <a href="../ranking/rankFilmes.html" class="nav-link">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Populares</span>
+                    </a>
+                </nav>
+      
+                <!-- Barra de Pesquisa Aprimorada com Auto-typing -->
+                <div class="search-container">
+                    <div class="search-bar">
+                        <input type="text" id="search-input" placeholder=" " autocomplete="off">
+                        <div id="search-placeholder"></div>
+                        <button type="submit" class="search-btn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        <div class="search-results" id="search-results"></div>
+                    </div>
+                    <div class="search-suggestions">
+                        <span class="suggestion-tag">Trending:</span>
+                        <div class="suggestions-list">
+                            <span class="suggestion-item">Interestelar</span>
+                            <span class="suggestion-item">Breaking Bad</span>
+                            <span class="suggestion-item">The Last of Us</span>
+                        </div>
+                    </div>
+                </div>
+      
+                <!-- Área do Usuário Aprimorada -->
+                <div class="user-area">
+                    <!-- Notificações com ícone maior -->
+                    <div class="notification-dropdown">
+                        <button class="icon-btn notification-btn" id="notification-btn">
+                            <i class="fas fa-bell"></i>
+                            <span class="notification-count">3</span>
+                        </button>
+                        <div class="dropdown-content notification-content">
+                            <div class="dropdown-header">
+                                <h3>Notificações</h3>
+                                <a href="#" class="mark-all-read">Marcar todas como lida</a>
+                            </div>
+                            <div class="notification-list">
+                                <div class="notification-item unread">
+                                    <div class="notification-avatar">
+                                        <img src="../src/img/user1.jpg" alt="Usuário">
+                                    </div>
+                                    <div class="notification-text">
+                                        <p><strong>Maria Silva</strong> curtiu sua avaliação de <strong>Interestelar</strong></p>
+                                        <span class="notification-time">há 2 minutos</span>
+                                    </div>
+                                </div>
+                                <div class="notification-item unread">
+                                    <div class="notification-avatar">
+                                        <img src="../src/img/user2.jpg" alt="Usuário">
+                                    </div>
+                                    <div class="notification-text">
+                                        <p><strong>João Santos</strong> começou a seguir você</p>
+                                        <span class="notification-time">há 15 minutos</span>
+                                    </div>
+                                </div>
+                                <div class="notification-item">
+                                    <div class="notification-avatar">
+                                        <img src="../src/img/user3.jpg" alt="Usuário">
+                                    </div>
+                                    <div class="notification-text">
+                                        <p>Novo episódio de <strong>The Last of Us</strong> disponível</p>
+                                        <span class="notification-time">há 1 hora</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dropdown-footer">
+                                <a href="../notifications.html">Ver todas as notificações</a>
+                            </div>
+                        </div>
+                    </div>
+      
+                    <!-- Menu do Usuário com Email -->
+                    <div class="user-dropdown">
+                        <button class="user-btn" id="user-btn">
+                            <img src="../src/img/icon.jpg" alt="Avatar" class="user-avatar">
+                            <div class="user-info-short">
+                                <span class="username">NomeUsuário</span>
+                                <span class="user-email">usuario@email.com</span>
+                            </div>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="dropdown-content user-content">
+                            <div class="user-info">
+                                <img src="../src/img/icon.jpg" alt="Avatar" class="user-avatar-large">
+                                <div class="user-details">
+                                    <h3>NomeUsuário</h3>
+                                    <p>@username</p>
+                                    <p class="user-email">usuario@email.com</p>
+                                </div>
+                            </div>
+                            <div class="dropdown-links">
+                                <a href="../profile/profile.html">
+                                    <i class="fas fa-user"></i>
+                                    <span>Meu Perfil</span>
+                                </a>
+                                <a href="../profile/watched.html">
+                                    <i class="fas fa-eye"></i>
+                                    <span>Assistidos</span>
+                                </a>
+                                <a href="../profile/liked.html">
+                                    <i class="fas fa-heart"></i>
+                                    <span>Favoritos</span>
+                                </a>
+                                <a href="../profile/userLists.html">
+                                    <i class="fas fa-list"></i>
+                                    <span>Minhas Listas</span>
+                                </a>
+                                <a href="../settings/settings.html">
+                                    <i class="fas fa-cog"></i>
+                                    <span>Configurações</span>
+                                </a>
+                                <a href="#" id="logout-btn">
+                                    <i class="fas fa-sign-out-alt"></i>
+                                    <span>Sair</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+      
+            <!-- Menu Mobile -->
+            <nav class="mobile-menu" id="mobileMenu">
+                <div class="mobile-menu-header">
+                    <div class="mobile-logo">
+                        <img src="../src/img/logo-branco.png" class="logo">
+                        <span class="logo-text">Rescene</span>
+                    </div>
+                    <button class="close-menu" id="closeMenu">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="mobile-user-info">
+                    <img src="../src/img/icon.jpg" alt="Avatar" class="mobile-user-avatar">
+                    <div class="mobile-user-details">
+                        <h3>NomeUsuário</h3>
+                        <p>usuario@email.com</p>
+                    </div>
+                </div>
+                <div class="mobile-menu-content">
+                    <a href="../index.html" class="mobile-menu-link">
+                        <i class="fas fa-home"></i>
+                        <span>Página Inicial</span>
+                    </a>
+                    <a href="../profile/profile.html" class="mobile-menu-link">
+                        <i class="fas fa-user"></i>
+                        <span>Meu Perfil</span>
+                    </a>
+                    <a href="../catalog/movies.html" class="mobile-menu-link">
+                        <i class="fas fa-film"></i>
+                        <span>Filmes</span>
+                    </a>
+                    <a href="../catalog/series.html" class="mobile-menu-link">
+                        <i class="fas fa-tv"></i>
+                        <span>Séries</span>
+                    </a>
+                    <a href="../ranking/rankFilmes.html" class="mobile-menu-link">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Populares</span>
+                    </a>
+                    <a href="../profile/watched.html" class="mobile-menu-link">
+                        <i class="fas fa-eye"></i>
+                        <span>Assistidos</span>
+                    </a>
+                    <a href="../profile/liked.html" class="mobile-menu-link">
+                        <i class="fas fa-heart"></i>
+                        <span>Favoritos</span>
+                    </a>
+                    <a href="../profile/userLists.html" class="mobile-menu-link">
+                        <i class="fas fa-list"></i>
+                        <span>Listas</span>
+                    </a>
+                    <a href="../settings/settings.html" class="mobile-menu-link">
+                        <i class="fas fa-cog"></i>
+                        <span>Configurações</span>
+                    </a>
+                    <a href="#" class="mobile-menu-link" id="mobile-logout">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Sair</span>
+                    </a>
+                </div>
+            </nav>
+        </header>
+
+      <!-- Conteúdo Principal -->
+    <main class="login-hub-main">
+      <!-- Fundo com partículas estelares (cometas) -->
+      <div class="comets-background" id="cometsBackground"></div>
+      
+      <!-- Efeito de brilho cósmico -->
+      <div class="cosmic-glow"></div>
+
+      <!-- Modal de Login/Registro -->
+      <div class="auth-modal-wide" id="authModal">
+        <!-- Círculos decorativos -->
+        <div class="modal-circle circle-1"></div>
+        <div class="modal-circle circle-2"></div>
+        <div class="modal-circle circle-3"></div>
+        
+        <!-- Efeito de estrela com cauda para transição -->
+        <div class="stellar-sweeper" id="stellarSweeper">
+          <div class="comet-head"></div>
+          <div class="comet-tail"></div>
+          <div class="sparkle-1"></div>
+          <div class="sparkle-2"></div>
+          <div class="sparkle-3"></div>
+        </div>
+        
+        <!-- Conteúdo do Modal -->
+        <div class="modal-content-wide">
+          <!-- Cabeçalho com abas -->
+          <div class="modal-header-wide">
+            <div class="tabs-container-wide">
+              <button class="tab-btn-wide active" id="loginTab">
+                <i class="fas fa-sign-in-alt"></i>
+                <span>Entrar na Comunidade</span>
+              </button>
+              <button class="tab-btn-wide" id="registerTab">
+                <i class="fas fa-user-plus"></i>
+                <span>Criar Conta</span>
+              </button>
+            </div>
+            <button class="close-modal-wide" id="closeModal">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+
+          <!-- Formulário de Login -->
+          <div class="form-container-wide login-form active" id="loginForm">
+            <div class="form-header-wide">
+              <div class="form-icon">
+                <i class="fas fa-film"></i>
+              </div>
+              <h2>Bem-vindo de volta, Cinéfilo!</h2>
+              <p>Entre na sua conta para continuar sua jornada cinematográfica</p>
+            </div>
+
+            <form class="auth-form-wide" id="loginAuthForm">
+              <div class="input-row">
+                <div class="input-group-wide">
+                  <div class="input-field-wide">
+                    <input type="email" id="loginEmail" required autocomplete="email">
+                    <label for="loginEmail">E-mail</label>
+                    <div class="input-icon">
+                      <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="input-underline"></div>
+                  </div>
+                </div>
+
+                <div class="input-group-wide">
+                  <div class="input-field-wide">
+                    <input type="password" id="loginPassword" required autocomplete="current-password">
+                    <label for="loginPassword">Senha</label>
+                    <div class="input-icon">
+                      <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="input-underline"></div>
+                    <button type="button" class="toggle-password" id="toggleLoginPassword">
+                      <i class="fas fa-eye"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-options-wide">
+                <label class="checkbox-container-wide">
+                  <input type="checkbox" id="rememberMe">
+                  <span class="checkmark-wide"></span>
+                  Manter-me conectado
+                </label>
+                <a href="#" class="forgot-password-wide">Esqueci minha senha</a>
+              </div>
+
+              <button type="submit" class="submit-btn-wide primary">
+                <span class="btn-text">Explorar o Universo Rescene</span>
+                <div class="btn-loader">
+                  <div class="loader-dot"></div>
+                  <div class="loader-dot"></div>
+                  <div class="loader-dot"></div>
+                </div>
+              </button>
+
+              <div class="divider-wide">
+                <span>ou continue com</span>
+              </div>
+
+              <div class="social-auth-wide">
+                <button type="button" class="social-btn-wide google-btn">
+                  <i class="fab fa-google"></i>
+                  <span>Google</span>
+                </button>
+                <button type="button" class="social-btn-wide facebook-btn">
+                  <i class="fab fa-facebook-f"></i>
+                  <span>Facebook</span>
+                </button>
+                <button type="button" class="social-btn-wide twitter-btn">
+                  <i class="fab fa-x-twitter"></i>
+                  <span>Twitter</span>
+                </button>
+              </div>
+            </form>
+
+            <div class="form-footer-wide">
+              <p>Novo no universo Rescene? <a href="#" id="switchToRegister">Crie uma conta</a></p>
+            </div>
+          </div>
+
+          <!-- Formulário de Registro -->
+          <div class="form-container-wide register-form" id="registerForm">
+            <div class="form-header-wide">
+              <div class="form-icon">
+                <i class="fas fa-star"></i>
+              </div>
+              <h2>Junte-se à Nossa Comunidade!</h2>
+              <p>Crie sua conta para descobrir, avaliar e compartilhar filmes</p>
+            </div>
+
+            <form class="auth-form-wide" id="registerAuthForm">
+              <div class="input-row">
+                <div class="input-group-wide">
+                  <div class="input-field-wide">
+                    <input type="text" id="registerName" required autocomplete="name">
+                    <label for="registerName">Nome completo</label>
+                    <div class="input-icon">
+                      <i class="fas fa-user"></i>
+                    </div>
+                    <div class="input-underline"></div>
+                  </div>
+                </div>
+
+                <div class="input-group-wide">
+                  <div class="input-field-wide">
+                    <input type="text" id="registerUsername" required autocomplete="username">
+                    <label for="registerUsername">Nome de usuário</label>
+                    <div class="input-icon">
+                      <i class="fas fa-at"></i>
+                    </div>
+                    <div class="input-underline"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="input-row">
+                <div class="input-group-wide">
+                  <div class="input-field-wide">
+                    <input type="email" id="registerEmail" required autocomplete="email">
+                    <label for="registerEmail">E-mail</label>
+                    <div class="input-icon">
+                      <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="input-underline"></div>
+                  </div>
+                </div>
+
+                <div class="input-group-wide">
+                  <div class="input-field-wide">
+                    <input type="password" id="registerPassword" required autocomplete="new-password">
+                    <label for="registerPassword">Senha</label>
+                    <div class="input-icon">
+                      <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="input-underline"></div>
+                    <button type="button" class="toggle-password" id="toggleRegisterPassword">
+                      <i class="fas fa-eye"></i>
+                    </button>
+                  </div>
+                  <div class="password-strength-wide">
+                    <div class="strength-bar-wide">
+                      <div class="strength-fill-wide" id="passwordStrengthFill"></div>
+                    </div>
+                    <span class="strength-text-wide" id="passwordStrengthText">Força da senha</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="input-group-wide">
+                <div class="input-field-wide">
+                  <input type="password" id="registerConfirmPassword" required autocomplete="new-password">
+                  <label for="registerConfirmPassword">Confirmar senha</label>
+                  <div class="input-icon">
+                    <i class="fas fa-lock"></i>
+                  </div>
+                  <div class="input-underline"></div>
+                </div>
+              </div>
+
+              <div class="form-options-wide">
+                <label class="checkbox-container-wide">
+                  <input type="checkbox" id="termsAgree" required>
+                  <span class="checkmark-wide"></span>
+                  Concordo com os <a href="../terms.html">Termos de Serviço</a> e <a href="../privacy.html">Política de Privacidade</a>
+                </label>
+                <label class="checkbox-container-wide">
+                  <input type="checkbox" id="newsletterSubscribe">
+                  <span class="checkmark-wide"></span>
+                  Desejo receber novidades e atualizações por e-mail
+                </label>
+              </div>
+
+              <button type="submit" class="submit-btn-wide primary">
+                <span class="btn-text">Iniciar Jornada Cinematográfica</span>
+                <div class="btn-loader">
+                  <div class="loader-dot"></div>
+                  <div class="loader-dot"></div>
+                  <div class="loader-dot"></div>
+                </div>
+              </button>
+
+              <div class="divider-wide">
+                <span>ou registre-se com</span>
+              </div>
+
+              <div class="social-auth-wide">
+                <button type="button" class="social-btn-wide google-btn">
+                  <i class="fab fa-google"></i>
+                  <span>Google</span>
+                </button>
+                <button type="button" class="social-btn-wide facebook-btn">
+                  <i class="fab fa-facebook-f"></i>
+                  <span>Facebook</span>
+                </button>
+                <button type="button" class="social-btn-wide twitter-btn">
+                  <i class="fab fa-x-twitter"></i>
+                  <span>Twitter</span>
+                </button>
+              </div>
+            </form>
+
+            <div class="form-footer-wide">
+              <p>Já faz parte da comunidade? <a href="#" id="switchToLogin">Faça login</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    
+    </main>
+      
+
+
+    <footer class="main-footer">
+        <div class="footer-wave">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+                <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+                <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+            </svg>
+        </div>
+        
+        <div class="footer-container">
+            <!-- Seção Principal -->
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="../src/img/logo-branco.png" alt="Rescene">
+                        <span class="logo-text">Rescene</span>
+                    </div>
+                    <p class="footer-description">
+                        Sua plataforma para descobrir, avaliar e compartilhar filmes e séries. Conecte-se com outros cinéfilos e expanda seu universo cinematográfico.
+                    </p>
+                    <div class="footer-newsletter">
+                        <h3>Receba novidades</h3>
+                        <div class="newsletter-form">
+                            <input type="email" placeholder="Seu e-mail">
+                            <button type="submit">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="links-column">
+                        <h3>Navegação</h3>
+                        <ul>
+                            <li><a href="../index.html">Página Inicial</a></li>
+                            <li><a href="../catalog/movies.html">Filmes</a></li>
+                            <li><a href="../catalog/series.html">Séries</a></li>
+                            <li><a href="../ranking/rankFilmes.html">Populares</a></li>
+                            <li><a href="../profile/profile.html">Meu Perfil</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="links-column">
+                        <h3>Recursos</h3>
+                        <ul>
+                            <li><a href="../profile/watched.html">Assistidos</a></li>
+                            <li><a href="../profile/liked.html">Favoritos</a></li>
+                            <li><a href="../profile/userLists.html">Listas</a></li>
+                            <li><a href="../settings/settings.html">Configurações</a></li>
+                            <li><a href="../search.html">Pesquisa Avançada</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="links-column">
+                        <h3>Suporte</h3>
+                        <ul>
+                            <li><a href="../contact.html">Contate-nos</a></li>
+                            <li><a href="../help.html">Ajuda & FAQ</a></li>
+                            <li><a href="../about.html">Sobre nós</a></li>
+                            <li><a href="../privacy.html">Privacidade</a></li>
+                            <li><a href="../terms.html">Termos de uso</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Divisor -->
+            <div class="footer-divider"></div>
+            
+            <!-- Seção Inferior -->
+            <div class="footer-bottom">
+                <div class="footer-social">
+                    <h3>Siga-nos</h3>
+                    <div class="social-icons">
+                        <a href="https://www.threads.com/@resceneoficial" target="_blank" class="social-icon">
+                            <i class="fab fa-threads"></i>
+                        </a>
+                        <a href="https://www.instagram.com/resceneoficial/" target="_blank" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://x.com/resceneoficial" target="_blank" class="social-icon">
+                            <i class="fab fa-x-twitter"></i>
+                        </a>
+                        <a href="https://www.facebook.com/resceneoficial" target="_blank" class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@resceneoficial" target="_blank" class="social-icon">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@resceneoficial" target="_blank" class="social-icon">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-copyright">
+                    <p>&copy; 2025 Rescene. Todos os direitos reservados.</p>
+                    <p>Feito por estudantes do IFSP-CAR</p>
+                    <p>Dados por <a href="https://www.themoviedb.org/" target="_blank">TMDB</a></p>
+                </div>
+                
+                <div class="footer-badges">
+                    <div class="badge">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Site seguro</span>
+                    </div>
+                    <div class="badge">
+                        <i class="fas fa-lock"></i>
+                        <span>Privacidade</span>
+                    </div>
+                    <div class="badge">
+                        <i class="fas fa-award"></i>
+                        <span>Melhor plataforma 2025</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Botão Voltar ao Topo -->
+        <button class="back-to-top" id="backToTop">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </footer>
+
+    <script src="../src/js/login-signup.js"></script>
+    <script src="../src/js/dropdown-catalog.js"></script>
+    <script src="../src/js/dropdown-user.js"></script>
+    <script src="../src/js/login-hub-rescene.js"></script>
+    <script src="../src/js/header.js"></script>
+    <script src="../src/js/footer.js"></script>
+
+</body>
+
+</html>

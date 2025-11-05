@@ -1,0 +1,1394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rescene | Editar Lista</title>
+  
+    <link rel="stylesheet" href="../src/css/reset.css">
+    <link rel="stylesheet" href="../src/css/footer.css">
+    <link rel="stylesheet" href="../src/css/body.css">
+    <link rel="stylesheet" href="../src/css/header.css">
+    <link rel="stylesheet" href="../src/css/editLists.css">
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="../src/img/favicon.ico">
+  </head>
+
+<body>
+
+    <!-------------HEADER------------------>
+    <div class="wrapper">
+        <header class="main-header">
+            <div class="header-container">
+                <!-- Logo e Menu Mobile -->
+                <div class="header-left">
+                    <div class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    
+                    <a href="../index.html" class="logo-link">
+                        <img src="../src/img/logo-branco.png" alt="Rescene" class="logo">
+                    </a>
+                </div>
+      
+                <!-- Menu de Navegação Principal -->
+                <nav class="main-nav">
+                    <a href="../catalog/movies.html" class="nav-link">
+                        <i class="fas fa-film"></i>
+                        <span>Filmes</span>
+                    </a>
+                    <a href="../catalog/series.html" class="nav-link">
+                        <i class="fas fa-tv"></i>
+                        <span>Séries</span>
+                    </a>
+                    <a href="../ranking/rankFilmes.html" class="nav-link">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Populares</span>
+                    </a>
+                </nav>
+      
+                <!-- Barra de Pesquisa Aprimorada com Auto-typing -->
+                <div class="search-container">
+                    <div class="search-bar">
+                        <input type="text" id="search-input" placeholder=" " autocomplete="off">
+                        <div id="search-placeholder"></div>
+                        <button type="submit" class="search-btn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        <div class="search-results" id="search-results"></div>
+                    </div>
+                    <div class="search-suggestions">
+                        <span class="suggestion-tag">Trending:</span>
+                        <div class="suggestions-list">
+                            <span class="suggestion-item">Interestelar</span>
+                            <span class="suggestion-item">Breaking Bad</span>
+                            <span class="suggestion-item">The Last of Us</span>
+                        </div>
+                    </div>
+                </div>
+      
+                <!-- Área do Usuário Aprimorada -->
+                <div class="user-area">
+                    <!-- Notificações com ícone maior -->
+                    <div class="notification-dropdown">
+                        <button class="icon-btn notification-btn" id="notification-btn">
+                            <i class="fas fa-bell"></i>
+                            <span class="notification-count">3</span>
+                        </button>
+                        <div class="dropdown-content notification-content">
+                            <div class="dropdown-header">
+                                <h3>Notificações</h3>
+                                <a href="#" class="mark-all-read">Marcar todas como lida</a>
+                            </div>
+                            <div class="notification-list">
+                                <div class="notification-item unread">
+                                    <div class="notification-avatar">
+                                        <img src="../src/img/user1.jpg" alt="Usuário">
+                                    </div>
+                                    <div class="notification-text">
+                                        <p><strong>Maria Silva</strong> curtiu sua avaliação de <strong>Interestelar</strong></p>
+                                        <span class="notification-time">há 2 minutos</span>
+                                    </div>
+                                </div>
+                                <div class="notification-item unread">
+                                    <div class="notification-avatar">
+                                        <img src="../src/img/user2.jpg" alt="Usuário">
+                                    </div>
+                                    <div class="notification-text">
+                                        <p><strong>João Santos</strong> começou a seguir você</p>
+                                        <span class="notification-time">há 15 minutos</span>
+                                    </div>
+                                </div>
+                                <div class="notification-item">
+                                    <div class="notification-avatar">
+                                        <img src="../src/img/user3.jpg" alt="Usuário">
+                                    </div>
+                                    <div class="notification-text">
+                                        <p>Novo episódio de <strong>The Last of Us</strong> disponível</p>
+                                        <span class="notification-time">há 1 hora</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dropdown-footer">
+                                <a href="../notifications.html">Ver todas as notificações</a>
+                            </div>
+                        </div>
+                    </div>
+      
+                    <!-- Menu do Usuário com Email -->
+                    <div class="user-dropdown">
+                        <button class="user-btn" id="user-btn">
+                            <img src="../src/img/icon.jpg" alt="Avatar" class="user-avatar">
+                            <div class="user-info-short">
+                                <span class="username">NomeUsuário</span>
+                                <span class="user-email">usuario@email.com</span>
+                            </div>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="dropdown-content user-content">
+                            <div class="user-info">
+                                <img src="../src/img/icon.jpg" alt="Avatar" class="user-avatar-large">
+                                <div class="user-details">
+                                    <h3>NomeUsuário</h3>
+                                    <p>@username</p>
+                                    <p class="user-email">usuario@email.com</p>
+                                </div>
+                            </div>
+                            <div class="dropdown-links">
+                                <a href="../profile/profile.html">
+                                    <i class="fas fa-user"></i>
+                                    <span>Meu Perfil</span>
+                                </a>
+                                <a href="../profile/watched.html">
+                                    <i class="fas fa-eye"></i>
+                                    <span>Assistidos</span>
+                                </a>
+                                <a href="../profile/liked.html">
+                                    <i class="fas fa-heart"></i>
+                                    <span>Favoritos</span>
+                                </a>
+                                <a href="../profile/userLists.html">
+                                    <i class="fas fa-list"></i>
+                                    <span>Minhas Listas</span>
+                                </a>
+                                <a href="../settings/settings.html">
+                                    <i class="fas fa-cog"></i>
+                                    <span>Configurações</span>
+                                </a>
+                                <a href="#" id="logout-btn">
+                                    <i class="fas fa-sign-out-alt"></i>
+                                    <span>Sair</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+      
+            <!-- Menu Mobile -->
+            <nav class="mobile-menu" id="mobileMenu">
+                <div class="mobile-menu-header">
+                    <div class="mobile-logo">
+                        <img src="../src/img/logo-branco.png" class="logo">
+                        <span class="logo-text">Rescene</span>
+                    </div>
+                    <button class="close-menu" id="closeMenu">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="mobile-user-info">
+                    <img src="../src/img/icon.jpg" alt="Avatar" class="mobile-user-avatar">
+                    <div class="mobile-user-details">
+                        <h3>NomeUsuário</h3>
+                        <p>usuario@email.com</p>
+                    </div>
+                </div>
+                <div class="mobile-menu-content">
+                    <a href="../index.html" class="mobile-menu-link">
+                        <i class="fas fa-home"></i>
+                        <span>Página Inicial</span>
+                    </a>
+                    <a href="../profile/profile.html" class="mobile-menu-link">
+                        <i class="fas fa-user"></i>
+                        <span>Meu Perfil</span>
+                    </a>
+                    <a href="../catalog/movies.html" class="mobile-menu-link">
+                        <i class="fas fa-film"></i>
+                        <span>Filmes</span>
+                    </a>
+                    <a href="../catalog/series.html" class="mobile-menu-link">
+                        <i class="fas fa-tv"></i>
+                        <span>Séries</span>
+                    </a>
+                    <a href="../ranking/rankFilmes.html" class="mobile-menu-link">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Populares</span>
+                    </a>
+                    <a href="../profile/watched.html" class="mobile-menu-link">
+                        <i class="fas fa-eye"></i>
+                        <span>Assistidos</span>
+                    </a>
+                    <a href="../profile/liked.html" class="mobile-menu-link">
+                        <i class="fas fa-heart"></i>
+                        <span>Favoritos</span>
+                    </a>
+                    <a href="../profile/userLists.html" class="mobile-menu-link">
+                        <i class="fas fa-list"></i>
+                        <span>Listas</span>
+                    </a>
+                    <a href="../settings/settings.html" class="mobile-menu-link">
+                        <i class="fas fa-cog"></i>
+                        <span>Configurações</span>
+                    </a>
+                    <a href="#" class="mobile-menu-link" id="mobile-logout">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Sair</span>
+                    </a>
+                </div>
+            </nav>
+        </header>
+
+
+         <!------------- MAIN ------------------>
+         <main class="edit-list-page">
+            <!-- Cabeçalho de Edição -->
+            <section class="edit-header">
+                <div class="container">
+                    <div class="edit-nav">
+                        <a href="../profile/userLists.html" class="back-btn">
+                            <i class="fas fa-arrow-left"></i>
+                            Voltar para minhas listas
+                        </a>
+                        <h1>Editar Lista</h1>
+                        <div class="edit-actions">
+                            <button class="btn secondary" id="previewBtn">
+                                <i class="fas fa-eye"></i>
+                                Visualizar
+                            </button>
+                            <button class="btn primary" id="saveBtn">
+                                <i class="fas fa-save"></i>
+                                Salvar alterações
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Formulário de Edição -->
+            <section class="edit-content">
+                <div class="container">
+                    <div class="edit-grid">
+                        <!-- Painel de Configurações -->
+                        <div class="settings-panel">
+                            <div class="settings-card">
+                                <h2>Configurações da Lista</h2>
+                                
+                                <div class="form-group">
+                                    <label for="listTitle">Nome da Lista *</label>
+                                    <input type="text" id="listTitle" value="Minha Lista de Favoritos" placeholder="Digite o nome da lista">
+                                    <span class="char-count">0/60 caracteres</span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="listDescription">Descrição</label>
+                                    <textarea id="listDescription" placeholder="Descreva o propósito ou tema da sua lista..." rows="4">Uma coleção pessoal dos melhores filmes e séries que já assisti. Cada obra aqui marcou minha jornada cinematográfica de alguma forma especial.</textarea>
+                                    <span class="char-count">0/250 caracteres</span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Privacidade</label>
+                                    <div class="radio-group">
+                                        <label class="radio-option">
+                                            <input type="radio" name="privacy" value="public" checked>
+                                            <span class="radio-checkmark"></span>
+                                            <div class="radio-content">
+                                                <i class="fas fa-globe-americas"></i>
+                                                <div>
+                                                    <strong>Pública</strong>
+                                                    <p>Qualquer pessoa pode ver esta lista</p>
+                                                </div>
+                                            </div>
+                                        </label>
+                                        
+                                        <label class="radio-option">
+                                            <input type="radio" name="privacy" value="private">
+                                            <span class="radio-checkmark"></span>
+                                            <div class="radio-content">
+                                                <i class="fas fa-lock"></i>
+                                                <div>
+                                                    <strong>Privada</strong>
+                                                    <p>Apenas você pode ver esta lista</p>
+                                                </div>
+                                            </div>
+                                        </label>
+                                        
+                                        <label class="radio-option">
+                                            <input type="radio" name="privacy" value="unlisted">
+                                            <span class="radio-checkmark"></span>
+                                            <div class="radio-content">
+                                                <i class="fas fa-link"></i>
+                                                <div>
+                                                    <strong>Não listada</strong>
+                                                    <p>Apenas pessoas com o link podem ver</p>
+                                                </div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Capa da Lista</label>
+                                    <div class="cover-upload">
+                                        <div class="upload-preview">
+                                            <img src="../src/img/poster11.jpg" alt="Preview da capa" id="coverPreview">
+                                            <div class="upload-overlay">
+                                                <i class="fas fa-camera"></i>
+                                                <span>Alterar imagem</span>
+                                            </div>
+                                        </div>
+                                        <input type="file" id="coverUpload" accept="image/*" hidden>
+                                        <div class="upload-options">
+                                            <button type="button" class="upload-btn" onclick="document.getElementById('coverUpload').click()">
+                                                <i class="fas fa-upload"></i>
+                                                Fazer upload
+                                            </button>
+                                            <button type="button" class="btn-text" id="suggestedCoversBtn">
+                                                <i class="fas fa-image"></i>
+                                                Escolher das sugestões
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Organização</label>
+                                    <select class="form-select" id="sortOrder">
+                                        <option value="custom">Personalizada (Arraste para ordenar)</option>
+                                        <option value="recent">Mais recentes primeiro</option>
+                                        <option value="oldest">Mais antigos primeiro</option>
+                                        <option value="rating">Melhor avaliados</option>
+                                        <option value="title">Ordem alfabética (A-Z)</option>
+                                    </select>
+                                </div>
+
+                                <div class="danger-zone">
+                                    <h3>Zona de Perigo</h3>
+                                    <div class="danger-actions">
+                                        <button class="btn danger" id="clearListBtn">
+                                            <i class="fas fa-broom"></i>
+                                            Limpar lista
+                                        </button>
+                                        <button class="btn danger" id="deleteListBtn">
+                                            <i class="fas fa-trash"></i>
+                                            Excluir lista
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Preview e Gerenciamento de Itens -->
+                        <div class="content-panel">
+                            <div class="preview-card">
+                                <h2>Preview & Gerenciamento</h2>
+                                <p>Visualize como sua lista aparecerá para outros usuários</p>
+                                
+                                <div class="preview-header">
+                                    <img src="../src/img/poster10.webp" alt="Capa da lista" class="preview-cover">
+                                    <div class="preview-info">
+                                        <h3 id="previewTitle">Minha Lista de Favoritos</h3>
+                                        <p id="previewDescription">Uma coleção pessoal dos melhores filmes e séries que já assisti. Cada obra aqui marcou minha jornada cinematográfica de alguma forma especial.</p>
+                                        <div class="preview-stats">
+                                            <span><i class="fas fa-film"></i> <span id="previewCount">24</span> itens</span>
+                                            <span><i class="fas fa-globe-americas"></i> Pública</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="items-management">
+                                    <div class="management-header">
+                                        <h3>Itens na Lista (<span id="itemsCount">24</span>)</h3>
+                                        <button class="btn primary" id="addItemBtn">
+                                            <i class="fas fa-plus"></i>
+                                            Adicionar item
+                                        </button>
+                                    </div>
+
+                                    <div class="search-box">
+                                        <i class="fas fa-search"></i>
+                                        <input type="text" placeholder="Buscar itens na lista..." id="searchItems">
+                                    </div>
+
+                                    <div class="sortable-items" id="sortableContainer">
+                                        <!-- Item 1 -->
+                                        <div class="sortable-item" draggable="true">
+                                            <div class="item-handle">
+                                                <i class="fas fa-grip-vertical"></i>
+                                            </div>
+                                            <img src="../src/img/poster3.jpg" alt="Interestelar" class="item-thumb">
+                                            <div class="item-details">
+                                                <h4>Interestelar</h4>
+                                                <p>2014 • Filme • Ficção Científica • 4.8★</p>
+                                                <span class="added-date">Adicionado em 25/03/2024</span>
+                                            </div>
+                                            <div class="item-actions">
+                                                <button class="action-btn" title="Editar">
+                                                    <i class="fas fa-pen"></i>
+                                                </button>
+                                                <button class="action-btn remove-btn" title="Remover">
+                                                    <i class="fas fa-times"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <!-- Item 2 -->
+                                        <div class="sortable-item" draggable="true">
+                                            <div class="item-handle">
+                                                <i class="fas fa-grip-vertical"></i>
+                                            </div>
+                                            <img src="../src/img/poster15.jpeg" alt="Breaking Bad" class="item-thumb">
+                                            <div class="item-details">
+                                                <h4>Breaking Bad</h4>
+                                                <p>2008-2013 • Série • Drama • 4.9★</p>
+                                                <span class="added-date">Adicionado em 20/03/2024</span>
+                                            </div>
+                                            <div class="item-actions">
+                                                <button class="action-btn" title="Editar">
+                                                    <i class="fas fa-pen"></i>
+                                                </button>
+                                                <button class="action-btn remove-btn" title="Remover">
+                                                    <i class="fas fa-times"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <!-- Item 3 -->
+                                        <div class="sortable-item" draggable="true">
+                                            <div class="item-handle">
+                                                <i class="fas fa-grip-vertical"></i>
+                                            </div>
+                                            <img src="../src/img/poster13.jpg" alt="O Poderoso Chefão" class="item-thumb">
+                                            <div class="item-details">
+                                                <h4>O Poderoso Chefão</h4>
+                                                <p>1972 • Filme • Drama • 4.9★</p>
+                                                <span class="added-date">Adicionado em 15/03/2024</span>
+                                            </div>
+                                            <div class="item-actions">
+                                                <button class="action-btn" title="Editar">
+                                                    <i class="fas fa-pen"></i>
+                                                </button>
+                                                <button class="action-btn remove-btn" title="Remover">
+                                                    <i class="fas fa-times"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <!-- Item 4 -->
+                                        <div class="sortable-item" draggable="true">
+                                            <div class="item-handle">
+                                                <i class="fas fa-grip-vertical"></i>
+                                            </div>
+                                            <img src="../src/img/poster9.png" alt="Game of Thrones" class="item-thumb">
+                                            <div class="item-details">
+                                                <h4>Game of Thrones</h4>
+                                                <p>2011-2019 • Série • Fantasia • 4.7★</p>
+                                                <span class="added-date">Adicionado em 10/03/2024</span>
+                                            </div>
+                                            <div class="item-actions">
+                                                <button class="action-btn" title="Editar">
+                                                    <i class="fas fa-pen"></i>
+                                                </button>
+                                                <button class="action-btn remove-btn" title="Remover">
+                                                    <i class="fas fa-times"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="bulk-actions">
+                                        <button class="btn secondary" id="selectMultipleBtn">
+                                            <i class="fas fa-check-square"></i>
+                                            Selecionar múltiplos
+                                        </button>
+                                        <button class="btn secondary" id="exportListBtn">
+                                            <i class="fas fa-download"></i>
+                                            Exportar lista
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!--------------FOOTER--------------->
+
+
+        <footer class="main-footer">
+            <div class="footer-wave">
+                <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+                    <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+                    <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+                </svg>
+            </div>
+            
+            <div class="footer-container">
+                <!-- Seção Principal -->
+                <div class="footer-main">
+                    <div class="footer-brand">
+                        <div class="footer-logo">
+                            <img src="../src/img/logo-branco.png" alt="Rescene">
+                            <span class="logo-text">Rescene</span>
+                        </div>
+                        <p class="footer-description">
+                            Sua plataforma para descobrir, avaliar e compartilhar filmes e séries. Conecte-se com outros cinéfilos e expanda seu universo cinematográfico.
+                        </p>
+                        <div class="footer-newsletter">
+                            <h3>Receba novidades</h3>
+                            <div class="newsletter-form">
+                                <input type="email" placeholder="Seu e-mail">
+                                <button type="submit">
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-links">
+                        <div class="links-column">
+                            <h3>Navegação</h3>
+                            <ul>
+                                <li><a href="../index.html">Página Inicial</a></li>
+                                <li><a href="../catalog/movies.html">Filmes</a></li>
+                                <li><a href="../catalog/series.html">Séries</a></li>
+                                <li><a href="../ranking/rankFilmes.html">Populares</a></li>
+                                <li><a href="../profile/profile.html">Meu Perfil</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="links-column">
+                            <h3>Recursos</h3>
+                            <ul>
+                                <li><a href="../profile/watched.html">Assistidos</a></li>
+                                <li><a href="../profile/liked.html">Favoritos</a></li>
+                                <li><a href="../profile/userLists.html">Listas</a></li>
+                                <li><a href="../settings/settings.html">Configurações</a></li>
+                                <li><a href="../search.html">Pesquisa Avançada</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="links-column">
+                            <h3>Suporte</h3>
+                            <ul>
+                                <li><a href="../contact.html">Contate-nos</a></li>
+                                <li><a href="../help.html">Ajuda & FAQ</a></li>
+                                <li><a href="../about.html">Sobre nós</a></li>
+                                <li><a href="../privacy.html">Privacidade</a></li>
+                                <li><a href="../terms.html">Termos de uso</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Divisor -->
+                <div class="footer-divider"></div>
+                
+                <!-- Seção Inferior -->
+                <div class="footer-bottom">
+                    <div class="footer-social">
+                        <h3>Siga-nos</h3>
+                        <div class="social-icons">
+                            <a href="https://www.threads.com/@resceneoficial" target="_blank" class="social-icon">
+                                <i class="fab fa-threads"></i>
+                            </a>
+                            <a href="https://www.instagram.com/resceneoficial/" target="_blank" class="social-icon">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://x.com/resceneoficial" target="_blank" class="social-icon">
+                                <i class="fab fa-x-twitter"></i>
+                            </a>
+                            <a href="https://www.facebook.com/resceneoficial" target="_blank" class="social-icon">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.youtube.com/@resceneoficial" target="_blank" class="social-icon">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="https://www.tiktok.com/@resceneoficial" target="_blank" class="social-icon">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-copyright">
+                        <p>&copy; 2025 Rescene. Todos os direitos reservados.</p>
+                        <p>Feito por estudantes do IFSP-CAR</p>
+                        <p>Dados por <a href="https://www.themoviedb.org/" target="_blank">TMDB</a></p>
+                    </div>
+                    
+                    <div class="footer-badges">
+                        <div class="badge">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Site seguro</span>
+                        </div>
+                        <div class="badge">
+                            <i class="fas fa-lock"></i>
+                            <span>Privacidade</span>
+                        </div>
+                        <div class="badge">
+                            <i class="fas fa-award"></i>
+                            <span>Melhor plataforma 2025</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Botão Voltar ao Topo -->
+            <button class="back-to-top" id="backToTop">
+                <i class="fas fa-arrow-up"></i>
+            </button>
+        </footer>
+
+        <div class="modal" id="confirmationModal">
+            <div class="modal-overlay"></div>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 id="modalTitle">Confirmar ação</h3>
+                    <button class="modal-close" id="modalClose">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p id="modalMessage">Tem certeza que deseja realizar esta ação?</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn secondary" id="modalCancel">Cancelar</button>
+                    <button class="btn danger" id="modalConfirm">Confirmar</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal de Capas Sugeridas -->
+        <div class="modal" id="coversModal">
+            <div class="modal-overlay"></div>
+            <div class="modal-content large">
+                <div class="modal-header">
+                    <h3>Escolher capa da lista</h3>
+                    <button class="modal-close" id="coversModalClose">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="covers-grid">
+                        <div class="cover-option">
+                            <img src="../src/img/list-covers/action.jpg" alt="Capa Ação">
+                            <span>Ação</span>
+                        </div>
+                        <div class="cover-option">
+                            <img src="../src/img/list-covers/drama.jpg" alt="Capa Drama">
+                            <span>Drama</span>
+                        </div>
+                        <div class="cover-option">
+                            <img src="../src/img/list-covers/favorites.jpg" alt="Capa Favoritos">
+                            <span>Favoritos</span>
+                        </div>
+                        <div class="cover-option">
+                            <img src="../src/img/list-covers/comedy.jpg" alt="Capa Comédia">
+                            <span>Comédia</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn secondary" id="coversModalCancel">Cancelar</button>
+                    <button class="btn primary" id="coversModalConfirm">Selecionar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // ===== VARIÁVEIS GLOBAIS =====
+            let draggedItem = null;
+            let currentModalType = '';
+            let selectedCover = null;
+            
+            // ===== CONTADOR DE CARACTERES =====
+            const titleInput = document.getElementById('listTitle');
+            const descTextarea = document.getElementById('listDescription');
+            const titleCount = document.querySelector('#listTitle + .char-count');
+            const descCount = document.querySelector('#listDescription + .char-count');
+            
+            // Inicializar contadores
+            updateCharCount(titleInput, titleCount, 60);
+            updateCharCount(descTextarea, descCount, 250);
+            
+            // Event listeners para contagem de caracteres
+            titleInput.addEventListener('input', () => updateCharCount(titleInput, titleCount, 60));
+            descTextarea.addEventListener('input', () => updateCharCount(descTextarea, descCount, 250));
+            
+            // ===== ATUALIZAÇÃO EM TEMPO REAL DO PREVIEW =====
+            titleInput.addEventListener('input', function() {
+                document.getElementById('previewTitle').textContent = this.value || "Nome da Lista";
+                updateSaveButtonState();
+            });
+            
+            descTextarea.addEventListener('input', function() {
+                document.getElementById('previewDescription').textContent = this.value || "Descrição da lista...";
+            });
+            
+            // Atualizar privacidade no preview
+            document.querySelectorAll('input[name="privacy"]').forEach(radio => {
+                radio.addEventListener('change', function() {
+                    const privacyText = this.nextElementSibling.nextElementSibling.querySelector('strong').textContent;
+                    document.querySelector('.preview-stats span:nth-child(2)').innerHTML = 
+                        `<i class="fas fa-${this.value === 'public' ? 'globe-americas' : this.value === 'private' ? 'lock' : 'link'}"></i> ${privacyText}`;
+                });
+            });
+            
+            // ===== UPLOAD DE CAPA =====
+            const coverUpload = document.getElementById('coverUpload');
+            const coverPreview = document.getElementById('coverPreview');
+            
+            coverUpload.addEventListener('change', function(e) {
+                if (e.target.files && e.target.files[0]) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        coverPreview.src = e.target.result;
+                        document.querySelector('.preview-cover').src = e.target.result;
+                        
+                        // Mostrar feedback visual
+                        showNotification('Capa atualizada com sucesso!', 'success');
+                    }
+                    reader.readAsDataURL(e.target.files[0]);
+                }
+            });
+            
+            // ===== MODAL DE CAPAS SUGERIDAS =====
+            const coversModal = document.getElementById('coversModal');
+            const suggestedCoversBtn = document.getElementById('suggestedCoversBtn');
+            const coversModalClose = document.getElementById('coversModalClose');
+            const coversModalCancel = document.getElementById('coversModalCancel');
+            const coversModalConfirm = document.getElementById('coversModalConfirm');
+            
+            // Abrir modal de capas
+            suggestedCoversBtn.addEventListener('click', function() {
+                openModal('covers');
+            });
+            
+            // Selecionar capa
+            document.querySelectorAll('.cover-option').forEach(option => {
+                option.addEventListener('click', function() {
+                    // Remover seleção anterior
+                    document.querySelectorAll('.cover-option').forEach(opt => {
+                        opt.style.borderColor = 'transparent';
+                    });
+                    
+                    // Selecionar nova capa
+                    this.style.borderColor = 'var(--primary-gold)';
+                    selectedCover = this.querySelector('img').src;
+                });
+            });
+            
+            // Confirmar seleção de capa
+            coversModalConfirm.addEventListener('click', function() {
+                if (selectedCover) {
+                    coverPreview.src = selectedCover;
+                    document.querySelector('.preview-cover').src = selectedCover;
+                    showNotification('Capa alterada com sucesso!', 'success');
+                }
+                closeModal();
+            });
+            
+            // ===== ARRASTAR E SOLTAR PARA REORDENAR =====
+            const sortableContainer = document.getElementById('sortableContainer');
+            
+            // Configurar eventos para cada item
+            document.querySelectorAll('.sortable-item').forEach(item => {
+                setupDragAndDrop(item);
+            });
+            
+            // ===== MODAL DE CONFIRMAÇÃO =====
+            const modal = document.getElementById('confirmationModal');
+            const modalClose = document.getElementById('modalClose');
+            const modalCancel = document.getElementById('modalCancel');
+            const modalConfirm = document.getElementById('modalConfirm');
+            const clearListBtn = document.getElementById('clearListBtn');
+            const deleteListBtn = document.getElementById('deleteListBtn');
+            
+            // Event listeners para botões de ação perigosa
+            clearListBtn.addEventListener('click', function() {
+                openModal('confirm', {
+                    title: 'Limpar Lista',
+                    message: 'Tem certeza que deseja remover todos os itens desta lista? Esta ação não pode ser desfeita.',
+                    confirmText: 'Limpar Tudo',
+                    onConfirm: clearAllItems
+                });
+            });
+            
+            deleteListBtn.addEventListener('click', function() {
+                openModal('confirm', {
+                    title: 'Excluir Lista',
+                    message: 'Tem certeza que deseja excluir permanentemente esta lista? Esta ação não pode ser desfeita.',
+                    confirmText: 'Excluir Permanentemente',
+                    onConfirm: deleteList
+                });
+            });
+            
+            // ===== BOTÃO DE ADICIONAR ITEM =====
+            document.getElementById('addItemBtn').addEventListener('click', function() {
+                // Simular abertura de modal de busca (seria implementado posteriormente)
+                this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Carregando...';
+                
+                setTimeout(() => {
+                    this.innerHTML = '<i class="fas fa-plus"></i> Adicionar item';
+                    showNotification('Funcionalidade de adicionar item em desenvolvimento', 'info');
+                }, 1000);
+            });
+            
+            // ===== BOTÃO DE SALVAR =====
+            document.getElementById('saveBtn').addEventListener('click', function() {
+                saveChanges(this);
+            });
+            
+            // ===== BOTÕES DE AÇÃO EM LOTE =====
+            document.getElementById('selectMultipleBtn').addEventListener('click', function() {
+                this.classList.toggle('active');
+                const isSelecting = this.classList.contains('active');
+                
+                if (isSelecting) {
+                    this.innerHTML = '<i class="fas fa-times"></i> Cancelar seleção';
+                    enableMultipleSelection();
+                } else {
+                    this.innerHTML = '<i class="fas fa-check-square"></i> Selecionar múltiplos';
+                    disableMultipleSelection();
+                }
+            });
+            
+            document.getElementById('exportListBtn').addEventListener('click', function() {
+                this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Exportando...';
+                
+                setTimeout(() => {
+                    this.innerHTML = '<i class="fas fa-download"></i> Exportar lista';
+                    showNotification('Lista exportada com sucesso!', 'success');
+                    
+                    // Simular download
+                    simulateDownload();
+                }, 1500);
+            });
+            
+            // ===== BUSCA DE ITENS =====
+            const searchInput = document.getElementById('searchItems');
+            let searchTimeout = null;
+            
+            searchInput.addEventListener('input', function() {
+                clearTimeout(searchTimeout);
+                searchTimeout = setTimeout(() => {
+                    filterItems(this.value.trim().toLowerCase());
+                }, 300);
+            });
+            
+            // ===== FUNÇÕES AUXILIARES =====
+            
+            // Atualizar contador de caracteres
+            function updateCharCount(element, counter, max) {
+                const count = element.value.length;
+                counter.textContent = `${count}/${max} caracteres`;
+                
+                if (count > max) {
+                    counter.style.color = 'var(--accent-red)';
+                    element.style.borderColor = 'var(--accent-red)';
+                } else if (count > max * 0.8) {
+                    counter.style.color = 'var(--warning-orange)';
+                    element.style.borderColor = 'var(--warning-orange)';
+                } else {
+                    counter.style.color = 'var(--text-secondary)';
+                    element.style.borderColor = '';
+                }
+                
+                updateSaveButtonState();
+            }
+            
+            // Atualizar estado do botão salvar
+            function updateSaveButtonState() {
+                const saveBtn = document.getElementById('saveBtn');
+                const title = titleInput.value.trim();
+                
+                if (title.length === 0 || title.length > 60) {
+                    saveBtn.disabled = true;
+                    saveBtn.style.opacity = '0.6';
+                    saveBtn.style.cursor = 'not-allowed';
+                } else {
+                    saveBtn.disabled = false;
+                    saveBtn.style.opacity = '1';
+                    saveBtn.style.cursor = 'pointer';
+                }
+            }
+            
+            // Configurar arrastar e soltar
+            function setupDragAndDrop(item) {
+                // Arrastar
+                item.addEventListener('dragstart', function(e) {
+                    draggedItem = this;
+                    setTimeout(() => {
+                        this.style.opacity = '0.5';
+                        this.classList.add('dragging');
+                    }, 0);
+                    
+                    // Definir efeito de arrasto
+                    e.dataTransfer.effectAllowed = 'move';
+                    e.dataTransfer.setData('text/plain', this.id);
+                });
+                
+                item.addEventListener('dragend', function() {
+                    this.style.opacity = '1';
+                    this.classList.remove('dragging');
+                    document.querySelectorAll('.sortable-item').forEach(item => {
+                        item.classList.remove('drop-zone');
+                    });
+                });
+                
+                // Soltar
+                item.addEventListener('dragover', function(e) {
+                    e.preventDefault();
+                });
+                
+                item.addEventListener('dragenter', function(e) {
+                    e.preventDefault();
+                    this.classList.add('drop-zone');
+                });
+                
+                item.addEventListener('dragleave', function() {
+                    this.classList.remove('drop-zone');
+                });
+                
+                item.addEventListener('drop', function(e) {
+                    e.preventDefault();
+                    this.classList.remove('drop-zone');
+                    
+                    if (draggedItem && this !== draggedItem) {
+                        const allItems = Array.from(sortableContainer.children);
+                        const thisIndex = allItems.indexOf(this);
+                        const draggedIndex = allItems.indexOf(draggedItem);
+                        
+                        if (draggedIndex < thisIndex) {
+                            this.after(draggedItem);
+                        } else {
+                            this.before(draggedItem);
+                        }
+                        
+                        // Mostrar feedback visual
+                        showNotification('Item reposicionado', 'success');
+                        
+                        // Atualizar timestamp de modificação
+                        updateModificationTime();
+                    }
+                });
+                
+                // Remover item
+                const removeBtn = item.querySelector('.remove-btn');
+                removeBtn.addEventListener('click', function() {
+                    const itemElement = this.closest('.sortable-item');
+                    const itemName = itemElement.querySelector('h4').textContent;
+                    
+                    openModal('confirm', {
+                        title: 'Remover Item',
+                        message: `Tem certeza que deseja remover "${itemName}" da lista?`,
+                        confirmText: 'Remover',
+                        onConfirm: function() {
+                            itemElement.style.opacity = '0';
+                            itemElement.style.transform = 'translateX(100px)';
+                            
+                            setTimeout(() => {
+                                itemElement.remove();
+                                const count = document.querySelectorAll('.sortable-item').length;
+                                document.getElementById('itemsCount').textContent = count;
+                                document.getElementById('previewCount').textContent = count;
+                                
+                                showNotification('Item removido com sucesso', 'success');
+                                updateModificationTime();
+                            }, 300);
+                        }
+                    });
+                });
+            }
+            
+            // Abrir modal
+            function openModal(type, options = {}) {
+                currentModalType = type;
+                
+                if (type === 'confirm') {
+                    document.getElementById('modalTitle').textContent = options.title;
+                    document.getElementById('modalMessage').textContent = options.message;
+                    document.getElementById('modalConfirm').textContent = options.confirmText;
+                    
+                    // Configurar ação de confirmação
+                    const confirmBtn = document.getElementById('modalConfirm');
+                    confirmBtn.onclick = function() {
+                        options.onConfirm();
+                        closeModal();
+                    };
+                    
+                    modal.style.display = 'flex';
+                } else if (type === 'covers') {
+                    coversModal.style.display = 'flex';
+                    selectedCover = null;
+                    
+                    // Resetar seleções
+                    document.querySelectorAll('.cover-option').forEach(opt => {
+                        opt.style.borderColor = 'transparent';
+                    });
+                }
+            }
+            
+            // Fechar modal
+            function closeModal() {
+                modal.style.display = 'none';
+                coversModal.style.display = 'none';
+            }
+            
+            // Limpar todos os itens
+            function clearAllItems() {
+                const items = document.querySelectorAll('.sortable-item');
+                
+                if (items.length === 0) {
+                    showNotification('A lista já está vazia', 'info');
+                    return;
+                }
+                
+                // Animação de remoção
+                items.forEach((item, index) => {
+                    setTimeout(() => {
+                        item.style.opacity = '0';
+                        item.style.transform = 'translateX(100px)';
+                        
+                        if (index === items.length - 1) {
+                            setTimeout(() => {
+                                items.forEach(item => item.remove());
+                                const count = document.querySelectorAll('.sortable-item').length;
+                                document.getElementById('itemsCount').textContent = count;
+                                document.getElementById('previewCount').textContent = count;
+                                
+                                showNotification('Lista limpa com sucesso', 'success');
+                                updateModificationTime();
+                            }, 300);
+                        }
+                    }, index * 100);
+                });
+            }
+            
+            // Excluir lista
+            function deleteList() {
+                // Simular exclusão
+                showNotification('Lista excluída com sucesso', 'success');
+                
+                // Redirecionar após um breve delay
+                setTimeout(() => {
+                    window.location.href = '../profile/userLists.html';
+                }, 1500);
+            }
+            
+            // Salvar alterações
+            function saveChanges(button) {
+                button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Salvando...';
+                button.disabled = true;
+                
+                // Simular processo de salvamento
+                setTimeout(() => {
+                    button.innerHTML = '<i class="fas fa-check"></i> Salvo!';
+                    button.classList.add('saved');
+                    
+                    showNotification('Alterações salvas com sucesso', 'success');
+                    updateModificationTime();
+                    
+                    // Restaurar botão após delay
+                    setTimeout(() => {
+                        button.innerHTML = '<i class="fas fa-save"></i> Salvar alterações';
+                        button.classList.remove('saved');
+                        button.disabled = false;
+                    }, 2000);
+                }, 1500);
+            }
+            
+            // Habilitar seleção múltipla
+            function enableMultipleSelection() {
+                document.querySelectorAll('.sortable-item').forEach(item => {
+                    const checkbox = document.createElement('div');
+                    checkbox.className = 'item-checkbox';
+                    checkbox.innerHTML = '<i class="fas fa-check"></i>';
+                    item.prepend(checkbox);
+                    
+                    // Evento de clique para seleção
+                    item.addEventListener('click', function(e) {
+                        if (!e.target.closest('.item-actions')) {
+                            this.classList.toggle('selected');
+                            this.querySelector('.item-checkbox').classList.toggle('checked');
+                        }
+                    });
+                });
+            }
+            
+            // Desabilitar seleção múltipla
+            function disableMultipleSelection() {
+                document.querySelectorAll('.item-checkbox').forEach(checkbox => {
+                    checkbox.remove();
+                });
+                
+                document.querySelectorAll('.sortable-item').forEach(item => {
+                    item.classList.remove('selected');
+                    item.removeEventListener('click', null);
+                });
+            }
+            
+            // Filtrar itens
+            function filterItems(searchTerm) {
+                const items = document.querySelectorAll('.sortable-item');
+                let visibleCount = 0;
+                
+                items.forEach(item => {
+                    const title = item.querySelector('h4').textContent.toLowerCase();
+                    const details = item.querySelector('p').textContent.toLowerCase();
+                    
+                    if (title.includes(searchTerm) || details.includes(searchTerm)) {
+                        item.style.display = 'flex';
+                        visibleCount++;
+                        
+                        // Destacar termo pesquisado
+                        if (searchTerm) {
+                            highlightText(item, searchTerm);
+                        }
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+                
+                // Atualizar contador de itens visíveis
+                document.getElementById('itemsCount').textContent = visibleCount;
+                
+                if (searchTerm && visibleCount === 0) {
+                    showNotification('Nenhum item encontrado', 'info');
+                }
+            }
+            
+            // Destacar texto
+            function highlightText(item, searchTerm) {
+                const title = item.querySelector('h4');
+                const originalTitle = title.textContent;
+                
+                // Criar regex para busca case-insensitive
+                const regex = new RegExp(`(${searchTerm})`, 'gi');
+                const highlighted = originalTitle.replace(regex, '<mark>$1</mark>');
+                
+                title.innerHTML = highlighted;
+            }
+            
+            // Simular download
+            function simulateDownload() {
+                const link = document.createElement('a');
+                link.href = 'data:text/plain;charset=utf-8,' + encodeURIComponent('Lista exportada do Rescene');
+                link.download = 'minha-lista-rescene.txt';
+                link.style.display = 'none';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }
+            
+            // Atualizar timestamp de modificação
+            function updateModificationTime() {
+                const now = new Date();
+                const formattedDate = now.toLocaleDateString('pt-BR') + ' ' + now.toLocaleTimeString('pt-BR');
+                
+                // Adicionar indicador de modificação não salva
+                document.getElementById('saveBtn').classList.add('unsaved-changes');
+            }
+            
+            // Mostrar notificação
+            function showNotification(message, type = 'info') {
+                // Criar elemento de notificação
+                const notification = document.createElement('div');
+                notification.className = `notification ${type}`;
+                notification.innerHTML = `
+                    <i class="fas fa-${type === 'success' ? 'check-circle' : type === 'error' ? 'exclamation-circle' : 'info-circle'}"></i>
+                    <span>${message}</span>
+                    <button class="notification-close"><i class="fas fa-times"></i></button>
+                `;
+                
+                // Adicionar ao documento
+                document.body.appendChild(notification);
+                
+                // Animação de entrada
+                setTimeout(() => {
+                    notification.classList.add('show');
+                }, 10);
+                
+                // Evento de fechamento
+                notification.querySelector('.notification-close').addEventListener('click', function() {
+                    notification.classList.remove('show');
+                    setTimeout(() => {
+                        notification.remove();
+                    }, 300);
+                });
+                
+                // Auto-remover após 5 segundos
+                setTimeout(() => {
+                    if (notification.parentNode) {
+                        notification.classList.remove('show');
+                        setTimeout(() => {
+                            notification.remove();
+                        }, 300);
+                    }
+                }, 5000);
+            }
+            
+            // ===== EVENT LISTENERS GLOBAIS =====
+            
+            // Fechar modais ao clicar fora
+            document.querySelectorAll('.modal-overlay').forEach(overlay => {
+                overlay.addEventListener('click', function(e) {
+                    if (e.target === this) {
+                        closeModal();
+                    }
+                });
+            });
+            
+            // Fechar modais com ESC
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    closeModal();
+                }
+            });
+            
+            // Fechar botões de modal
+            modalClose.addEventListener('click', closeModal);
+            modalCancel.addEventListener('click', closeModal);
+            coversModalClose.addEventListener('click', closeModal);
+            coversModalCancel.addEventListener('click', closeModal);
+            
+            // ===== INICIALIZAÇÃO =====
+            updateSaveButtonState();
+            
+            // Adicionar estilos para notificações
+            const notificationStyles = document.createElement('style');
+            notificationStyles.textContent = `
+                .notification {
+                    position: fixed;
+                    top: 20px;
+                    right: 20px;
+                    background: var(--card-bg);
+                    color: white;
+                    padding: 16px 20px;
+                    border-radius: 12px;
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+                    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+                    border: 1px solid var(--border-color);
+                    transform: translateX(100%);
+                    opacity: 0;
+                    transition: all 0.3s ease;
+                    z-index: 10000;
+                    max-width: 350px;
+                }
+                
+                .notification.show {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+                
+                .notification.success {
+                    border-left: 4px solid var(--success-green);
+                }
+                
+                .notification.error {
+                    border-left: 4px solid var(--accent-red);
+                }
+                
+                .notification.info {
+                    border-left: 4px solid var(--primary-gold);
+                }
+                
+                .notification i:first-child {
+                    font-size: 18px;
+                }
+                
+                .notification.success i:first-child {
+                    color: var(--success-green);
+                }
+                
+                .notification.error i:first-child {
+                    color: var(--accent-red);
+                }
+                
+                .notification.info i:first-child {
+                    color: var(--primary-gold);
+                }
+                
+                .notification-close {
+                    background: none;
+                    border: none;
+                    color: var(--text-secondary);
+                    cursor: pointer;
+                    padding: 4px;
+                    border-radius: 4px;
+                    margin-left: auto;
+                }
+                
+                .notification-close:hover {
+                    color: white;
+                    background: rgba(255, 255, 255, 0.1);
+                }
+                
+                .item-checkbox {
+                    width: 22px;
+                    height: 22px;
+                    border: 2px solid var(--text-secondary);
+                    border-radius: 4px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                    flex-shrink: 0;
+                }
+                
+                .item-checkbox.checked {
+                    background: var(--primary-gold);
+                    border-color: var(--primary-gold);
+                }
+                
+                .item-checkbox.checked i {
+                    color: #1c1b25;
+                    font-size: 12px;
+                    display: block;
+                }
+                
+                .item-checkbox:not(.checked) i {
+                    display: none;
+                }
+                
+                .sortable-item.selected {
+                    background: rgba(250, 218, 94, 0.1);
+                    border-color: var(--primary-gold);
+                }
+                
+                mark {
+                    background: rgba(250, 218, 94, 0.3);
+                    color: inherit;
+                    padding: 2px 0;
+                    border-radius: 2px;
+                }
+                
+                .btn.saved {
+                    background: var(--success-green) !important;
+                }
+                
+                .btn.unsaved-changes::after {
+                    content: '';
+                    position: absolute;
+                    top: 5px;
+                    right: 5px;
+                    width: 8px;
+                    height: 8px;
+                    background: var(--warning-orange);
+                    border-radius: 50%;
+                }
+            `;
+            document.head.appendChild(notificationStyles);
+        });
+        </script>
+
+        <script src="../src/js/dropdown-catalog.js"></script>
+        <script src="../src/js/dropdown-user.js"></script>
+        <script src="../src/js/header.js"></script>
+
+        <script src="../src/js/footer.js"></script>
+</body>
+
+</html>
