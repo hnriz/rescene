@@ -1,0 +1,1010 @@
+/* Seção de Estatísticas */
+.profileStatsSection {
+  margin: 30px auto;
+  padding: 20px 0;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.statsCard {
+  background: linear-gradient(145deg, #2a2931, #1e1d25);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.glow-card {
+  border: 1px solid rgba(250, 218, 94, 0.1);
+}
+
+.glow-card::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg,
+      rgba(250, 218, 94, 0.1),
+      rgba(250, 218, 94, 0.05),
+      transparent);
+  z-index: -1;
+  border-radius: 14px;
+}
+
+.statsCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(250, 218, 94, 0.15);
+}
+
+.statsHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.statsHeader h3 {
+  font-size: 1.2rem;
+  margin-left: 10px;
+  color: #fada5e;
+}
+
+.stats-icon {
+  font-size: 1.5rem;
+  color: #fada5e;
+}
+
+.statsContent {
+  display: grid;
+  gap: 15px;
+}
+
+.statItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.statLabel {
+  color: #b4b4b4;
+  font-size: 0.95rem;
+}
+
+.statValue {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: white;
+}
+
+/* Gráficos */
+.chart-container {
+  position: relative;
+  height: 200px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* Medalhas */
+.badgesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 20px 0;
+  justify-content: center;
+}
+
+.badge {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #3e3c46, #2a2931);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.badge i {
+  font-size: 1.5rem;
+}
+
+.badge:hover {
+  transform: scale(1.1) translateY(-5px);
+}
+
+.badge:hover::after {
+  opacity: 1;
+}
+
+.gold {
+  color: #ffd700;
+}
+
+.silver {
+  color: #c0c0c0;
+}
+
+.bronze {
+  color: #cd7f32;
+}
+
+.seeAllBadges {
+  background: rgba(250, 218, 94, 0.1);
+  border: 1px solid rgba(250, 218, 94, 0.3);
+  color: #fada5e;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.seeAllBadges:hover {
+  background: rgba(250, 218, 94, 0.2);
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.statsCard {
+  animation: fadeIn 0.6s ease forwards;
+}
+
+.statsCard:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.statsCard:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.statsCard:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.statsCard:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .statsCard {
+    padding: 15px;
+  }
+}
+
+.yearProgress {
+  margin: 20px 0;
+}
+
+.progressBar {
+  height: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, #fada5e, #ffd700);
+  border-radius: 5px;
+  position: relative;
+  animation: progressAnimation 2s ease-in-out;
+}
+
+@keyframes progressAnimation {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 65%;
+  }
+}
+
+.progressStats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.progressStats div {
+  text-align: center;
+}
+
+.progressNumber {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #fada5e;
+  display: block;
+}
+
+.progressLabel {
+  font-size: 0.8rem;
+  color: #b4b4b4;
+}
+
+.milestones {
+  display: grid;
+  gap: 12px;
+}
+
+.milestone {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+}
+
+.milestone i:first-child {
+  color: #fada5e;
+  width: 20px;
+  text-align: center;
+}
+
+.milestone span {
+  flex-grow: 1;
+  font-size: 0.9rem;
+}
+
+.milestone .completed {
+  color: #4CAF50;
+}
+
+.milestone .fa-spinner {
+  color: #FFC107;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Medalhas Aprimoradas */
+.badge {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.badge-inner {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.badge i {
+  font-size: 1.5rem;
+  margin-bottom: 2px;
+  position: relative;
+  z-index: 2;
+}
+
+.badge-level {
+  font-size: 0.6rem;
+  font-weight: bold;
+  position: relative;
+  z-index: 2;
+}
+
+/* Estilos por nível de medalha */
+.badge.bronze {
+  background: linear-gradient(145deg, #cd7f32, #b87333);
+}
+
+.badge.bronze .badge-inner {
+  background: radial-gradient(circle at 30% 30%, #cd7f32, #8a5a2f);
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.badge.silver {
+  background: linear-gradient(145deg, #c0c0c0, #a8a8a8);
+}
+
+.badge.silver .badge-inner {
+  background: radial-gradient(circle at 30% 30%, #e0e0e0, #a8a8a8);
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.badge.gold {
+  background: linear-gradient(145deg, #ffd700, #daa520);
+}
+
+.badge.gold .badge-inner {
+  background: radial-gradient(circle at 30% 30%, #ffd700, #daa520);
+  box-shadow: inset 0 0 15px rgba(255, 215, 0, 0.5);
+}
+
+.badge.diamond {
+  background: linear-gradient(145deg, #b9f2ff, #00b4d8);
+}
+
+.badge.diamond .badge-inner {
+  background: radial-gradient(circle at 30% 30%, #b9f2ff, #00b4d8);
+  box-shadow: inset 0 0 20px rgba(185, 242, 255, 0.7);
+  animation: diamondGlow 2s infinite alternate;
+}
+
+.badge.star {
+  background: linear-gradient(145deg, #ffd700, #ff4500);
+}
+
+.badge.star .badge-inner {
+  background: radial-gradient(circle at 30% 30%, #ffd700, #ff4500);
+  box-shadow: inset 0 0 25px rgba(255, 215, 0, 0.8);
+  animation: starGlow 1.5s infinite alternate;
+}
+
+@keyframes diamondGlow {
+  from {
+    box-shadow: inset 0 0 20px rgba(185, 242, 255, 0.7);
+  }
+
+  to {
+    box-shadow: inset 0 0 30px rgba(185, 242, 255, 0.9), 0 0 20px rgba(185, 242, 255, 0.5);
+  }
+}
+
+@keyframes starGlow {
+  from {
+    box-shadow: inset 0 0 25px rgba(255, 215, 0, 0.8);
+  }
+
+  to {
+    box-shadow: inset 0 0 40px rgba(255, 215, 0, 0.9), 0 0 30px rgba(255, 215, 0, 0.7);
+  }
+}
+
+/* Tooltip aprimorado */
+/* .badge::after {
+  content: attr(data-tooltip);
+  width: 100%;
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1c1b25;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+  border: 1px solid;
+  z-index: 1000;
+} */
+
+.badge.bronze::after {
+  border-color: #cd7f32;
+}
+
+.badge.silver::after {
+  border-color: #c0c0c0;
+}
+
+.badge.gold::after {
+  border-color: #ffd700;
+}
+
+.badge.diamond::after {
+  border-color: #b9f2ff;
+}
+
+.badge.star::after {
+  border-color: #ff4500;
+}
+
+.badge:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-5px);
+}
+
+/* Modal de Medalhas */
+.badges-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.badges-modal.active {
+  display: flex;
+}
+
+.modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  position: relative;
+  background: linear-gradient(145deg, #2a2931, #1e1d25);
+  border-radius: 12px;
+  max-width: 900px;
+  width: 100%;
+  max-height: 90vh;
+  /* overflow-y: auto; */
+  z-index: 2;
+  padding: 25px;
+  box-shadow: 0 0 30px rgba(250, 218, 94, 0.2);
+  border: 1px solid rgba(250, 218, 94, 0.3);
+  animation: modalFadeIn 0.3s ease-out;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.close-modal {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #fada5e;
+  color: #1c1b25;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.close-modal:hover {
+  background: #ff3333;
+  color: white;
+  transform: rotate(90deg);
+}
+
+
+
+.progress-summary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.progress-summary .progress-bar {
+  width: 200px;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-summary .progress-fill {
+  height: 100%;
+  background: linear-gradient(to right, #fada5e, #ffd700);
+  border-radius: 4px;
+}
+
+.modal-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.filter-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(250, 218, 94, 0.3);
+  color: #b4b4b4;
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.filter-btn.active {
+  background: #fada5e;
+  color: #1c1b25;
+  font-weight: bold;
+}
+
+.filter-btn:hover:not(.active) {
+  background: rgba(250, 218, 94, 0.2);
+  color: white;
+}
+
+.search-box {
+  position: relative;
+  margin-left: auto;
+}
+
+.search-box input {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(250, 218, 94, 0.3);
+  color: white;
+  padding: 8px 15px 8px 35px;
+  border-radius: 20px;
+  width: 200px;
+}
+
+.search-box i {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #b4b4b4;
+}
+
+.badges-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.badge-item {
+  display: flex;
+  gap: 15px;
+  padding: 15px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.badge-item:hover {
+  background: rgba(250, 218, 94, 0.1);
+  border-color: rgba(250, 218, 94, 0.3);
+}
+
+.badge-visual {
+  position: relative;
+  min-width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.badge-icon {
+  font-size: 2.2rem;
+  z-index: 2;
+  position: relative;
+}
+
+.badge-glow {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background: radial-gradient(circle at center,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0));
+  border-radius: 50%;
+  opacity: 0.5;
+  animation: badgeGlow 2s infinite alternate;
+}
+
+@keyframes badgeGlow {
+  from {
+    transform: scale(0.9);
+    opacity: 0.3;
+  }
+
+  to {
+    transform: scale(1.1);
+    opacity: 0.7;
+  }
+}
+
+.badge-level {
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1c1b2525;
+  color: white;
+  padding: 2px 10px;
+  border-radius: 10px;
+  font-size: 0.7rem;
+  font-weight: bold;
+  white-space: nowrap;
+  border: 1px solid;
+}
+
+.badge-lock {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.badge-details {
+  flex-grow: 1;
+}
+
+.badge-details h3 {
+  color: #fada5e;
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+}
+
+.badge-details p {
+  color: #b4b4b4;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.badge-progress {
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.badge-progress.unlocked {
+  color: #4CAF50;
+}
+
+.badge-progress i {
+  font-size: 1rem;
+}
+
+.badge-progress .progress-bar {
+  flex-grow: 1;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.badge-progress .progress-fill {
+  height: 100%;
+  background: linear-gradient(to right, #fada5e, #ffd700);
+  border-radius: 3px;
+}
+
+/* Estilos por nível de medalha */
+.badge-item.common .badge-visual {
+  background: radial-gradient(circle at center, #6c757d, #495057);
+  border-radius: 50%;
+}
+
+.badge-item.bronze .badge-visual {
+  background: radial-gradient(circle at center, #cd7f32, #8a5a2f);
+  border-radius: 50%;
+}
+
+.badge-item.silver .badge-visual {
+  background: radial-gradient(circle at center, #c0c0c0, #a8a8a8);
+  border-radius: 50%;
+}
+
+.badge-item.gold .badge-visual {
+  background: radial-gradient(circle at center, #ffd700, #daa520);
+  border-radius: 50%;
+}
+
+.badge-item.diamond .badge-visual {
+  background: radial-gradient(circle at center, #b9f2ff, #00b4d8);
+  border-radius: 50%;
+}
+
+.badge-item.star .badge-visual {
+  background: radial-gradient(circle at center, #ffd700, #ff4500);
+  border-radius: 50%;
+}
+
+.badge-item.common .badge-level {
+  border-color: #6c757d;
+  color: #adb5bd;
+}
+
+.badge-item.bronze .badge-level {
+  border-color: #cd7f32;
+  color: #cd7f32;
+}
+
+.badge-item.silver .badge-level {
+  border-color: #c0c0c0;
+  color: #c0c0c0;
+}
+
+.badge-item.gold .badge-level {
+  border-color: #ffd700;
+  color: #ffd700;
+}
+
+.badge-item.diamond .badge-level {
+  border-color: #b9f2ff;
+  color: #b9f2ff;
+}
+
+.badge-item.star .badge-level {
+  border-color: #ff4500;
+  color: #ffd700;
+}
+
+/* Elementos decorativos das medalhas */
+.badge-visual {
+  position: relative;
+  min-width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.decorative-element {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform-origin: bottom center;
+  font-size: 0.8rem;
+  color: inherit;
+  width: 100%;
+  text-align: center;
+  height: 40px;
+}
+
+.badge-item.common .decorative-element {
+  color: #6c757d;
+  font-size: 0.6rem;
+}
+
+.badge-item.bronze .decorative-element {
+  color: #cd7f32;
+}
+
+.badge-item.silver .decorative-element {
+  color: #c0c0c0;
+  font-size: 0.9rem;
+}
+
+.badge-item.gold .decorative-element {
+  color: #ffd700;
+  font-size: 1rem;
+}
+
+.badge-item.diamond .decorative-element {
+  color: #b9f2ff;
+  font-size: 1.1rem;
+}
+
+.badge-item.star .decorative-element {
+  color: #ff4500;
+  font-size: 1.2rem;
+  animation: twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle {
+  from {
+    opacity: 0.7;
+    transform: scale(0.9) rotate(0deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1.1) rotate(5deg);
+  }
+}
+
+/* Posicionamento dos elementos decorativos */
+.decorative-element.pos-0 {
+  transform: rotate(0deg) translateY(-15px);
+}
+
+.decorative-element.pos-1 {
+  transform: rotate(72deg) translateY(-15px);
+}
+
+.decorative-element.pos-2 {
+  transform: rotate(144deg) translateY(-15px);
+}
+
+.decorative-element.pos-3 {
+  transform: rotate(216deg) translateY(-15px);
+}
+
+.decorative-element.pos-4 {
+  transform: rotate(288deg) translateY(-15px);
+}
+
+.decorative-element.pos-5 {
+  transform: rotate(360deg) translateY(-15px);
+}
+
+/* Efeitos especiais por nível */
+.badge-item.gold .badge-icon {
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+}
+
+.badge-item.diamond .badge-icon {
+  animation: shine 3s infinite;
+}
+
+@keyframes shine {
+  0% {
+    filter: drop-shadow(0 0 5px rgba(185, 242, 255, 0.5));
+  }
+
+  50% {
+    filter: drop-shadow(0 0 15px rgba(185, 242, 255, 0.9));
+  }
+
+  100% {
+    filter: drop-shadow(0 0 5px rgba(185, 242, 255, 0.5));
+  }
+}
+
+.badge-item.star .badge-icon {
+  animation: pulse 1.5s infinite alternate;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.2);
+  }
+}
+
+/* Medalhas bloqueadas */
+.badge-item.locked {
+  opacity: 0.7;
+}
+
+.badge-item.locked .badge-visual {
+  filter: grayscale(80%);
+}
+
+.badge-item.locked .badge-details h3 {
+  color: #b4b4b4;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .badges-container {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-box {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .search-box input {
+    width: 100%;
+  }
+}
+
+/* Distribuição de Notas */
+.rating-distribution {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.rating-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.rating-stars {
+  color: #fada5e;
+  width: 80px;
+}
+
+.rating-bar {
+  flex-grow: 1;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.rating-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #fada5e, #ffd700);
+  border-radius: 5px;
+}
+
+.rating-count {
+  width: 40px;
+  text-align: right;
+  font-size: 0.8rem;
+  color: #b4b4b4;
+}

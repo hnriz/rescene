@@ -1,0 +1,200 @@
+/* Estilos para a página de Favoritos */
+.likedContent {
+    padding: 20px 0 40px;
+    max-width: 1000px !important;
+    margin-top: 40px !important;
+  }
+  
+  .contentFilters {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+  .filterGroup {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .filterGroup label {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+  }
+  
+  .filterSelect {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .filterSelect:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: #fada5e;
+  }
+  
+  .contentGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+  }
+  
+  .contentCard {
+    background: #1A1A23;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .contentCard:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    border-color: rgba(250, 218, 94, 0.3);
+  }
+  
+  .cardImage {
+    position: relative;
+    aspect-ratio: 2/3;
+  }
+  
+  .cardImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .cardOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .contentCard:hover .cardOverlay {
+    opacity: 1;
+  }
+  
+  .cardRating {
+    align-self: flex-end;
+    background: rgba(28, 27, 37, 0.8);
+    color: #fada5e;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+  }
+  
+  .likeButton {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    align-self: flex-end;
+  }
+  
+  .likeButton.liked {
+    color: #ff6b6b;
+  }
+
+  .cardInfo {
+    display: none;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+  }
+  
+  .paginationButton {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .paginationButton:hover:not(:disabled):not(.active) {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  .paginationButton.active {
+    background: #fada5e;
+    color: #1c1b25;
+    font-weight: bold;
+  }
+  
+  .paginationButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .contentFilters {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .searchBox {
+      margin-left: 0;
+      width: 100%;
+    }
+    
+    .searchBox input {
+      width: 100%;
+    }
+    
+    .contentGrid {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 15px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .contentGrid {
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+    
+    .cardInfo {
+      padding: 10px;
+    }
+    
+    .cardActions .actionButton span {
+      display: none;
+    }
+    
+    .cardActions .actionButton i {
+      margin: 0;
+    }
+  }

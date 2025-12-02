@@ -1,0 +1,656 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --dark-bg: #1c1b25;
+    --darker-bg: #313037;
+    --accent-yellow: #fada5e;
+    --accent-yellow-dark: #e6c850;
+    --text-primary: #ffffff;
+    --text-secondary: #d1d1d1;
+    --text-tertiary: #a0a0a0;
+    --card-bg: #3e3d45;
+    --card-hover: #46454e;
+    --border-color: #4a4951;
+    --gold: #ffd700;
+    --silver: #c0c0c0;
+    --bronze: #cd7f32;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--text-primary);
+    font-family: 'Nunito Sans', sans-serif;
+    overflow-x: hidden;
+    padding-bottom: 40px;
+}
+
+
+/* Cabeçalho do ranking */
+
+
+/* .rankingBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #2c3e50, #4ca1af);
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.4);
+    z-index: -1;
+} */
+
+/* .rankingContent {
+    padding: 40px 0;
+    position: relative;
+    z-index: 1;
+} */
+
+.rankingMainInfo {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.rankingIconContainer {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.rankingIcon {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #4ca1af, #2c3e50);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.rankingIcon:hover {
+    transform: scale(1.05) rotate(5deg);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+.rankingIcon i {
+    font-size: 3rem;
+    color: #fff;
+}
+
+.rankingDetails {
+    flex: 1;
+    min-width: 250px;
+}
+
+.rankingDisplayName {
+    font-size: 2.5rem;
+    margin: 0 0 10px 0;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.rankingSubtitle {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
+    display: block;
+    margin-bottom: 20px;
+}
+
+.rankingStatsMini {
+    display: flex;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.statMini {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 8px 15px;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+.statMini:hover {
+    background: rgba(76, 161, 175, 0.3);
+}
+
+.statMini i {
+    color: #4ca1af;
+}
+
+.statMini span {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.statMini small {
+    font-size: 0.8rem;
+    opacity: 0.8;
+    font-weight: normal;
+}
+
+.rankingActions {
+    display: flex;
+    gap: 10px;
+    margin-left: auto;
+    align-self: center;
+}
+
+.filterButton, .shareButton {
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.filterButton {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    backdrop-filter: blur(5px);
+}
+
+.filterButton:hover {
+    background: rgba(76, 161, 175, 0.3);
+    transform: translateY(-2px);
+}
+
+.shareButton {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    width: 48px;
+    height: 48px;
+    justify-content: center;
+    padding: 0;
+    backdrop-filter: blur(5px);
+}
+
+.shareButton:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+
+
+
+
+.navItemRank.active i {
+    color: #4ca1af;
+}
+
+.navIndicator {
+    position: absolute;
+    bottom: 5px;
+    height: calc(100% - 10px);
+    background: rgba(76, 161, 175, 0.15);
+    border-radius: 8px;
+    transition: all 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+    border: 1px solid rgba(76, 161, 175, 0.3);
+    z-index: 0;
+}
+
+/* Container do ranking */
+.rankingContainer {
+    padding: 0 20px;
+}
+
+.rankingOptions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.sortOptions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sortLabel {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+}
+
+/* .sortSelect {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%234ca1af'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+    width: 180px;
+}
+
+.sortSelect:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: #4ca1af;
+} */
+
+.viewOptions {
+    display: flex;
+    gap: 10px;
+    background: rgba(28, 27, 37, 0.7);
+    border-radius: 8px;
+    padding: 5px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.viewOption {
+    background: none;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.viewOption.active, .viewOption:hover {
+    background: rgba(76, 161, 175, 0.15);
+    color: #4ca1af;
+}
+
+/* Lista de ranking */
+.rankingList {
+    display: grid;
+    gap: 25px;
+}
+
+.rankingList.listView {
+    grid-template-columns: 1fr;
+}
+
+.rankingList.gridView {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+.rankingItem {
+    background: rgba(28, 27, 37, 0.7);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+}
+
+.rankingItem:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    border-color: rgba(76, 161, 175, 0.3);
+}
+
+.listView .rankingItem {
+    flex-direction: row;
+    height: 200px;
+}
+
+.gridView .rankingItem {
+    height: auto;
+}
+
+.itemRank {
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.listView .itemRank {
+    flex-shrink: 0;
+}
+
+.rankBadge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 1.1rem;
+    background: var(--card-bg);
+    color: var(--text-primary);
+}
+
+.rankBadge.gold {
+    background: linear-gradient(135deg, var(--gold), #daa520);
+    color: #000;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+}
+
+.rankBadge.silver {
+    background: linear-gradient(135deg, var(--silver), #a8a8a8);
+    color: #000;
+    box-shadow: 0 0 15px rgba(192, 192, 192, 0.5);
+}
+
+.rankBadge.bronze {
+    background: linear-gradient(135deg, var(--bronze), #b87333);
+    color: #000;
+    box-shadow: 0 0 15px rgba(205, 127, 50, 0.5);
+}
+
+.itemPoster {
+    position: relative;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.listView .itemPoster {
+    width: 120px;
+    height: 100%;
+}
+
+.gridView .itemPoster {
+    width: 100%;
+    height: 280px;
+}
+
+.itemPoster img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.rankingItem:hover .itemPoster img {
+    transform: scale(1.05);
+}
+
+.posterOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.rankingItem:hover .posterOverlay {
+    opacity: 1;
+}
+
+.quickAction {
+    background: rgba(76, 161, 175, 0.9);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    transform: translateY(20px);
+}
+
+.rankingItem:hover .quickAction {
+    transform: translateY(0);
+}
+
+.quickAction:hover {
+    background: #4ca1af;
+    transform: scale(1.1);
+}
+
+.itemInfo {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.itemTitle {
+    font-size: 1.4rem;
+    margin: 0 0 8px 0;
+    color: #fff;
+    line-height: 1.3;
+}
+
+.itemYear {
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 400;
+}
+
+.itemMeta {
+    margin-bottom: 15px;
+}
+
+.metaCreator {
+    display: block;
+    font-size: 0.9rem;
+    color: #4ca1af;
+    margin-bottom: 5px;
+}
+
+.metaGenre {
+    display: block;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.metaSeasons {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 5px;
+}
+
+.itemRating {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+
+
+.ratingValue {
+    font-weight: 700;
+    color: #4ca1af;
+    font-size: 1.1rem;
+}
+
+.ratingVotes {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-left: auto;
+}
+
+.itemActions {
+    padding: 15px 20px;
+    display: flex;
+    gap: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.actionButton {
+    background: none;
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.actionButton:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+/* Botão Carregar Mais */
+/* .loadMoreContainer {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.loadMoreButton {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.loadMoreButton:hover {
+    background: rgba(76, 161, 175, 0.2);
+    color: #4ca1af;
+    transform: translateY(-2px);
+} */
+
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.rankingItem {
+    animation: fadeIn 0.5s ease forwards;
+    opacity: 0;
+}
+
+.rankingItem:nth-child(1) { animation-delay: 0.05s; }
+.rankingItem:nth-child(2) { animation-delay: 0.1s; }
+.rankingItem:nth-child(3) { animation-delay: 0.15s; }
+.rankingItem:nth-child(4) { animation-delay: 0.2s; }
+.rankingItem:nth-child(5) { animation-delay: 0.25s; }
+.rankingItem:nth-child(6) { animation-delay: 0.3s; }
+.rankingItem:nth-child(7) { animation-delay: 0.35s; }
+.rankingItem:nth-child(8) { animation-delay: 0.4s; }
+.rankingItem:nth-child(9) { animation-delay: 0.45s; }
+.rankingItem:nth-child(10) { animation-delay: 0.5s; }
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .rankingList.gridView {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .rankingMainInfo {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .rankingActions {
+        margin-left: 0;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .rankingOptions {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .listView .rankingItem {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .listView .itemPoster {
+        width: 100%;
+        height: 200px;
+    }
+    
+    .rankingNav {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .rankingDisplayName {
+        font-size: 2rem;
+    }
+    
+    .rankingIcon {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .rankingIcon i {
+        font-size: 2.5rem;
+    }
+    
+    .rankingStatsMini {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .rankingList.gridView {
+        grid-template-columns: 1fr;
+    }
+    
+    .rankingNav .navItemRank {
+        flex: 1;
+        min-width: 120px;
+        font-size: 0.8rem;
+        padding: 10px 8px;
+    }
+    
+    .rankingNav .navItemRank i {
+        font-size: 0.9rem;
+    }
+    
+    .rankingNav .navItemRank span {
+        display: none;
+    }
+}

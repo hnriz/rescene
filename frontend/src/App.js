@@ -1,0 +1,195 @@
+import Home from "./pages-en/Home";
+import HeaderEN from "./components-en/HeaderEN.js";
+import FooterEN from "./components-en/FooterEN.js";
+import Profile from "./pages-en/Profile";
+import Privacy from "./pages-en/Privacy";
+import About from "./pages-en/About";
+import Terms from "./pages-en/Terms";
+import Contact from "./pages-en/Contact";
+import Search from "./pages-en/Search";
+import Movies from "./pages-en/Movies";
+import TVShows from "./pages-en/TVShows.js";
+import List from "./pages-en/List";
+import ListEdit from "./pages-en/ListEdit";
+import Info from "./pages-en/Info";
+import Settings from "./pages-en/Settings";
+import LoginEN from "./pages-en/LoginEN";
+import RankMovies from "./pages-en/ranks/Movies.js";
+import RankTVShows from "./pages-en/ranks/TVShows.js"
+import RankUsers from "./pages-en/ranks/Users.js"
+import RankComments from "./pages-en/ranks/Comments.js"
+
+import HomePTBR from "./paginas-ptbr/HomePTBR";
+import HeaderPTBR from "./componentes-ptbr/HeaderPTBR";
+import FooterPTBR from "./componentes-ptbr/FooterPTBR";
+import Perfil from "./paginas-ptbr/Perfil";
+import Privacidade from "./paginas-ptbr/Privacidade";
+import SobreNos from "./paginas-ptbr/SobreNos";
+import Termos from "./paginas-ptbr/Termos";
+import Contate from "./paginas-ptbr/Contate";
+import Pesquisa from "./paginas-ptbr/Pesquisa";
+import Filmes from "./paginas-ptbr/CatalogoFilmes";
+import SeriesPTBR from "./paginas-ptbr/CatalogoSeries";
+import Lista from "./paginas-ptbr/Lista";
+import ListaEditar from "./paginas-ptbr/ListaEditar";
+import InfoPTBR from "./paginas-ptbr/InfoPTBR";
+import Configuracoes from "./paginas-ptbr/Configuracoes";
+import LoginPTBR from "./paginas-ptbr/LoginPTBR";
+import RankFilmes from "./paginas-ptbr/ranks/Filmes.js";
+import RankSeries from "./paginas-ptbr/ranks/Series.js"
+import RankUsuarios from "./paginas-ptbr/ranks/Usuarios.js"
+import RankComentarios from "./paginas-ptbr/ranks/Comentarios.js"
+import ErrorPage from "./pages-en/ErrorPage";
+import PaginaErro from "./paginas-ptbr/PaginaErro";
+import ErrorBoundary from "./components/ErrorBoundary";
+
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
+import { AuthProvider } from "./context/AuthContext";
+import useScrollToTop from "./hooks/useScrollToTop";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+import './css/reset.css';
+import './css/index.css';
+import './css/header.css';
+import './css/footer.css';
+import './css/profile.css';
+import './css/body.css';
+import './css/about.css';
+import './css/terms.css'
+import './css/search.css'
+import './css/movies.css'
+import './css/series.css'
+import './css/list.css'
+import './css/listEdit.css'
+import './css/info.css';
+import './css/settings.css';
+import './css/rank.css';
+import './css/rankMovies.css';
+import './css/rankSeries.css';
+import './css/rankUsers.css';
+import './css/rankComments.css';
+import './css/settingsAvatar.css';
+import './css/settingsLanguage.css';
+import './css/settingsNotifications.css';
+import './css/settingsPrivacy.css';
+import './css/settingsSecurity.css';
+import './css/login-hub-rescene.css';
+import './css/errorPage.css';
+import './css/contact.css';
+
+// Componente que renderiza header/footer e conteúdo
+function AppContent() {
+  useScrollToTop();
+  const location = useLocation();
+  console.log('🔍 Current pathname:', location.pathname);
+  
+  const isPTBR = location.pathname.includes('/PTBR/') || location.pathname.startsWith('/perfil') || 
+                  location.pathname.startsWith('/usuario') || location.pathname.startsWith('/privacidade') || 
+                  location.pathname.startsWith('/sobre-nos') || location.pathname.startsWith('/termos') || 
+                  location.pathname.startsWith('/contate') || location.pathname.startsWith('/pesquisa') || 
+                  location.pathname.startsWith('/filmes') || location.pathname.startsWith('/series') || 
+                  location.pathname.startsWith('/lista') || location.pathname.startsWith('/editar-lista') || 
+                  location.pathname.startsWith('/info-ptbr') || location.pathname.startsWith('/top-') || 
+                  location.pathname.startsWith('/configuracoes') || location.pathname.startsWith('/login-ptbr') || 
+                  location.pathname.startsWith('/erro');
+  
+  console.log('🌐 isPTBR:', isPTBR);
+  console.log('📦 Rendering header:', isPTBR ? 'HeaderPTBR' : 'HeaderEN');
+  
+  return (
+    <>
+      <ErrorBoundary>
+        {isPTBR ? <HeaderPTBR /> : <HeaderEN />}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/user/:username" element={<Profile />} />
+          <Route path="/:username/profile" element={<Profile />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/search" element={<Search />} />
+          <Route path="/movies" element={<Movies />} />
+          <Route path="/tvshows" element={<TVShows />} />
+          <Route path="/list" element={<List />} />
+          <Route path="/list/:listId" element={<List />} />
+          <Route path="/:username/list/:listId" element={<List />} />
+          <Route path="/listEdit" element={<ListEdit />} />
+          <Route path="/list-edit/:listId" element={<ListEdit />} />
+          <Route path="/:username/list-edit/:listId" element={<ListEdit />} />
+          <Route path="/rankMovies" element={<RankMovies />} />
+          <Route path="/rankTVShows" element={<RankTVShows />} />
+          <Route path="/rankUsers" element={<RankUsers />} />
+          <Route path="/rankComments" element={<RankComments />} />
+          <Route path="/settings" element={<Settings />} />
+          <Route path="/login-en" element={<LoginEN />} />
+
+          <Route path="/info/:movieId" element={<Info />} />
+          <Route path="/info/:type/:movieId" element={<Info />} />
+
+          <Route path="/PTBR/" element={<HomePTBR />} />
+          <Route path="/perfil" element={<Perfil />} />
+          <Route path="/usuario/:username" element={<Perfil />} />
+          <Route path="/:username/perfil" element={<Perfil />} />
+          <Route path="/privacidade" element={<Privacidade />} />
+          <Route path="/sobre-nos" element={<SobreNos />} />
+          <Route path="/termos" element={<Termos />} />
+          <Route path="/contate" element={<Contate />} />
+          <Route path="/pesquisa" element={<Pesquisa />} />
+          <Route path="/filmes" element={<Filmes />} />
+          <Route path="/series" element={<SeriesPTBR />} />
+          <Route path="/lista" element={<Lista />} />
+          <Route path="/lista/:listId" element={<Lista />} />
+          <Route path="/:username/lista/:listId" element={<Lista />} />
+          <Route path="/editar-lista" element={<ListaEditar />} />
+          <Route path="/lista-editar/:listId" element={<ListaEditar />} />
+          <Route path="/:username/lista-editar/:listId" element={<ListaEditar />} />
+          <Route path="/info-ptbr/:movieId" element={<InfoPTBR />} />
+          <Route path="/info-ptbr/:type/:movieId" element={<InfoPTBR />} />
+          <Route path="/top-filmes" element={<RankFilmes />} />
+          <Route path="/top-series" element={<RankSeries />} />
+          <Route path="/top-usuarios" element={<RankUsuarios />} />
+          <Route path="/top-comentarios" element={<RankComentarios />} />
+          <Route path="/configuracoes" element={<Configuracoes />} />
+          <Route path="/login-ptbr" element={<LoginPTBR />} />
+
+          {/* Error Pages */}
+          <Route path="/error" element={<ErrorPage />} />
+          <Route path="/erro" element={<PaginaErro />} />
+
+          {/* Catch-all route */}
+          <Route path="*" element={<ErrorPage />} />
+        </Routes>
+      </ErrorBoundary>
+      {isPTBR ? <FooterPTBR /> : <FooterEN />}
+    </>
+  );
+}
+
+function App() {
+  console.log('✅ App component rendering');
+  return (
+    <AuthProvider>
+      <BrowserRouter>
+        <AppContent />
+        <ToastContainer
+          position="bottom-right"
+          autoClose={3000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="light"
+        />
+      </BrowserRouter>
+    </AuthProvider>
+  );
+}
+
+export default App;
+

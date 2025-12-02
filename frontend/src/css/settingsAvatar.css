@@ -1,0 +1,208 @@
+.avatarContent {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.avatarContent h3 {
+    color: white;
+    font-size: 24px;
+}
+
+.changeAvatar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.currentAvatar, .newAvatar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.currentAvatar h3,
+.newAvatar h3 {
+    background-color: lightgray;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.avatar {
+    background-color: lightgray;
+    border: 2px solid white;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+    i {
+        font-size: 60px;
+    }
+}
+
+#currentAvatar {
+    background-image: url(https://incoerente.com.br/wp-content/uploads/2023/06/fofohnwxwaalvao.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#newAvatar {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#newAvatar:hover {
+    cursor: pointer;
+}
+
+.pencil {
+    background-color: rgb(211, 210, 210, 0.5);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#separatorVertical {
+    height: 400px;
+    width: 3px;
+    background-color: white;
+}
+
+.centralizeBtn {
+    display: flex;
+    justify-content: center;
+}
+
+/* Responsividade Avatar */
+
+@media (max-width: 1024px) {
+    .changeAvatar {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .avatar {
+        width: 220px;
+        height: 220px;
+    }
+
+    .avatar i {
+        font-size: 50px;
+    }
+
+    #separatorVertical {
+        display: none;
+    }
+
+    .currentAvatar h3,
+    .newAvatar h3 {
+        padding: 8px 16px;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .avatarContent {
+        gap: 30px;
+        margin-top: 30px;
+    }
+
+    .avatarContent h3 {
+        font-size: 20px;
+    }
+
+    .changeAvatar {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .avatar {
+        width: 180px;
+        height: 180px;
+    }
+
+    .avatar i {
+        font-size: 40px;
+    }
+
+    .currentAvatar h3,
+    .newAvatar h3 {
+        font-size: 14px;
+        padding: 8px 12px;
+        margin-bottom: 12px;
+    }
+
+    #separatorVertical {
+        height: 1px;
+        width: 100%;
+        margin: 15px 0;
+    }
+
+    .centralizeBtn {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .avatarContent {
+        gap: 25px;
+        margin-top: 20px;
+    }
+
+    .avatarContent h3 {
+        font-size: 16px;
+    }
+
+    .changeAvatar {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .avatar {
+        width: 150px;
+        height: 150px;
+    }
+
+    .avatar i {
+        font-size: 35px;
+    }
+
+    .currentAvatar h3,
+    .newAvatar h3 {
+        font-size: 12px;
+        padding: 6px 10px;
+        margin-bottom: 10px;
+    }
+
+    #separatorVertical {
+        height: 1px;
+        width: 100%;
+        margin: 15px 0;
+    }
+
+    .centralizeBtn {
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .centralizeBtn button {
+        flex: 1;
+        min-width: 120px;
+    }
+}

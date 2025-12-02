@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+html {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    font-family: "Nunito Sans";
+    background-color: #1c1b25;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+button:focus:not(:focus-visible) {
+  outline: none;
+}
+
+a {
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+button {
+    font-family: 'Nunito Sans', sans-serif;
+    color: white;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+main {
+    flex: 1;
+    overflow-x: hidden;
+}
+
+main.movie-info-page {
+    overflow: hidden !important;
+    overflow-y: hidden !important;
+    overflow-x: hidden !important;
+}
+
+/* ===== SCROLLBAR PARA MAIN ===== */
+/* main::-webkit-scrollbar {
+    width: 12px;
+}
+
+main::-webkit-scrollbar-track {
+    background: #1c1b25;
+    border-radius: 10px;
+}
+
+main::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #fada5e 0%, #f0c030 100%);
+    border-radius: 10px;
+    border: 2px solid #1c1b25;
+    transition: background 0.3s ease-in-out;
+}
+
+main::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #ffd700 0%, #ffed4e 100%);
+    box-shadow: 0 0 8px rgba(250, 218, 94, 0.5);
+}
+
+main::-webkit-scrollbar-thumb:active {
+    background: linear-gradient(180deg, #f0c030 0%, #daa520 100%);
+} */
+
+/* main {
+    scrollbar-color: #fada5e #1c1b25;
+    scrollbar-width: thin;
+} */
+/* ===== FIM SCROLLBAR MAIN ===== */
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+    width: 100%;
+    flex: 1;
+}
+
+.btn {
+    background-color: #fada5e;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 200px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+
+    color: black;
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+    box-shadow: 0 4px 8px #a3881a;
+}
+
