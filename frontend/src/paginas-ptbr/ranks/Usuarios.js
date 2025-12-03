@@ -1,16 +1,11 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faFilm,
     faTv,
-    faStar,
-    faUsers,
-    faFilter,
     faUserGroup,
     faComment,
-    faBolt,
-    faTrophy,
     faPlus
 } from '@fortawesome/free-solid-svg-icons';
 

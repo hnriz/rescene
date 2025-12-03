@@ -484,7 +484,7 @@ export const getTVShowsByGenre = async (genreId, page = 1, language = 'pt-BR') =
   }
 };
 
-export default {
+const tmdbService = {
   getPopularMovies,
   getPopularTVShows,
   getMovieDetails,
@@ -504,3 +504,5 @@ export default {
   getTVShowsByGenre,
   TMDB_IMAGE_BASE
 };
+
+export default tmdbService;
