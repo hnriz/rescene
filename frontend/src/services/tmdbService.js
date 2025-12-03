@@ -505,5 +505,4 @@ const tmdbService = {
   TMDB_IMAGE_BASE
 };
 
-// eslint-disable-next-line import/no-anonymous-default-export
 export default tmdbService;
